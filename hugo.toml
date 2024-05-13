@@ -1,4 +1,4 @@
-baseURL = 'https:/efficientml-postech.github.io/'
+baseURL = ''
 languageCode = 'en-us'
 title = 'Efficient ML Systems'
 theme = 'hugo-book'
