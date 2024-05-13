@@ -1,7 +1,13 @@
+---
+type: docs
+bookToc: True
+weight: 1
+---
+
 ## Example : Content
 This paper propose a compression framework that leverages text information mainly by text-adaptive encoding and training with joint image-text loss. By doing so, they avoid decoding based on text-guided generative models---known for high generative diversity---and effectively utilize the semantic information of text at a global level. 
 
-{{< figure src="./overall_architecture.png" alt="." width="1000" height="1000" >}}
+{{< figure src="./overall_architecture.png" alt="." width="600" height="600" >}}
 
 ## Example : Using KaTeX for math equation
 
