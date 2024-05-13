@@ -5,20 +5,26 @@ title: "Spring 2024"
 ---
 
 # Blog-Post-Assignment (Spring 24)
+
 This is the Github page for the class, Efficient ML Systems (EECE695D-01).  Students (will) upload a blog post reviewing the paper.
 
 ## Guideline for Students
-* First, make the folder named `Paper Number_Paper Title_Member1_Member2 (e.g. 0_TACO_HagyeongLee)`. You can use initials of paper title. If there is no optimal initials, then you can skip the paper name (e.g. 0_HagyeongLee).
-* Second, you put the markdown file and assests(e.g. figures) in the folder.
-* Finally, if you verify that the markdown file is rendering successfully.
+* You toggle the menu and find your paper number. Then, into the page, you can easily find the ```Edit this page``` button.
+     * You edit the markdown file. If you want to attach the image (e.g. pipeline), <br> you easily add file using ```Upload files``` button:
+          {{< figure src="./example.png" alt="." width="1000" height="2000" >}}
 
+     💡 You can reference TA's example post 👉 [LINK](https://effml-postech.github.io/docs/spring24/0_taco_example/)
+     * Posted how to use the KaTex
 
-## Posts
+## Contact
+If you have any questions, please feel free to contact TA (hagyeonglee@postech.ac.kr).
 
-|  | Title | Team |
-|---|:---:|:---:|
-| 0 | **_(example)_** [Neural Image Compression with Text-guided Encoding for both Pixel-level and Perceptual Fidelity](https://arxiv.org/abs/2403.02944) | [Hagyeong Lee](https://effml-postech.github.io/docs/spring24/posts/example_0_taco_hagyeonglee/) |
-| 1 | [Is Bigger Edit Batch Size Always Better? -- An Empirical Study on Model Editing with Llama-3         	](https//arxiv.org/abs/2405.00666) | [Jin Hyun,  Gyuhyun Jung]() |
+## Paper List
+
+| Paper No. | Title | Team |
+|:---:|:---:|:---:|
+| 0 | **_(example)_** [Neural Image Compression with Text-guided Encoding for both Pixel-level and Perceptual Fidelity](https://arxiv.org/abs/2403.02944) | Hagyeong Lee |
+| 1 | [Is Bigger Edit Batch Size Always Better? -- An Empirical Study on Model Editing with Llama-3         	](https//arxiv.org/abs/2405.00666) | Jin Hyun,  Gyuhyun Jung |
 | 2 | [Spectrally Pruned Gaussian Fields with Neural Compensation                          	](https//arxiv.org/pdf/2405.00676) | Donggeon Lee,  Chiho yoon |
 | 3 | [Unit Scaling: Out-of-the-Box Low-Precision Training                              	](https//arxiv.org/abs/2303.11257) | SeongRok Moon,  Changyoung Ju |
 | 4 | [Better & Faster Large Language Models via Multi-token Prediction                       	](https//arxiv.org/abs/2404.19737) | Jinoh Cho,  Seonghyeon Park |
@@ -43,6 +49,3 @@ This is the Github page for the class, Efficient ML Systems (EECE695D-01).  Stud
 | 23 | [Beyond Language Models: Byte Models are Digital World Simulators                       	](https//arxiv.org/abs/2402.19155) | Dohun Kim, Yeongwoo Kim |
 | 24 | [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression          	](https//arxiv.org/abs/2403.12968) | Seungjoo Shin, Sua Choi |
 | 25 | [Merging Text Transformer Models from Different Initializations                        	](https//arxiv.org/abs/2403.00986) | Minwoo Kim, Kyungtae Kim |
-
-## Contact
-If you have any questions, please feel free to contact TA (hagyeonglee@postech.ac.kr).
