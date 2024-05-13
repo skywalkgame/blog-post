@@ -10,10 +10,9 @@ theme = 'hugo-book'
 
 [menu]
 
-[markup.tableOfContents]
-  startLevel = 1
 
 [params]
   BookSection = 'docs'
   BookRepo = 'https://github.com/effml-postech/effml-postech.github.io'
+  BookCommitPath = 'commit'
   BookEditPath = 'edit/main/'
