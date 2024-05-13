@@ -1,0 +1,4 @@
+baseURL = 'https:/efficientml-postech.github.io/'
+languageCode = 'en-us'
+title = 'Efficient ML Systems'
+theme = 'hugo-book'

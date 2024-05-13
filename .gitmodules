@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/effml-postech/effml-postech.github.io.git
+	branch = main
