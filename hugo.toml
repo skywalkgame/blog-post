@@ -16,5 +16,5 @@ enableGitInfo = true
 
 [params]
   BookSection = 'docs'
-  BookRepo = 'https://github.com/effml-postech/effml-postech.github.io'
+  BookRepo = 'https://github.com/effml-postech/blog-post'
   BookEditPath = 'edit/main/'
