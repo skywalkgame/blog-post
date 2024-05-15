@@ -1,0 +1,40 @@
+Watching for changes in /Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 64  
+  Paginator pages  |  0  
+  Non-page files   |  5  
+  Static files     | 78  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Built in 238 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+Change detected, rebuilding site (#1).
+2024-05-15 14:11:27.744 +0900
+Source changed /_index.md
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 144 ms
+
+Change detected, rebuilding site (#2).
+2024-05-15 14:14:52.687 +0900
+Source changed /_index.md
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 37 ms
+
+Change detected, rebuilding site (#3).
+2024-05-15 14:14:53.185 +0900
+Source changed /_index.md
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 23 ms
