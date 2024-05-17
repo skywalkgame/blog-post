@@ -27,6 +27,9 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 {{< katex >}}P_i = [b_{(i-1)S+1}, \ldots, b_iS]{{< /katex >}} for {{< katex >}}( 1 \leq i \leq N){{< /katex >}}, {{< katex >}}\P_N = [b_{(N-1)S+1}, \ldots, b_T, \underbrace{e, \ldots, e}_{S - (T \mod S)}]{{< /katex >}} where {{< katex >}}e{{< /katex >}} represents the `<eop>` (end-of-patch).
 
 ***Components***
+<p align="center">
+    <img src=architecture.JPG width="600"> 
+</p>
 - **Linear Projection Layer**: Each byte patch is mapped to a high-dimensional feature space through a linear projection layer. During this process, each byte is encoded into a 257-dimensional vector, which includes the 256 possible byte values and a special `<eop>` (end-of-patch) token.
 - **Patch-Level Decoder**: The embedded patches are processed by a patch-level decoder. This decoder plays a role in predicting the features of the next patch from the embedding of each patch, thereby learning the structural patterns of the entire dataset.
 - **Byte-Level Decoder**: Based on the predicted patch features, the byte sequence within each patch is reconstructed. The byte-level decoder uses the features of each patch to predict the next byte within that patch, processing the detailed information of the entire byte sequence.
