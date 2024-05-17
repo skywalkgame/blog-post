@@ -26,7 +26,7 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 - **Linear Projection Layer**: Each byte patch is mapped to a high-dimensional feature space through a linear projection layer. During this process, each byte is encoded into a 257-dimensional vector, which includes the 256 possible byte values and a special `<eop>` (end-of-patch) token.
 - **Patch-Level Decoder**: The embedded patches are processed by a patch-level decoder. This decoder plays a role in predicting the features of the next patch from the embedding of each patch, thereby learning the structural patterns of the entire dataset.
 - **Byte-Level Decoder**: Based on the predicted patch features, the byte sequence within each patch is reconstructed. The byte-level decoder uses the features of each patch to predict the next byte within that patch, processing the detailed information of the entire byte sequence.
-
+***
 ### Model Training
 **Generative Modeling**
 
@@ -45,11 +45,11 @@ For classification tasks, the loss function used is the cross-entropy loss, whic
 \[ L_{\text{CLF}}(\theta) = -\sum_{k=1}^{K} y_k \log p(y_k \mid B; \theta) \]
 
 These training objectives enable bGPT to understand various byte-based data and accurately mimic digital patterns of the real world. The combination of generative approaches and classification capabilities grants the model the flexibility to tackle a diverse range of problems. Through this, the model can go beyond simple pattern recognition to play a crucial role in predicting and analyzing the operations of complex digital systems.
-
+***
 ### Applications and Experiment 
 **1. Digital Media Processing**
 **2. Algorithm and Hardware Simulation**
-
+***
 ### Conclusion and Future Work 
 
 bGPT has proven to be a powerful model capable of effectively processing various types of digital media data. Particularly, this model can be flexibly applied to different types of data and has demonstrated performance that can compete with models pretrained on specific datasets. These results show that bGPT can be extremely useful in solving a wide range of real-world problems.
