@@ -96,7 +96,7 @@ Each model was fine-tuned for specific types of classification and generative ta
 - **Audio Processing**: bGPTlibri demonstrated excellent performance on the Speech Commands v2 dataset, showcasing its high potential in audio processing.
 - **Image Processing**: bGPTimage recorded high accuracy on the CIFAR-10 dataset but showed somewhat lower performance on ImageNet. This suggests that while bGPT works well with relatively simple images, it may have limitations with more complex images.
 
-*** 2.  Algorithm and Hardware Simulation***  
+***2.  Algorithm and Hardware Simulation***  
 
 **Experiment Overview** 
 
