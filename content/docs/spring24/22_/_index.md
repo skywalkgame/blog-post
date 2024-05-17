@@ -6,7 +6,8 @@ weight: 1
 # Larimar: Large Language Models with Episodic Memory Control
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
-## Neocortex-Hippocampus interactions
+## Background
+### Neocortex-Hippocampus interactions
 This paper imitate the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
 <p align="center">
     <img src=brain.png width="400"> 
@@ -22,10 +23,13 @@ Selective Fact Forgetting and Information Leakage Prevention:
 
 3. Larimar effectively supports selective fact forgetting and prevents information leakage using its one-shot memory updating mechanism.
 Recursive Search-Based Solution for Long Context Generalization: A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
+## Model architecture
+## Memory Operations
 ## Results
 
 ## Conclusion
 
 ## References
 https://arxiv.org/abs/2403.11901
+
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
