@@ -45,3 +45,22 @@ For classification tasks, the loss function used is the cross-entropy loss, whic
 \[ L_{\text{CLF}}(\theta) = -\sum_{k=1}^{K} y_k \log p(y_k \mid B; \theta) \]
 
 These training objectives enable bGPT to understand various byte-based data and accurately mimic digital patterns of the real world. The combination of generative approaches and classification capabilities grants the model the flexibility to tackle a diverse range of problems. Through this, the model can go beyond simple pattern recognition to play a crucial role in predicting and analyzing the operations of complex digital systems.
+
+### Applications and Experiment 
+**1. Digital Media Processing**
+**2. Algorithm and Hardware Simulation**
+
+### Conclusion and Future Work 
+
+bGPT has proven to be a powerful model capable of effectively processing various types of digital media data. Particularly, this model can be flexibly applied to different types of data and has demonstrated performance that can compete with models pretrained on specific datasets. These results show that bGPT can be extremely useful in solving a wide range of real-world problems.
+
+Moreover, bGPT has proven its ability to go beyond simply processing data, successfully modeling and simulating the operations of complex algorithms and hardware. This capability will be particularly valuable in fields related to technical problem solving and new hardware design.
+
+bGPT extends deep learning to binary data processing through byte prediction. Experiments have demonstrated bGPT's strong scalability in native binary data modeling.
+
+Future research directions for byte models include:
+
+- Reducing training costs to make byte model training more feasible;
+- Expanding the model and dataset sizes to accommodate a wider range of native binary data and handle larger digital media files such as high-resolution images and videos;
+- Improving performance in underexplored tasks involving native binary data across various application domains.
+
