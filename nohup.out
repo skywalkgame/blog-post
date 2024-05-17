@@ -38,3 +38,33 @@ Change detected, rebuilding site (#3).
 Source changed /_index.md
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Total in 23 ms
+
+Change detected, rebuilding site (#4).
+2024-05-16 17:56:36.424 +0900
+Source changed /_index.md
+WARN  File "/" not found, skipping.
+ERROR Rebuild failed: render: failed to render pages: render of "home" failed: "/Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/themes/hugo-book/layouts/_default/baseof.html:82:5": execute of template failed at <partial "docs/toc" .>: error calling partial: "/Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/themes/hugo-book/layouts/partials/docs/toc.html:2:3": execute of template failed at <.TableOfContents>: error calling TableOfContents: failed to open file "/Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/content/_index.md": open /Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/content/_index.md: no such file or directory
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 189 ms
+Watching for changes in /Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /Users/hagyeonglee/Documents/GitHub/effml/blog-post/blog/hugo.toml
+Start building sites … 
+hugo v0.125.7+extended darwin/amd64 BuildDate=2024-05-08T14:46:24Z VendorInfo=brew
+
+
+                   | EN  
+-------------------+-----
+  Pages            | 64  
+  Paginator pages  |  0  
+  Non-page files   |  6  
+  Static files     | 78  
+  Processed images |  0  
+  Aliases          |  2  
+  Cleaned          |  0  
+
+Built in 245 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
