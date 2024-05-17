@@ -21,6 +21,4 @@ Utility Demonstration in Knowledge Editing and Context Generalization:
 Selective Fact Forgetting and Information Leakage Prevention:
 
 3. Larimar effectively supports selective fact forgetting and prevents information leakage using its one-shot memory updating mechanism.
-Recursive Search-Based Solution for Long Context Generalization:
-
-4. A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
+Recursive Search-Based Solution for Long Context Generalization: A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
