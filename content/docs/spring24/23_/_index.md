@@ -22,7 +22,8 @@ The bGPT framework simulates digital systems using native binary data. It integr
 Learning patterns in digital systems at the byte level provides a unified approach to integrating various data types, but the high resolution of bytes results in long sequences that significantly increase computational costs. This issue is especially pronounced in transformer-based models, limiting the efficiency and scalability of processing binary data.
 bGPT is equipped with a hierarchical structure designed to efficiently handle entire byte sequences. This structure segments a sequence of byte 
 {{< katex >}}B = \{b_1, b_2, \ldots, b_T\}{{< /katex >}} of length {{< katex >}}T{{< /katex >}} into a sequence of patches {{< katex >}}mathcal{P}{{< /katex >}}, where each patch contains exactly {{< katex >}}S{{< /katex >}} bytes:
-{{< katex >}}\mathcal{P} = [P_1, P_2, \ldots, P_N]{{< /katex >}} where {{< katex >}}( N = \left\lceil \frac{T}{S} \right\rceil \){{< /katex >}} is the number of patches,
+{{< katex >}}\mathcal{P} = [P_1, P_2, \ldots, P_N]{{< /katex >}} where {{< katex >}}N = \left\lceil \frac{T}{S} \right\rceil{{< /katex >}} is the number of patches,
+
 {{< katex >}}P_i = [b_{(i-1)S+1}, \ldots, b_iS]{{< /katex >}} for {{< katex >}}\( 1 \leq i \leq N \){{< /katex >}}, {{< katex >}}\[ P_N = [b_{(N-1)S+1}, \ldots, b_T, e, \ldots, e] \]{{< /katex >}} where {{< katex >}}\( e \{{< /katex >}} represents the `<eop>` (end-of-patch).
 
 ***Components***
