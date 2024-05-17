@@ -22,3 +22,4 @@ $B = \{b_1, b_2, \ldots, b_T\}$   of length $\T\$ into a sequence of patches %ma
 %\mathcal{P} = [P_1, P_2, \ldots, P_N]$ where %( N = \left\lceil \frac{T}{S} \right\rceil \)% is the number of patches,
 
 \mathcal{P} = [P_1, P_2, \ldots, P_N]
+{{< katex >}}\pi(x){{< /katex >}}
