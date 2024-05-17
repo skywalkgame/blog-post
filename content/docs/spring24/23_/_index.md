@@ -126,7 +126,7 @@ bGPT extends deep learning to binary data processing through byte prediction. Ex
 
 Future research directions for byte models include:
 
-- Reducing training costs to make byte model training more feasible;
-- Expanding the model and dataset sizes to accommodate a wider range of native binary data and handle larger digital media files such as high-resolution images and videos;
+- Reducing training costs to make byte model training more feasible.
+- Expanding the model and dataset sizes to accommodate a wider range of native binary data and handle larger digital media files such as high-resolution images and videos.
 - Improving performance in underexplored tasks involving native binary data across various application domains.
 
