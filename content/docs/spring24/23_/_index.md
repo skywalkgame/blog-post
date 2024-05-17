@@ -121,7 +121,7 @@ bGPT's performance was evaluated in the following two key areas:
 
 ***
 
-### **Conclusion and Future Work **
+### **Conclusion and Future Work**
 
 bGPT has proven to be a powerful model capable of effectively processing various types of digital media data. Particularly, this model can be flexibly applied to different types of data and has demonstrated performance that can compete with models pretrained on specific datasets. These results show that bGPT can be extremely useful in solving a wide range of real-world problems.
 
