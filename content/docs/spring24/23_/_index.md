@@ -21,6 +21,4 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 $B = \{b_1, b_2, \ldots, b_T\}$   of length $\( T \)$ into a sequence of patches %mathcal{P}%, where each patch contains exactly $\( S \)$ bytes:
 %\mathcal{P} = [P_1, P_2, \ldots, P_N]$ where %( N = \left\lceil \frac{T}{S} \right\rceil \)% is the number of patches,
 
-{{< katex display=true >}}
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-{{< /katex >}}
+\mathcal{P} = [P_1, P_2, \ldots, P_N]
