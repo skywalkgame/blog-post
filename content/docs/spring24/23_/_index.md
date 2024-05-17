@@ -74,7 +74,7 @@ For example, in the task of converting the music data format from ABC notation t
 ***1. Processing Various Digital Media***
 
 **Overview**
-To assess the flexibility and versatility of the bGPT model, we conducted experiments with various types of digital media data. This involved handling a wide range of file types including text, audio, and image data, with the aim to measure the model's ability to process these types and to see how well bGPT generalizes compared to specialized models. The experiment included both generative modeling and classification tasks.
+To assess the flexibility and versatility of the bGPT model, experiments with various types of digital media data were conducted. This involved handling a wide range of file types including text, audio, and image data, with the aim to measure the model's ability to process these types and to see how well bGPT generalizes compared to specialized models. The experiment included both generative modeling and classification tasks.
 
 **Experimental Data**
 The datasets used in the experiment included:
