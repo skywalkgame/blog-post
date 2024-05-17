@@ -13,7 +13,9 @@ In this paper, bGPT is introduced. bGPT is designed to model digital data at the
     <img src=framework.JPG width="800"> 
 </p>
 The bGPT framework simulates digital systems using native binary data. It integrates diverse data types into a single model by treating everything as a byte sequence.
+
 ***
+
 ### **Exploring bGPT**
 ***Architecture*** 
 Learning patterns in digital systems at the byte level provides a unified approach to integrating various data types, but the high resolution of bytes results in long sequences that significantly increase computational costs. This issue is especially pronounced in transformer-based models, limiting the efficiency and scalability of processing binary data.
@@ -28,7 +30,7 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 - **Byte-Level Decoder**: Based on the predicted patch features, the byte sequence within each patch is reconstructed. The byte-level decoder uses the features of each patch to predict the next byte within that patch, processing the detailed information of the entire byte sequence.
 ***
 ### Model Training
-**Generative Modeling**
+***Generative Modeling***
 
 This approach requires the model to predict the next byte in a given byte sequence. The model takes the byte sequence \( B = \{b_1, b_2, \ldots, b_T\} \) as input and utilizes all previous byte information to predict the next byte \( b_{i+1} \) at each position.
 
@@ -36,7 +38,8 @@ As a loss function, the negative log likelihood of the next byte at each step is
 
 \[ L_{\text{GEN}}(\theta) = -\sum_{i=1}^{T-1} \log p(b_{i+1} \mid b_1, b_2, \ldots, b_i; \theta) \]
 
-**Classification**
+
+***Classification***
 
 Based on the knowledge acquired through generative modeling, bGPT can also be applied to classification tasks for labeled datasets. In this process, the model takes a byte sequence as input and predicts the category to which that sequence belongs.
 
