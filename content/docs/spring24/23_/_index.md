@@ -18,5 +18,5 @@ The bGPT framework simulates digital systems using native binary data. It integr
 ***Architecture*** 
 Learning patterns in digital systems at the byte level provides a unified approach to integrating various data types, but the high resolution of bytes results in long sequences that significantly increase computational costs. This issue is especially pronounced in transformer-based models, limiting the efficiency and scalability of processing binary data.
 bGPT is equipped with a hierarchical structure designed to efficiently handle entire byte sequences. This structure segments a sequence of byte 
-$B = \{b_1, b_2, \ldots, b_T\}$   of length $\( T \)$ into a sequence of patches $\( P \)$, where each patch contains exactly $\( S \)$ bytes:
+$B = \{b_1, b_2, \ldots, b_T\}$   of length $\( T \)$ into a sequence of patches %mathcal{P}%, where each patch contains exactly $\( S \)$ bytes:
 %\mathcal{P} = [P_1, P_2, \ldots, P_N]$ where %( N = \left\lceil \frac{T}{S} \right\rceil \)% is the number of patches,
