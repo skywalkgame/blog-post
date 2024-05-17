@@ -22,3 +22,10 @@ Selective Fact Forgetting and Information Leakage Prevention:
 
 3. Larimar effectively supports selective fact forgetting and prevents information leakage using its one-shot memory updating mechanism.
 Recursive Search-Based Solution for Long Context Generalization: A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
+## Results
+
+## Conclusion
+
+## References
+https://arxiv.org/abs/2403.11901
+[brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
