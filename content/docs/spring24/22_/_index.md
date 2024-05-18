@@ -33,6 +33,9 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
     (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data)
 </p>
 
+### Autoencoder
+
+### Memory network
 
 ### Neocortex-Hippocampus interactions
 This paper imitates the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
@@ -55,7 +58,7 @@ Recursive Search-Based Solution for Long Context Generalization: A simple recurs
 ## Model architecture
 Larimar consists of three main components: encoder, decoder, and adaptive memory.
 1) Encoder: Transforms the input into a latent vector
-2) Decoder: 
+2) Decoder: Generates an answer to the question conditioned on the memory
 3) Memory: Stores episodes in encoded form
 
 ## Memory Operations
