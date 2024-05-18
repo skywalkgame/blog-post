@@ -4,7 +4,7 @@ bookToc: True
 weight: 1
 ---
 
-# Mixture-of-Depths: Dynamically allocating compute in transformer-based language models
+# **Mixture-of-Depths: Dynamically allocating compute in transformer-based language models**
 *Authors: Dativd Raposo(Google DeepMind) and Adam Santoro(Google DeepMind) et.al*
 
 
@@ -28,7 +28,7 @@ Therefore, the things that authors of this paper contributed in this paper are l
 2. Comparing this method with vanilla Transformer(isoFLOP) &  Mixture-of-Experts(MoE) & Combined version of MoE + MoD = MoDE
 3. With this method, MoD achieves better performance than vanilla Transformer in isoFLOPs & faster inference speed.
 
-## Background 
+## **Background**
 
 #### Early Exit method
 
@@ -55,21 +55,25 @@ MoE is an model which consists of parallel expert models which is fitted to cert
 Like MoD, token-level routing decisions are made across the network depth.  
 Difference between MoD is, MoD chooses path to transformer or to residual connection, MoE chooses path to transformer(Expert) or to transformer(Expert) or both.
 
-## Implementing Mixture-of-Depth Transformers
+## **Implementing Mixture-of-Depth Transformers**
 
-#### Defining a compute budget
+High-level strategy of Mixture-of-Depths is as follows:
 
-#### Routing around transformer blocks
+#### **Defining a compute budget**
 
-#### Routing schemes
+To manage compute budgets in transformers, we use **capacity**, which is the total number of tokens processed. In vanilla transformers, capacity (T) covers all tokens in self-attention and MLP layers. MoE transformers split this capacity across multiple experts, balancing the compute load. Compute budgets, measured in FLOPs, depend on token capacity rather than routing decisions. Lowering computation capacity can reduce the budget without performance loss if the model learns to prioritize important tokens. Efficient routing schemes are essential for selecting these tokens dynamically. This approach optimizes computation and maintains performance within budget constraints.
 
-#### Routing implementation
+#### **Routing around transformer blocks**
 
-#### Sampling
+#### **Routing schemes**
 
-## Results & Discussion
+#### **Routing implementation**
 
-## References
+#### **Sampling**
+
+## **Results & Discussion**
+
+## **References**
 
 Fig 2. https://www.sciencedirect.com/science/article/pii/S0893608022002532  
 Fig 3. https://deepgram.com/learn/mixture-of-experts-ml-model-guide  
