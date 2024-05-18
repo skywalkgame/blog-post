@@ -7,7 +7,7 @@ weight: 1
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
 ## Background
-Pre-trained Large Language Models (LLMs) have achieved impressive performance on various Natural Language Processing (NLP) tasks, and are often considered as knowledge repositories. However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the "knowledge update" problem.
+Pre-trained Large Language Models (LLMs) have demonstrated outstanding performance on various Natural Language Processing (NLP) problems, and are often considered as knowledge repositories. However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the "knowledge update" problem.
 
 ### Knowledge update in LLM research
 In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploymemnt, the knowledge of the LLM needs to be constantly updated. To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Firgures below shows why do we need knowledge update with detailed examples.
