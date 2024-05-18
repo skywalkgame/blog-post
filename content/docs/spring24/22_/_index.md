@@ -35,6 +35,8 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
 
 ### Autoencoder
 
+TODO : This content can be erased
+
 <p align="center">
     <img src='auto encoder.png' width="600">
 </p>
@@ -44,6 +46,7 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
 
 
 ### Memory network
+
 
 ### Neocortex-Hippocampus interactions
 This paper imitates the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
