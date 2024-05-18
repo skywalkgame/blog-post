@@ -7,11 +7,17 @@ weight: 1
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
 ## Background
-### Knowledge update
+Pre-trained Large Language Models (LLMs) have achieved impressive performance on various Natural Language Processing (NLP) tasks, and are often considered as knowledge repositories. However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the 'knowledge update' problem.
+
+### Knowledge update in LLM research
+In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploymemnt, the knowledge of the LLM needs to be constantly updated. To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Firgures below shows why do we need knowledge update with detailed examples.
+<p align="left">
+    <img src='knowledge update.png' width="200">
+</p>
 
 
 ### Neocortex-Hippocampus interactions
-This paper imitate the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
+This paper imitates the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
 <p align="center">
     <img src=brain.png width="400"> 
 </p>
