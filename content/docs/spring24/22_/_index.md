@@ -14,6 +14,12 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
 <p align="center">
     <img src='knowledge update.png' width="600">
 </p>
+<p align="center">
+    <img src='context length generalization.png' width="600">
+</p>
+<p align="center">
+    <img src='selective fact forgetting.png' width="600">
+</p>
 
 
 ### Neocortex-Hippocampus interactions
