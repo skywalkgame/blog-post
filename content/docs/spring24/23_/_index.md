@@ -19,6 +19,7 @@ The bGPT framework simulates digital systems using native binary data. It integr
 ### **Exploring bGPT**
 
 ***Architecture*** 
+
 Learning patterns in digital systems at the byte level provides a unified approach to integrating various data types, but the high resolution of bytes results in long sequences that significantly increase computational costs. This issue is especially pronounced in transformer-based models, limiting the efficiency and scalability of processing binary data.
 bGPT is equipped with a hierarchical structure designed to efficiently handle entire byte sequences. This structure segments a sequence of byte 
 {{< katex >}}B = \{b_1, b_2, \ldots, b_T\}{{< /katex >}} of length {{< katex >}}T{{< /katex >}} into a sequence of patches {{< katex >}}mathcal{P}{{< /katex >}}, where each patch contains exactly {{< katex >}}S{{< /katex >}} bytes:
@@ -37,6 +38,7 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 ***Model Training***
 
 **1. Generative Modeling**
+
 This approach requires the model to predict the next byte in a given byte sequence. The model takes the byte sequence {{< katex >}}\( B = \{b_1, b_2, \ldots, b_T\} \){{< katex >}} as input and utilizes all previous byte information to predict the next byte {{< katex >}}\( b_{i+1} \){{< katex >}} at each position.
 
 As a loss function, the negative log likelihood of the next byte at each step is minimized. This encourages the model to maximize the likelihood of the actual occurrence of the next byte.
@@ -73,7 +75,7 @@ For example, in the task of converting the music data format from ABC notation t
 
 ***1. Processing Various Digital Media***
 
-**Overview**
+**Experiment Overview**
 To assess the flexibility and versatility of the bGPT model, experiments with various types of digital media data were conducted. This involved handling a wide range of file types including text, audio, and image data, with the aim to measure the model's ability to process these types and to see how well bGPT generalizes compared to specialized models. The experiment included both generative modeling and classification tasks.
 
 **Experimental Data**
@@ -86,7 +88,6 @@ The datasets used in the experiment included:
 These datasets are ideal resources for evaluating the diverse media processing capabilities of bGPT.
 
 **Experimental Setup** 
-
 The bGPT model was trained under various settings:
 
 - **bGPTimage**: Trained exclusively with image data (ImageNet).
@@ -104,11 +105,9 @@ Each model was fine-tuned for specific types of classification and generative ta
 ***2.  Algorithm and Hardware Simulation***  
 
 **Experiment Overview** 
-
 One of the unique capabilities of the bGPT model is its ability to simulate the operations of algorithms and hardware. This experimental section assesses how bGPT handles complex data conversion processes and CPU state modeling tasks. These capabilities are particularly significant in the fields of cybersecurity, system diagnostics, and hardware optimization.
 
 **Experiment Methods** 
-
 bGPT's performance was evaluated in the following two key areas:
 
 - **Data Conversion**: This experiment evaluates whether bGPT can learn the process of converting ABC music notation into MIDI format. The task tests how bGPT models complex algorithms and their ability to convert actual music files.
