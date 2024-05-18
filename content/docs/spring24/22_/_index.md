@@ -95,7 +95,10 @@ https://arxiv.org/abs/2207.04901
 https://arxiv.org/abs/2402.05813
  -> Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models
 
-
 https://arxiv.org/abs/2403.11901
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
+
+https://openreview.net/forum?id=Harn4_EZBw
+ -> Generative Pseudo-Inverse Memory
+
