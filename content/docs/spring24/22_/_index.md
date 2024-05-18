@@ -35,6 +35,14 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
 
 ### Autoencoder
 
+<p align="center">
+    <img src='auto encoder.png' width="600">
+</p>
+<p align="center">
+    (Fig4. Autoencoder)
+</p>
+
+
 ### Memory network
 
 ### Neocortex-Hippocampus interactions
