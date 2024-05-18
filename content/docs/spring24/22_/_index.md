@@ -15,14 +15,21 @@ In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploym
     <img src='knowledge update.png' width="600">
 </p>
 <p align="center">
-    Fig1. Knowledge update: new knowledge should be injected constantly
+    (Fig1. Knowledge update: New knowledge should be injected constantly)
 </p>
 
 <p align="center">
     <img src='context length generalization.png' width="600">
 </p>
 <p align="center">
+    (Fig2. Context length generalization: The ability to quickly update the LLM can help with 'input context length generalization problem')
+</p>
+
+<p align="center">
     <img src='selective fact forgetting.png' width="600">
+</p>
+<p align="center">
+    (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data)
 </p>
 
 
