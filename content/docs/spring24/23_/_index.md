@@ -27,7 +27,7 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 {{< katex >}}B = \{b_1, b_2, \ldots, b_T\}{{< /katex >}} of length {{< katex >}}T{{< /katex >}} into a sequence of patches {{< katex >}}\mathcal{P}{{< /katex >}}, where each patch contains exactly {{< katex >}}S{{< /katex >}} bytes:
 {{< katex >}}\mathcal{P} = [P_1, P_2, \ldots, P_N]{{< /katex >}} where {{< katex >}}N = \left\lceil \frac{T}{S} \right\rceil{{< /katex >}} is the number of patches,
 
-{{< katex >}}P_i = [b_{(i-1)S+1}, \ldots, b_{(i)S}]{{< /katex >}} for {{< katex >}}( 1 \leq i \leq N){{< /katex >}}, {{< katex >}}P_N = [b_{(N-1)S+1}, \ldots, b_T, \underbrace{e, \ldots, e}_{S - (T \mod S)}]{{< /katex >}} where {{< katex >}}e{{< /katex >}} represents the `<eop>` (end-of-patch).
+{{< katex >}}P_i = [b_{(i-1)S+1}, \ldots, b_{(i)S}]{{< /katex >}} for {{< katex >}}( 1 \leq i \leq N){{< /katex >}}, if {{< katex >}}T \mod S \neq 0{{< /katex >}}, the last patch defined as {{< katex >}}P_N = [b_{(N-1)S+1}, \ldots, b_T, \underbrace{e, \ldots, e}_{S - (T \mod S)}]{{< /katex >}} where {{< katex >}}e{{< /katex >}} represents the `<eop>` (end-of-patch).
 
 ***Components***
 <p align="center">
@@ -43,10 +43,10 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 
 **1. Generative Modeling**
 
-This approach requires the model to predict the next byte in a given byte sequence. The model takes the byte sequence {{< katex >}}B = \{b_1, b_2, \ldots, b_T\}{{< katex >}} as input and utilizes all previous byte information to predict the next byte {{< katex >}}b_{i+1}{{< katex >}} at each position.
+This approach requires the model to predict the next byte in a given byte sequence. The model takes the byte sequence {{< katex >}}B = \{b_1, b_2, \ldots, b_T\}{{< /katex >}} as input and utilizes all previous byte information to predict the next byte {{< katex >}}b_{i+1}{{< /katex >}} at each position.
 
 As a loss function, the negative log likelihood of the next byte at each step is minimized. This encourages the model to maximize the likelihood of the actual occurrence of the next byte.
-{{< katex >}}\mathcal{L}_{\text{GEN}}(\theta) = - \sum_{i=1}^{T-1} \log p(b_{i+1} \mid b_1, b_2, \ldots, b_i; \theta){{< katex >}}
+{{< katex >}}\mathcal{L}_{\text{GEN}}(\theta) = - \sum_{i=1}^{T-1} \log p(b_{i+1} \mid b_1, b_2, \ldots, b_i; \theta){{< /katex >}}
 
 
 **2. Classification**
@@ -54,7 +54,7 @@ As a loss function, the negative log likelihood of the next byte at each step is
 Based on the knowledge acquired through generative modeling, bGPT can also be applied to classification tasks for labeled datasets. In this process, the model takes a byte sequence as input and predicts the category to which that sequence belongs.
 For classification tasks, the loss function used is the cross-entropy loss, which ensures that the model accurately outputs the prediction probabilities for each category.
 
-{{< katex >}}\mathcal{L}_{\text{CLF}}(\theta) = - \sum_{k=1}^{K} y_k \log p(y_k \mid B; \theta){{< katex >}}
+{{< katex >}}\mathcal{L}_{\text{CLF}}(\theta) = - \sum_{k=1}^{K} y_k \log p(y_k \mid B; \theta){{< /katex >}}
 
 
 These training objectives enable bGPT to understand various byte-based data and accurately mimic digital patterns of the real world. The combination of generative approaches and classification capabilities grants the model the flexibility to tackle a diverse range of problems. Through this, the model can go beyond simple pattern recognition to play a crucial role in predicting and analyzing the operations of complex digital systems.
