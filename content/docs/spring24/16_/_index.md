@@ -61,7 +61,7 @@ High-level strategy of Mixture-of-Depths is as follows:
 
 #### **Defining a compute budget**
 
-To manage compute budgets in transformers, we use **capacity**, which is the total number of tokens processed. In vanilla transformers, capacity (T) covers all tokens in self-attention and MLP layers. MoE transformers split this capacity across multiple experts, balancing the compute load. Compute budgets, measured in FLOPs, depend on token capacity rather than routing decisions. Lowering computation capacity can reduce the budget without performance loss if the model learns to prioritize important tokens. Efficient routing schemes are essential for selecting these tokens dynamically. This approach optimizes computation and maintains performance within budget constraints.
+To manage compute budgets in transformers, we use **capacity**, which is the total number of tokens processed. In vanilla transformers, capacity ($T$) covers all tokens in self-attention and MLP layers. MoE transformers split this capacity across multiple experts, balancing the compute load. Compute budgets, measured in FLOPs, depend on token capacity rather than routing decisions. Lowering computation capacity can reduce the budget without performance loss if the model learns to prioritize important tokens. Efficient routing schemes are essential for selecting these tokens dynamically. This approach optimizes computation and maintains performance within budget constraints.
 
 #### **Routing around transformer blocks**
 
