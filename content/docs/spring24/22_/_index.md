@@ -56,6 +56,17 @@ Recursive Search-Based Solution for Long Context Generalization: A simple recurs
 ## Conclusion
 
 ## References
+
+https://arxiv.org/abs/2310.16218
+ -> Knowledge Editing for Large Language Models: A Survey
+
+https://arxiv.org/abs/2207.04901
+ -> Exploring Length Generalization in Large Language Models
+
+https://arxiv.org/abs/2402.05813
+ -> Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models
+
+
 https://arxiv.org/abs/2403.11901
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
