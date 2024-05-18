@@ -35,6 +35,7 @@ bGPT is equipped with a hierarchical structure designed to efficiently handle en
 - **Patch-Level Decoder**: The embedded patches are processed by a patch-level decoder. This decoder plays a role in predicting the features of the next patch from the embedding of each patch, thereby learning the structural patterns of the entire dataset.
 - **Byte-Level Decoder**: Based on the predicted patch features, the byte sequence within each patch is reconstructed. The byte-level decoder uses the features of each patch to predict the next byte within that patch, processing the detailed information of the entire byte sequence.
 
+
 ***Model Training***
 
 **1. Generative Modeling**
