@@ -69,6 +69,14 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 2) Decoder: Generates an answer to the question conditioned on the memory
 3) Memory: Stores episodes in encoded form
 
+<p align="center">
+    <img src='architecture.png' width="600">
+</p>
+<p align="center">
+    (Fig6. Larimar architecture)
+</p>
+
+
 ## Memory Operations
 
 
