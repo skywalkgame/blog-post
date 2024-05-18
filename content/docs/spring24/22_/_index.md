@@ -50,8 +50,17 @@ Selective Fact Forgetting and Information Leakage Prevention:
 
 3. Larimar effectively supports selective fact forgetting and prevents information leakage using its one-shot memory updating mechanism.
 Recursive Search-Based Solution for Long Context Generalization: A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
+
+
 ## Model architecture
+Larimar consists of three main components: encoder, decoder, and adaptive memory.
+1) Encoder: Transforms the input into a latent vector
+2) Decoder: 
+3) Memory: Stores episodes in encoded form
+
 ## Memory Operations
+
+
 ## Results
 
 ## Conclusion
