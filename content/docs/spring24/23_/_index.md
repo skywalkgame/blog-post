@@ -107,6 +107,18 @@ Each model was fine-tuned for specific types of classification and generative ta
 - **Text Processing**: bGPTwiki showed high classification accuracy on the AG News dataset, indicating bGPT's strong performance in text-based tasks.
 - **Audio Processing**: bGPTlibri demonstrated excellent performance on the Speech Commands v2 dataset, showcasing its high potential in audio processing.
 - **Image Processing**: bGPTimage recorded high accuracy on the CIFAR-10 dataset but showed somewhat lower performance on ImageNet. This suggests that while bGPT works well with relatively simple images, it may have limitations with more complex images.
+  | Model           | \| AG News (4 classes) \| |           | CIFAR-10 (10 classes) \| |           | Speech Commands v2 (36 classes) \| |
+|-----------------|----------------------------|-----------|----------------------------|-----------|------------------------------------|
+|                 | BPB     | Acc (%)           | BPB       | Acc (%)                    | BPB       | Acc (%)                            |
+|-----------------|---------|-------------------|-----------|----------------------------|-----------|------------------------------------|
+| bGPT_random     | 1.3496  | 84.74             | 3.4928    | 76.73                      | 1.5414    | 92.43                              |
+| bGPT_wiki       | **1.0639**  | **92.49**             | 3.6663    | 77.02                      | 1.5719    | 93.56                              |
+| bGPT_image      | 1.4179  | 83.16             | **3.1234**    | **88.69**                      | 1.5326    | 93.91                              |
+| bGPT_libri      | 1.3993  | 83.59             | 3.3345    | 83.51                      | **1.4818**    | **96.03**                              |
+| bGPT_signal     | 1.4058  | 83.80             | 3.1554    | 87.65                      | 1.4898    | 95.66                              |
+| bGPT_mix        | 1.0935  | 91.75             | 3.2279    | 84.32                      | 1.5086    | 95.09                              |
+| Baselines       | 0.9237  | 94.50             | —         | **98.13**                      | —         | **98.11**                              |
+
 
 ***2.  Algorithm and Hardware Simulation***  
 
