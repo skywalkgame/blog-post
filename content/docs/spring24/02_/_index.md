@@ -13,7 +13,7 @@ weight: 1
 <p align="center">
     Fig1. Comparison of 3D gaussian splatting and proposed SUNDAE
 </p>
-Conventional 3D Gaussian Splatting
+Conventional 3D Gaussian Splatting (3DGS)
 - Pros: Superior rendering speed and quality
 - Cons: High memory consumption
 
@@ -28,11 +28,11 @@ Proposed SUNDAE
     <img src='fig2.png' width="600">
 </p>
 <p align="center">
-    Fig2. Conceptual illustration of vanilla 3D gaussian splatting, SUNDAE spectral pruning technique, and neural compensation.
+    Fig2. Conceptual illustration of vanilla 3DGS, SUNDAE spectral pruning technique, and neural compensation.
 </p>  
 
-### Conventional 3D gaussian splatting (3DGS)
-Recently, 3D Gaussian splatting (3DGS) [29][64][51] has been proposed as a novel 3D scene representation, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
+### 3DGS
+Recently, 3DGS has been proposed as a novel 3D scene representation, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
 3DGS demonstrates notable advantages in rendering speed, rendering quality, and training time. But it requires a large storage.
 
 ### Spectral graph pruning
@@ -56,4 +56,4 @@ To address an inevitable decrease in rendering quality, they employ a neural com
 ## Conclusion
 - They propose SUNDAE, a novel approach to spectrally prune Gaussian fields with neural compensation, efficiently capturing the relationship between Gaussian primitives using graph signal processing and blending information to offset pruning-induced information loss.
 - By leveraging spatial information among Gaussian primitives to construct a graph and spectrally pruning less significant ones, they employ a lightweight neural network to compensate for quality degradation post-pruning.
-- Experimental findings demonstrate SUNDAE's ability to maintain the efficiency of 3D Gaussian Splatting while significantly reducing its size across various scenarios.
+- Experimental findings demonstrate SUNDAE's ability to maintain the efficiency of 3DGS while significantly reducing its size across various scenarios.
