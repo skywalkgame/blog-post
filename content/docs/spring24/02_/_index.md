@@ -59,7 +59,7 @@ To address an inevitable decrease in rendering quality, they employ a neural com
     <img src='tab1.png' width="600">
 </p>
 <p align="center">
-    Fig2. Quatitative evaluation of SUNDAE.
+    Table 1. Quatitative evaluation of SUNDAE.
 </p>  
 
 SUNDAE demonstrates strong performance across various metrics, including PSNR, SSIM, FPS, and memory usage. 
@@ -74,13 +74,14 @@ SUNDAE demonstrates strong performance across various metrics, including PSNR, S
     <img src='fig5.png' width="600">
 </p>
 <p align="center">
-    Fig2. Qualitative results of SUNDAE.
+    Fig3. Qualitative results of SUNDAE.
 </p>  
 
 The qualitative results demonstrate that SUNDAE achieves comparable novel view synthesis quality with significantly lower memory consumption (1% or 10%).
 - The graph effectively captures primitive relationships, while the neural compensation head preserves rendering quality.
 - Spectral pruning notably removes outliers near the camera, enhancing scene coherence.
-- 
+
+  
 ### Ablation Study
 
 ### Efficiency Evaluation
