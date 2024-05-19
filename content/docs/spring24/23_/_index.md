@@ -134,6 +134,13 @@ bGPT's performance was evaluated in the following two key areas:
 
 **Results and Analysis** 
 
+# Two Images Side by Side
+
+<p float="left">
+  <img src="dataconversion.JPG" alt="Image 1" width="400" />
+  <img src="cpumodeling.JPG" alt="Image 2" width="400" /> 
+</p>
+
 - **Data Conversion Performance**: bGPT performed the conversion between MIDI and ABC notation with high accuracy. Notably, it also showed high accuracy in converting MIDI back to ABC notation, indicating that bGPT successfully learned the inherent structures and patterns of the data.
 - **CPU State Modeling Performance**: bGPT accurately predicted the resulting state of CPUs from an initial state across a variety of CPU instructions. It achieved over 99% accuracy even with complex instruction sequences, demonstrating bGPT's detailed understanding of the internal workings of hardware.
 
