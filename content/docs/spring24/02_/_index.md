@@ -13,15 +13,16 @@ weight: 1
 <p align="center">
     Fig1. Comparison of 3D gaussian splatting and proposed SUNDAE
 </p>
-Conventional 3D Gaussian Splatting (3DGS)
-- Pros: Superior rendering speed and quality
-- Cons: High memory consumption
 
-Proposed SUNDAE
-- It constructs a memory-efficient Gaussian field using spectral pruning and neural compensation. 
-- It considers the relationship between primitives, reducing memory usage while maintaining rendering quality.
-- It significantly reduces memory consumption while preserving high rendering quality.
-- Code: https://runyiyang.github.io/projects/SUNDAE/.
+Conventional 3D Gaussian Splatting (3DGS) 
+- Pros: Superior rendering speed and quality  
+- Cons: High memory consumption  
+  
+Proposed SUNDAE  
+- It constructs a memory-efficient Gaussian field using spectral pruning and neural compensation.  
+- It considers the relationship between primitives, reducing memory usage while maintaining rendering quality.  
+- It significantly reduces memory consumption while preserving high rendering quality.  
+- Code: https://runyiyang.github.io/projects/SUNDAE/.  
 
 ## Introduction
 <p align="center">
