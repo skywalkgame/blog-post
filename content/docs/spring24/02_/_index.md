@@ -83,19 +83,36 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
 
   
 ### Ablation Study
+
+<p align="center">
+    <img src='fig7.png' width="600">
+</p>
+<p align="center">
+    Fig4. Ablations experiment on the ratio 𝛾 of the bandlimited filter of graph based pruning.
+</p>  
+
 - **Band-limited ratio of Graph-based pruning:**
-  - The band-limited filter's ratio, represented by 𝛾, significantly impacts rendering quality, with a 𝛾 value of 50% yielding the most favorable outcomes, emphasizing the advantage of spectral pruning in preserving important high-frequency details and low-frequency background.
+  - The band-limited filter's ratio, represented by 𝛾, significantly impacts rendering quality, with a 𝛾 value of 50% yielding the most favorable outcomes, emphasizing the advantage of spectral pruning in preserving important high-frequency details and low-frequency background (Fig. 4).
+    
+<p align="center">
+    <img src='tab3.png' width="600">
+</p>
+<p align="center">
+    Table 2. Ablations of neural compensation module size.
+</p>  
+
+<p align="center">
+    <img src='fig6.png' width="600">
+</p>
+<p align="center">
+    Fig 5. Visualization with and without neural compensation.
+</p>  
+
 - **The compensation performance of the network:**
-  - Employing the neural compensation module enhances performance across all sampling rates, as evidenced by Table 3 and visualization results in Fig. 6, highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
+  - Employing the neural compensation module enhances performance across all sampling rates evide(Table 3, Fig. 5), highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
 - **Neural Compensation Module Size:**
-  - Increasing the size of the neural compensation module does not necessarily enhance rendering quality, as shown in Tab. 3, aligning with findings from ADOP and indicating a balance between quality and memory usage.
-- **Sample More Points:**
-  - Preserving 50% of primitives outperforms the original 3DGS in rendering quality, with further tests indicating that keeping 80% of primitives improves quality marginally while diminishing storage efficiency.
-- **Continuous Pruning:**
-  - Continuous pruning strategy reduces peak memory usage but is challenging to control for final memory and may cause quality loss due to parameter sensitivity, justifying the preference for the training-then-pruning strategy.
-
-### Efficiency Evaluation
-
+  - Increasing the size of the neural compensation module does not necessarily enhance rendering quality (Table 2), aligning with findings from ADOP and indicating a balance between quality and memory usage.
+    
 
 ## Conclusion
 - They propose SUNDAE, a novel approach to spectrally prune Gaussian fields with neural compensation, efficiently capturing the relationship between Gaussian primitives using graph signal processing and blending information to offset pruning-induced information loss.
