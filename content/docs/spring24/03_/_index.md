@@ -34,7 +34,7 @@ weight: 1
 
 ### 5.5 Example
 <p align="center">
-    <img src='Figure4.png' width="600">
+    <img src='./Figure4.png' width="600">
 </p>
 
 ## 6. Results
