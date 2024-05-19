@@ -7,10 +7,17 @@ weight: 1
 *Authors: Yang, Runyi, et al
 
 ## Summary
+3D Gaussian Splatting
+- Pros: Superior rendering speed and quality
+- Cons: High memory consumption
 
-## Background
-Pre-trained Large Language Models (LLMs) have demonstrated outstanding performance on various Natural Language Processing (NLP) tasks.
-However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the "knowledge update" problem.
+SUNDAE
+- SUNDAE constructs a memory-efficient Gaussian field using spectral pruning and neural compensation. 
+- SUNDAE considers the relationship between primitives, reducing memory usage while maintaining rendering quality.
+- SUNDAE significantly reduces memory consumption while preserving high rendering quality.
+- Code: https://runyiyang.github.io/projects/SUNDAE/.
+
+## Introduction
 
 ### 
 
