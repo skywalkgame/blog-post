@@ -136,7 +136,7 @@ bGPT's performance was evaluated in the following two key areas:
 
 # Two Images Side by Side
 
-<p float="left">
+<p float="center">
   <img src="dataconversion.JPG" alt="Image 1" width="400" />
   <img src="cpumodeling.JPG" alt="Image 2" width="400" /> 
 </p>
