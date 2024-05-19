@@ -85,10 +85,14 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
 ### Ablation Study
 - **Band-limited ratio of Graph-based pruning:**
   - The band-limited filter's ratio, represented by 𝛾, significantly impacts rendering quality, with a 𝛾 value of 50% yielding the most favorable outcomes, emphasizing the advantage of spectral pruning in preserving important high-frequency details and low-frequency background.
-- **The compensation performance of the network:** Employing the neural compensation module enhances performance across all sampling rates, as evidenced by Table 3 and visualization results in Fig. 6, highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
-- **Neural Compensation Module Size:** Increasing the size of the neural compensation module does not necessarily enhance rendering quality, as shown in Tab. 3, aligning with findings from ADOP and indicating a balance between quality and memory usage.
-- **Sample More Points:** Preserving 50% of primitives outperforms the original 3DGS in rendering quality, with further tests indicating that keeping 80% of primitives improves quality marginally while diminishing storage efficiency.
-- **Continuous Pruning:** Continuous pruning strategy reduces peak memory usage but is challenging to control for final memory and may cause quality loss due to parameter sensitivity, justifying the preference for the training-then-pruning strategy.
+- **The compensation performance of the network:**
+-- Employing the neural compensation module enhances performance across all sampling rates, as evidenced by Table 3 and visualization results in Fig. 6, highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
+- **Neural Compensation Module Size:**
+-- Increasing the size of the neural compensation module does not necessarily enhance rendering quality, as shown in Tab. 3, aligning with findings from ADOP and indicating a balance between quality and memory usage.
+- **Sample More Points:**
+-- Preserving 50% of primitives outperforms the original 3DGS in rendering quality, with further tests indicating that keeping 80% of primitives improves quality marginally while diminishing storage efficiency.
+- **Continuous Pruning:**
+-- Continuous pruning strategy reduces peak memory usage but is challenging to control for final memory and may cause quality loss due to parameter sensitivity, justifying the preference for the training-then-pruning strategy.
 
 ### Efficiency Evaluation
 
