@@ -47,10 +47,6 @@ To address an inevitable decrease in rendering quality, they employ a neural com
 - A novel feature splatting and mixing module to compensate for the performance drop caused by the pruning;
 - State-of-the-art results, in terms of both quality and speed, on various benchmarks with low memory footprint.
 
-### 
-
-### Autoencoder
-
 ## Methods
 
 
@@ -58,3 +54,6 @@ To address an inevitable decrease in rendering quality, they employ a neural com
 ## Results
 
 ## Conclusion
+- They propose SUNDAE, a novel approach to spectrally prune Gaussian fields with neural compensation, efficiently capturing the relationship between Gaussian primitives using graph signal processing and blending information to offset pruning-induced information loss.
+- By leveraging spatial information among Gaussian primitives to construct a graph and spectrally pruning less significant ones, they employ a lightweight neural network to compensate for quality degradation post-pruning.
+- Experimental findings demonstrate SUNDAE's ability to maintain the efficiency of 3D Gaussian Splatting while significantly reducing its size across various scenarios.
