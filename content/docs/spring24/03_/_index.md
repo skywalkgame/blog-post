@@ -33,8 +33,9 @@ weight: 1
 ### 5.4 Recipe
 
 ### 5.5 Example
-
-{{< figure src="./Figure4.png" alt="." width="600" height="600" >}}
+<p align="center">
+    <img src='Figure4.png' width="600">
+</p>
 
 ## 6. Results
 
