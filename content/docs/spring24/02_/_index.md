@@ -12,9 +12,9 @@ weight: 1
 - Cons: High memory consumption
 
 SUNDAE
-- SUNDAE constructs a memory-efficient Gaussian field using spectral pruning and neural compensation. 
-- SUNDAE considers the relationship between primitives, reducing memory usage while maintaining rendering quality.
-- SUNDAE significantly reduces memory consumption while preserving high rendering quality.
+- It constructs a memory-efficient Gaussian field using spectral pruning and neural compensation. 
+- It considers the relationship between primitives, reducing memory usage while maintaining rendering quality.
+- It significantly reduces memory consumption while preserving high rendering quality.
 - Code: https://runyiyang.github.io/projects/SUNDAE/.
 
 ## Introduction
