@@ -3,7 +3,6 @@ type: docs
 bookToc: True
 weight: 1
 ---
-
 # Spectrally Pruned Gaussian Fields with Neural Compensation (SUNDAE)
 *Authors: Yang, Runyi, et al
 
