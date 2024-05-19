@@ -31,6 +31,10 @@ Proposed SUNDAE
     Fig2. Conceptual illustration of vanilla 3D gaussian splatting, SUNDAE spectral pruning technique, and neural compensation.
 </p>  
 
+### Conventional 3D gaussian splatting (3DGS)
+Recently, 3D Gaussian splatting (3DGS) [29][64][51] has been proposed as a novel 3D scene representation, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
+3DGS demonstrates notable advantages in rendering speed, rendering quality, and training time. But it requires a large storage.
+
 ### Spectral graph pruning
 Gaussian fields utilize a collection of Gaussian primitives as the representation of the scene. As these primitives are irregularly distributed in 3D space, we propose a graph-based data structure, rather than regular structures like grids, to capture the relationship between these primitives (middle panel of Fig. 2).
 
@@ -38,7 +42,7 @@ Gaussian fields utilize a collection of Gaussian primitives as the representatio
 ### Neural compensation
 To address an inevitable decrease in rendering quality, they employ a neural compensation head to compensate for this quality loss (right panel of Fig. 2).
 
-Contributions
+### Contributions
 - A newly proposed primitive pruning framework for Gaussian fields based upon the spectrum of primitive graphs;
 - A novel feature splatting and mixing module to compensate for the performance drop caused by the pruning;
 - State-of-the-art results, in terms of both quality and speed, on various benchmarks with low memory footprint.
