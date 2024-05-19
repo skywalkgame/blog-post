@@ -109,7 +109,7 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
 </p>  
 
 - **The compensation performance of the network:**
-  - Employing the neural compensation module enhances performance across all sampling rates evide(Table 3, Fig. 5), highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
+  - Employing the neural compensation module enhances performance across all sampling rates evide(Table 2, Fig. 5), highlighting its compensatory capability in mitigating performance drops caused by spectral pruning and effectively modeling the relationship between primitives.
 - **Neural Compensation Module Size:**
   - Increasing the size of the neural compensation module does not necessarily enhance rendering quality (Table 2), aligning with findings from ADOP and indicating a balance between quality and memory usage.
     
