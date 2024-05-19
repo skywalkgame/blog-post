@@ -7,6 +7,12 @@ weight: 1
 *Authors: Yang, Runyi, et al
 
 ## Summary
+<p align="center">
+    <img src='fig1.png' width="600">
+</p>
+<p align="center">
+    (Fig1. Comparison of 3D gaussian splatting and proposed SUNDAE)
+</p>
 Conventional 3D Gaussian Splatting
 - Pros: Superior rendering speed and quality
 - Cons: High memory consumption
