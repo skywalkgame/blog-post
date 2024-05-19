@@ -29,7 +29,8 @@ Proposed SUNDAE
 </p>
 <p align="center">
     Fig2. Conceptual illustration of vanilla 3D gaussian splatting, SUNDAE spectral pruning technique, and neural compensation.
-</p>
+</p>  
+
 ### Spectral graph pruning
 Gaussian fields utilize a collection of Gaussian primitives as the representation of the scene. As these primitives are irregularly distributed in 3D space, we propose a graph-based data structure, rather than regular structures like grids, to capture the relationship between these primitives (middle panel of Fig. 2).
 
