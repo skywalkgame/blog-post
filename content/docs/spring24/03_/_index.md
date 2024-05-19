@@ -33,7 +33,10 @@ weight: 1
 ### 5.4 Recipe
 
 ### 5.5 Example
+<<<<<<< HEAD
 
+=======
+>>>>>>> 15d1e759590876fdb9cfc52cc8fcb34544e3e8b3
 <p align="center">
     <img src='Figure4.png' width="600">
 </p>
