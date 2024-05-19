@@ -4,6 +4,7 @@ bookToc: True
 weight: 1
 ---
 # Spectrally Pruned Gaussian Fields with Neural Compensation (SUNDAE)
+*Team: Donggeon Lee, Chiho yoon
 *Authors: Yang, Runyi, et al
 
 ## Summary
