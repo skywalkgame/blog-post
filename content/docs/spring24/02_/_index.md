@@ -52,6 +52,40 @@ To address an inevitable decrease in rendering quality, they employ a neural com
 
 
 ## Results
+### Quantitative Results
+
+<p align="center">
+    <img src='tab1.png' width="600">
+</p>
+<p align="center">
+    Fig2. Quatitative evaluation of SUNDAE.
+</p>  
+
+SUNDAE demonstrates strong performance across various metrics, including PSNR, SSIM, FPS, and memory usage. 
+- Compared to existing methods on the MipNeRF360 dataset, SUNDAE achieves a balance between rendering quality and efficiency, maintaining high FPS rates while significantly reducing memory consumption.
+- Even at low sampling rates, SUNDAE remains competitive with established approaches, showcasing the effectiveness of its spectral pruning and neural compensation techniques in managing Gaussian primitive relationships and retaining scene information.
+- Overall, SUNDAE represents scenes more compactly while maintaining high quality rendering.
+
+
+### Qualitative Results
+
+<p align="center">
+    <img src='fig5.png' width="600">
+</p>
+<p align="center">
+    Fig2. Qualitative results of SUNDAE.
+</p>  
+
+The qualitative results demonstrate that SUNDAE achieves comparable novel view synthesis quality with significantly lower memory consumption (1% or 10%).
+- The graph effectively captures primitive relationships, while the neural compensation head preserves rendering quality.
+- Spectral pruning notably removes outliers near the camera, enhancing scene coherence.
+- 
+### Ablation Study
+
+### Efficiency Evaluation
+
+
+
 
 ## Conclusion
 - They propose SUNDAE, a novel approach to spectrally prune Gaussian fields with neural compensation, efficiently capturing the relationship between Gaussian primitives using graph signal processing and blending information to offset pruning-induced information loss.
