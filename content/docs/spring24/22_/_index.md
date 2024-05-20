@@ -93,6 +93,10 @@ Fig6 below shows the overall structure of Larimar. It consists of three main com
 </p>
 
 
+First, let's 
+
+sparse distributed memory is used for stroing and retrieving large amounts of information without focusing on the accuracy but on similarity of information. - wiki
+
 
 
 
