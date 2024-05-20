@@ -56,28 +56,13 @@ In this paper, authors followed the method from [6]. For more details, please re
 </p>
 
 
-### Autoencoder
-
-TODO : This content can be erased
-
-<p align="center">
-    <img src='auto encoder.png' width="600">
-</p>
-<p align="center">
-    (Fig5. Autoencoder)
-</p>
-
-
-
-
-
 ### Neocortex-Hippocampus interactions
 This paper imitates the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
 <p align="center">
     <img src=brain.png width="400"> 
 </p>
 <p align="center">
-    (Fig6. Neocortex and the Hippocampus)
+    (Fig5. Neocortex and the Hippocampus)
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
 
@@ -102,7 +87,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
     <img src='architecture.png' width="600">
 </p>
 <p align="center">
-    (Fig7. Larimar architecture)
+    (Fig6. Larimar architecture)
 </p>
 
 
