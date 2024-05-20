@@ -45,7 +45,7 @@ To tackle the problem, "memory network" was proposed. The main point of memory n
 
 For example, let's assume that you're providing new information to a pre-trained LLM. What you expect to the model is to answer the following questions based on the facts you mentioned. In this case, the model can do the job by writing the knowledge from you into a memory and reading the relevant one from the memory to answer the question. This problem is called as "Question Answering (QA)."
 
-In this paper, authors followed the method from [6]. For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
+In this paper, authors followed the basic structures from [6] to combine pre-trained LLMs and memory component. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
 
 
 <p align="center">
