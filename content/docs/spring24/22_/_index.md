@@ -103,10 +103,11 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 <p align="center">
     (Fig8. Comparison between different editing methods and the wall clock time for a single edit)
 </p>
+The experiment was conducted on a single A100 GPU. Comparing the wall clock time for each editing method across 10 single edits, as shown in Fig8, Larimar was found to be approximately 4-10 times faster than the existing ROME and GRACE methods. Additionally, Larimar demonstrates the ability to address sequential edits, batch edits, and forgetting/deletion, which were not previously addressed in existing work.
 
 ### Single Fact Editing
 <p align="center">
-    <img src='Single_fact_editing_result.PNG' width="600">
+    <img src='Single_fact_editing_result.PNG' width="500">
 </p>
 <p align="center">
     (Fig9. )
@@ -114,7 +115,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Sequential Fact Editing
 <p align="center">
-    <img src='sequential_fact_editing_result.PNG' width="400">
+    <img src='sequential_fact_editing_result.PNG' width="450">
 </p>
 <p align="center">
     (Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data)
