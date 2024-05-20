@@ -63,11 +63,25 @@ We now outline a high-level recipe for a unit-scaled model:
 
 ### Example
 
+Using the unit scaling recipe, we first build a scaled op, and then a full scaled layer. Consider a scaled projection op with learnable weights:
+
+<p align="center">
+    {{< katex >}} \operatorname{matmul}^*(X, W) & =\alpha \cdot X W {{< katex >}}
+        
+    {{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_1 & =\beta_1 \cdot G W^{\top}  {{< katex >}}
+    
+    {{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_2 & =\beta_2 \cdot X^{\top} G {{< katex >}}
+</p>
+for input {{< katex >}} X \in \mathbb{R}^{b \times m}  {{< katex >}}, weight  {{< katex >}} W \in \mathbb{R}^{m \times n} {{< katex >}}, output {{< katex >}} \mathbb{R}^{b \times n} {{< katex >}} and incoming gradients {{< katex >}} G \in \mathbb{R}^{b \times n} {{< katex >}}
+
+We show code for the above in Figure 3, which also gives a scaled layer for the Transformer FFN 
+
 <p align="center">
     <img src='./Figure3.PNG' width="900">
 </p>
+    
 <p align="center">
-    Fig4. PyTorch examples
+    Fig3. PyTorch examples
 </p>
 
 ## Results
