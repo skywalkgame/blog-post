@@ -78,7 +78,8 @@ Recursive Search-Based Solution for Long Context Generalization: A simple recurs
 
 
 ## 3. Model architecture
-Larimar consists of three main components: encoder, decoder, and adaptive memory.
+Larimar consists of three main components: encoder, decoder, and adaptive memory. They are combined to pre-trained LLM to provide efficient and accurate updating of knowledge.
+
 1) Encoder: Transforms the input into a latent vector
 2) Decoder: Generates an answer to the question conditioned on the memory
 3) Memory: Stores episodes in encoded form
@@ -89,6 +90,9 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 <p align="center">
     (Fig6. Larimar architecture)
 </p>
+
+
+
 
 
 ## 4. Memory Operations
