@@ -8,25 +8,25 @@ weight: 1
 
 ### A framework for scaling computational graphs
 
-**Computational Graphs**
++ Computational Graphs
 
-**Forward and backward graphs**
++ Forward and backward graphs
 
-**Scaled ops**
++ Scaled ops
+
++ Scaled computational graph
+
++ Constraint-scaled computational graphs
 
 **Proposition 5.1**
-
-**Scaled computational graph**
-
-**Constraint-scaled computational graphs**
 
 **Theorem 5.2**
 
 ### A scaling strategy for unit variance
 
-**Unit scaled computational graphs**
++ Unit scaled computational graphs
 
-**Selecting scaling factors**
++ Selecting scaling factors
 
 ### Weighted addition
 
@@ -50,6 +50,11 @@ weight: 1
     + Experimental Setup
 
     + Results
+
+<p align="center">
+    <img src='./Table2.png' width="600">
+</p>
+
 
 ## Related Work
 
