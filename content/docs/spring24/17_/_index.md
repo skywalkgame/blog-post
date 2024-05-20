@@ -8,7 +8,7 @@ weight: 1
 
 Author : Saleh Ashkboos, Amirkeivan Mohtashami, Maximilian L. Croci, Bo Li
 
-1. 05. 22. Posted by MyeongJi Yun, JungGyu Min, POSTECH 
+Posted by MyeongJi Yun, JungGyu Min, POSTECH 
 
 This post assumes that the reader has a structural understanding of Transformer and Llama models. If you need a detailed understanding of these models, please refer to the Transformer, LLaMa. 
 
