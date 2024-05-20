@@ -4,6 +4,8 @@ bookToc: True
 weight: 1
 ---
 # Larimar: Large Language Models with Episodic Memory Control
+*Posted by: Sunggyu Jang, Hyeonwoo Park*
+
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
 ## Background
