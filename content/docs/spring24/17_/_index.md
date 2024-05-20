@@ -60,7 +60,7 @@ $$
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
 
-<img src="./hadamard_2.png" width="200" height="200">
+<img src="./hadamard_2.png">
 ---
 
 QuaRot demonstrates that using this technique reduces the number of outliers. By applying the random Hadamard transformation, the distribution of activations is more uniform, which decreases the number of extreme values or outliers, thereby minimizing information loss during quantization.
