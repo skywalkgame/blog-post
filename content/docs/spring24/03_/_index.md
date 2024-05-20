@@ -62,11 +62,12 @@ We now outline a high-level recipe for a unit-scaled model:
 4. Replace adds with weighted adds.
 
 ### Example
+
 <p align="center">
-    <img src='./Figure4.png' width="600">
+    <img src='./Figure3.png' width="600">
 </p>
 <p align="center">
-    Fig4. Character language modelling, showing validation bits per character over a wide range of models
+    Fig4. PyTorch examples
 </p>
 
 ## Results
@@ -76,6 +77,13 @@ We now outline a high-level recipe for a unit-scaled model:
     + Experimental Setup
 
     + Results
+ 
+<p align="center">
+    <img src='./Figure4.png' width="600">
+</p>
+<p align="center">
+    Fig4. Character language modelling, showing validation bits per character over a wide range of models
+</p>
 
 + Masked language modelling
 
