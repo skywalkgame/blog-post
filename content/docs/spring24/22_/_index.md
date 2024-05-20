@@ -39,14 +39,14 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
 
 
 ### Memory network
-However, knowledge edit is not so simple as it sounds. Pre-training LLMs requires substantial computational cost due to thier unprecedented amounts of parameters. Considering that we have to introduce new knowledge into the pre-trained model frequently, re-training is not a feasible solution [2]. 
+However, knowledge edit is not so simple as it sounds. Pre-training LLMs requires substantial computational cost due to thier unprecedented amounts of parameters. Considering the fact that we have to introduce new knowledge into the pre-trained model frequently, re-training the whole model is not a feasible solution [2]. 
 
 To tackle the problem, "memory network" was proposed. The main point of memory network is "to combine the successful learning strategies developed in the machine learning literature for inference with a memory component that can be read and written to." [5]
 
+For example, let's assume that you're providing new information to a pre-trained LLM. What you expect to the model is to answer the following questions based on the facts you mentioned. In this case, the model can do the job by writing the knowledge from you into a memory and reading the relevant one from the memory to answer the question. In other words, LLM can save the facts from users and utilize the saved knowledge to answer the question.
 
+In this paper, authors followed the method from [6]. For details, please refer to '3. Model architecture' and '4. Memory Operations.'
 
-
-To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. 
 
 ### Autoencoder
 
@@ -164,12 +164,13 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
 
 [5] https://arxiv.org/abs/1410.3916
  -> Memory Networks
-
+ 
+[6] https://openreview.net/forum?id=Harn4_EZBw
+ -> Generative Pseudo-Inverse Memory
 
 https://arxiv.org/abs/2403.11901
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
 
-https://openreview.net/forum?id=Harn4_EZBw
- -> Generative Pseudo-Inverse Memory
+
 
