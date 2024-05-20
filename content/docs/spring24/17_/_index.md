@@ -65,7 +65,7 @@ This transformation pairs elements to perform simultaneous computations, allowin
 
 QuaRot demonstrates that using this technique reduces the number of outliers. By applying the random Hadamard transformation, the distribution of activations is more uniform, which decreases the number of extreme values or outliers, thereby minimizing information loss during quantization.
 
-![title](./figure2.PNG){: .center}
+![title](./figure2.PNG) 
 
 ---
 
@@ -97,7 +97,7 @@ $$
 
 Inserting online Hadamard operation can ease the activation value’s quantization difficulty within each block.  This operation is implicitly reserved by fusing a Hadamard matrix into the next matrix of the network. 
 
-![title](./figure3.PNG){: .center}
+![title](./figure3.PNG) 
 
 ---
 
@@ -143,7 +143,7 @@ $$
 
 Note that this transformation can be applied without changing final attention scores since both queries and keys are rotated, therefore no remaining Hadamard transformation exists.
 
-![title](./figure4.PNG){: .center}
+![title](./figure4.PNG) 
 
 ---
 
@@ -153,7 +153,7 @@ Step 2 involves applying various state-of-the-art techniques to quantize weights
 
 You can quantize the adjusted weights using GPTQ, or you can use a very simple round-to-nearest (RTN) technique. The paper have shown simpler method(RTN) have shown a slight sacrifice in accuracy.
 
-![title](./weight_qunat.PNG){: .center}
+![title](./weight_qunat.PNG) 
 
 ### Step 2-b. Online Quantization
 
