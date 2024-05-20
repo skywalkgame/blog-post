@@ -18,13 +18,13 @@ Large Language models ( LLMs ) like GPT-2, LLaMa have become increasingly import
 Recent research has shown that LLMs have large outliers and make quantization more difficult, especially in 4-bit case. Also, they mentioned that the activations have more outliers, which makes quantization harder. There are three main streams to solve this problem. 
 
 - Weight only quantization
-    - LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale, 2022 NeurIPs
+    - [LLM.int8()](https://arxiv.org/abs/2208.07339): 8-bit Matrix Multiplication for Transformers at Scale, 2022 NeurIPs
     - Weight quantization can ease the memory budget for saving the model. However, since activations are not quantized, the computation still involves integer and float operations, making it difficult to address compute issues.
 - Remain outlier in higher bitwidth
-    - QUIK: Towards End-to-End 4-Bit Inference on Generative Large Language Models, 2023
+    - [QUIK](https://arxiv.org/abs/2310.09259): Towards End-to-End 4-Bit Inference on Generative Large Language Models, 2023
     - Weight quantization can ease the memory budget for saving the model, and since most operations are integer X integer, compute issues are largely resolved. However, some operations still involve integer X float, and the occurrence of float values is irregular, leaving some compute issues unresolved.
 - Use calibration set and normalize activation
-    - SmoothQuant: Accurate and Efficient Post-Training Quantization for LLM, 2023 ICML
+    - [SmoothQuant](https://arxiv.org/abs/2211.10438): Accurate and Efficient Post-Training Quantization for LLM, 2023 ICML
     - Accuracy is guaranteed up to 8-bit quantization, but it is not assured with 4-bit quantization.
     
 
@@ -48,17 +48,16 @@ QuaRot uses **Random Hadamard transformation** because the result PPL is lower, 
 Random Hadamard transformation matrix H is described below : 
 
 $$
-H_{2} = \frac{1}{\sqrt2}\begin{bmatrix}
+H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
 1 & 1 \\
 1 & -1 
-\end{bmatrix}, H_{2^n} = H_2  \otimes H_{2^{n-1}}  
+\end{bmatrix}, \quad H_{2^n} = H_2 \otimes H_{2^{n-1}}
 
 $$
 
 $$
-H'= H\cdot{diag(s)}, s∼Uniform({−1,+1})
+H' = H \cdot \mathrm{diag}(s), \quad s \sim \mathrm{Uniform}(\{-1, +1\})
  
-
 $$
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
