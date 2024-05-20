@@ -134,7 +134,6 @@ bGPT's performance was evaluated in the following two key areas:
 
 **Results and Analysis** 
 
-# Two Images Side by Side
 
 <p float="center">
   <img src="dataconversion.JPG" alt="Image 1" width="400" />
