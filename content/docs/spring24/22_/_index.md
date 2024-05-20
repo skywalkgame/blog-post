@@ -77,7 +77,7 @@ Recursive Search-Based Solution for Long Context Generalization: A simple recurs
 
 
 ## 3. Model architecture
-Inspired by human brain (neocortex-hippocampus interactions), authors suggest "a class of LLMs augmented with an external episodic memory controller." To be specific, they utilize an episodic memory to mimic hippocampal fast-learning system, and use LLM as a neocortical slow learning system.
+Inspired by human brain (neocortex-hippocampus interactions), authors suggest "a class of LLMs augmented with an external episodic memory controller." They utilize an episodic memory to mimic hippocampal fast-learning system, and use LLM as a neocortical slow learning system.
 
 Fig6 below shows the overall structure of Larimar. It consists of three main components: encoder, decoder, and adaptive memory. 
 
