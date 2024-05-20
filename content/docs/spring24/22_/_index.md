@@ -86,7 +86,7 @@ Fig6 below shows the overall structure of Larimar. It consists of three main com
 3) Memory: Stores episodes in encoded form
 
 <p align="center">
-    <img src='architecture.png' width="600">
+    <img src='architecture.png' width="800">
 </p>
 <p align="center">
     (Fig6. Larimar architecture)
