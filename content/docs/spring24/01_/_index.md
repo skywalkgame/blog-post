@@ -37,8 +37,17 @@ For a relation __(s, r, o)__ expressed as a tuple in the form of __(subject, rel
     \operatorname{argmin}_{\hat{W}} =\alpha \cdot X W
   {{< /katex >}} 
 </p>
+    
 ### How model editing performance is estimated?
+Model performance is estimated with 4 main scores, and they are denoted as follow.
+#### __Efficacy Score (ES)__ 
+It measures if the new fact, we want to edit, is successfully edited to model. It is measured by percentage where P(new fact) > P(old fact) for query prompt.
 
-This work presents a detailed guide for using PM-objective-based model editing methods on the newly released Llama-3. The process involves making edits on all Llama-3-8b layers to identify the optimal layer for balancing editing accuracy and preserving existing knowledge. Once identified, single-layer editing experiments using ROME, MEMIT, and EMMET are performed. The study explores three types of edits: singular edits (editing one fact at a time), batched edits (updating multiple facts simultaneously), and sequential-batched edits (updating batches of facts sequentially on the same model). This approach aims to optimize the editing process without degrading the model's performance, addressing concerns from previous research about the adverse effects of increasing edit batch size.
+#### __Paraphrase Score (PS)__
+It measures model's ability to generalize following an edit. It is measured by where P(new fact) > P(old fact) under paraphrases of the query prompt.
 
-The study compares batched model editing with sequential-batched editing and finds that for Llama-3, sequential-batched editing with a batch size of 1024 offers optimal scaling performance. This method outperforms simple batched edits or sequential-batched edits with smaller batch sizes, highlighting the importance of sequential model editing for large-scale model updates. Additionally, sequential model editing aligns with the continual learning paradigm, providing baseline experiments and transparent procedures for future research on Llama-3 models. This work establishes benchmarks and guidelines for effectively editing models while maintaining their integrity.
+#### __Neighborhood Score (NS)__
+It represents the locality of model editing. It measures the impact of edit process on adjacent stored facts within the model. It quantifies the percentage of nearby facts that remain unchanged after edit.
+
+#### __Composite Score (S)__
+It combines aspect of edit success, generalization, and locality. It is calculated as the harmonic mean of Edit Success (ES), Paraphrase Score (PS), and Neighborhood Score (NS). It provies overall efficacy of model edits.
