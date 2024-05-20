@@ -1,5 +1,4 @@
 ---
-title: "Mixture of depths Explained"
 author:
  - "A"
  - "B"
