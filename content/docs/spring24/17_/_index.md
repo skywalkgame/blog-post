@@ -1,8 +1,3 @@
----
-type: docs
-bookToc: True
-weight: 1
----
 
 # QuaRot : Outlier-Free 4-Bit Inference in Rotated LLMs
 
