@@ -21,11 +21,11 @@ as *ops*.
 
 + Scaled ops
     +  Given an op {{< katex >}}f\left(x_1, \ldots, x_k\right){{< katex >}}, we define the *scaled op* {{< katex >}} f^*\left(x_1, \ldots, x_k, \alpha, \beta_1, \ldots, \beta_k\right) {{< katex >}} with *scaling factors* {{< katex >}} \alpha, \beta_1, \ldots, \beta_k \in \mathbb{R}^{+} {{< katex >}}, such that
-<p align="center">
-    {{< katex >}}f^* & \triangleq \alpha \cdot f\left(x_1, \ldots, x_k\right){{< katex >}}
 
-    {{< katex >}} f_{\text {grad }}^*\left(x_1, \ldots x_k, g\right)_i & \triangleq \beta_i \cdot f_{\text {grad }}\left(x_1, \ldots x_k, g\right)_i, \forall i \in[1 . . k] {{< katex >}}
-</p>
+{{< katex >}}f^* & \triangleq \alpha \cdot f\left(x_1, \ldots, x_k\right){{< katex >}}
+
+{{< katex >}} f_{\text {grad }}^*\left(x_1, \ldots x_k, g\right)_i & \triangleq \beta_i \cdot f_{\text {grad }}\left(x_1, \ldots x_k, g\right)_i, \forall i \in[1 . . k] {{< katex >}}
+
 
 + Scaled computational graph
     + A scaled computational graph is one where every op {{< katex >}}f{{< katex >}} in the forward graph is replaced by a scaled equivalent {{< katex >}}f^{*}{{< katex >}}, with the backward graph then generated to produce {{< katex >}}f^{*}_{grad}{{< katex >}} grad for each {{< katex >}}f_{grad}{{< katex >}}, using any choice of scaling factors.
@@ -65,13 +65,12 @@ We now outline a high-level recipe for a unit-scaled model:
 
 Using the unit scaling recipe, we first build a scaled op, and then a full scaled layer. Consider a scaled projection op with learnable weights:
 
-<p align="center">
-    {{< katex >}} \operatorname{matmul}^*(X, W) & =\alpha \cdot X W {{< katex >}}
+{{< katex >}} \operatorname{matmul}^*(X, W) & =\alpha \cdot X W {{< katex >}}
         
-    {{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_1 & =\beta_1 \cdot G W^{\top}  {{< katex >}}
+{{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_1 & =\beta_1 \cdot G W^{\top}  {{< katex >}}
     
-    {{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_2 & =\beta_2 \cdot X^{\top} G {{< katex >}}
-</p>
+{{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_2 & =\beta_2 \cdot X^{\top} G {{< katex >}}
+
 for input {{< katex >}} X \in \mathbb{R}^{b \times m}  {{< katex >}}, weight  {{< katex >}} W \in \mathbb{R}^{m \times n} {{< katex >}}, output {{< katex >}} \mathbb{R}^{b \times n} {{< katex >}} and incoming gradients {{< katex >}} G \in \mathbb{R}^{b \times n} {{< katex >}}
 
 We show code for the above in Figure 3, which also gives a scaled layer for the Transformer FFN 
