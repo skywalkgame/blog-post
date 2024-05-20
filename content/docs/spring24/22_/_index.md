@@ -86,7 +86,11 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 
 ## Results
-
+### Wall Clock time
+### Single Fact Editing
+### Sequential Fact Editing
+### Selective Forgetting
+### Recall Performance
 ## Conclusion
 
 ## References
