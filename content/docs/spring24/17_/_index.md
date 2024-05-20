@@ -51,10 +51,12 @@ $$
 H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
 1 & 1 \\
 1 & -1 
-\end{bmatrix}, \quad H_{2^n} = H_2 \otimes H_{2^{n-1}}
+\end{bmatrix}
 
 $$
-
+$$
+\quad H_{2^n} = H_2 \otimes H_{2^{n-1}}
+$$
 $$
 H' = H \cdot \mathrm{diag}(s), \quad s \sim \mathrm{Uniform}(\{-1, +1\})
  
