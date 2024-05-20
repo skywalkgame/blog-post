@@ -167,7 +167,7 @@ The significance of storing in 4-bit is greater than performing calculations in 
 
 ## QuaRot saves runtime & memory
 
-As highlighted in the contributions of the paper, this model demonstrates that it maintains accuracy even with 4-bit quantization, achieving the same level of accuracy as other models with significant computation overhead.
+As highlighted in the contributions of the paper, this model demonstrates that it maintains accuracy even with 4-bit quantization, achieving the same level of accuracy as other models with significant computation overhead. 4-bit quantization not experiencing any accuracy drop is significant not only because it surpasses the limitations of the existing SmoothQuant, but also because it outperforms [Omniquant](https://arxiv.org/pdf/2308.13137), which had slightly more computational overhead compared to SmoothQuant.
 ![title](./result1.PNG)
 
 The key point of QuaRot is that the process of performing the Hadamard transform for quantization to INT4 should not introduce a large overhead compared to the computational benefits gained from converting to INT4. From the perspective of the runtime of the FFN block, it has been confirmed that the overhead remains minimal regardless of layer size, model size, or batch size. Additionally, the memory saving factor ranges from x3.48 to x3.71, which is very close to the ideal value (4 = FP16 / INT4), demonstrating significant efficiency. This paper is particularly noteworthy for addressing the issue of memory overhead in long sequence scenarios by quantizing the KV cache as well.
