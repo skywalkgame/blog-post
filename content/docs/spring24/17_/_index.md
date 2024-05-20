@@ -60,12 +60,12 @@ $$
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
 
-</center><img src="./hadamard.png" width="400" height="300"></center>
+</center><img src="./hadamard_2.png" width="400" height="300"></center>
 ---
 
 QuaRot demonstrates that using this technique reduces the number of outliers. By applying the random Hadamard transformation, the distribution of activations is more uniform, which decreases the number of extreme values or outliers, thereby minimizing information loss during quantization.
 
-![Untitled](QuaRot%20Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLM%20d62affb326d24ef4881ed78b5b8e429d/Untitled%201.png)
+</center><img src="./figure2"></center>
 
 ---
 
@@ -97,7 +97,7 @@ $$
 
 Inserting online Hadamard operation can ease the activation value’s quantization difficulty within each block.  This operation is implicitly reserved by fusing a Hadamard matrix into the next matrix of the network. 
 
-![Untitled](QuaRot%20Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLM%20d62affb326d24ef4881ed78b5b8e429d/Untitled%202.png)
+</center><img src="./figure3"></center>
 
 ---
 
@@ -143,6 +143,8 @@ $$
 
 Note that this transformation can be applied without changing final attention scores since both queries and keys are rotated, therefore no remaining Hadamard transformation exists.
 
+</center><img src="./figure4"></center>
+
 ---
 
 Step 2 involves applying various state-of-the-art techniques to quantize weights and activations.
@@ -151,7 +153,7 @@ Step 2 involves applying various state-of-the-art techniques to quantize weights
 
 You can quantize the adjusted weights using GPTQ, or you can use a very simple round-to-nearest (RTN) technique. The paper have shown simpler method(RTN) have shown a slight sacrifice in accuracy.
 
-![Untitled](QuaRot%20Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLM%20d62affb326d24ef4881ed78b5b8e429d/Untitled%203.png)
+</center><img src="./weight_qunat"></center>
 
 ### Step 2-b. Online Quantization
 
@@ -172,13 +174,13 @@ The key point of QuaRot is that the process of performing the Hadamard transform
 ### Discussion and future work direction
 
 - **Why we limited to symmetric INT4 qunatization?**
-    - Numerous papers discuss the limitations of using symmetric quantization in INT4 format for quantization.  For example, ANT demonstrate that, even with the same bitwidth, numeric formats like flint and PoT(power of Two), which divide the representation into exponent and mantissa, can achieve better accuracy due to their ability to represent a wider range of values. In the figure below, the INT-4bit example uses only integers, while the others utilize new data formats. It is evident that the Mean Squared Error (MSE) significantly decreases with these new formats.
+    - Numerous papers discuss the limitations of using symmetric quantization in INT4 format for quantization.  For example, [ANT](https://ieeexplore.ieee.org/abstract/document/9923832) demonstrate that, even with the same bitwidth, numeric formats like flint and PoT(power of Two), which divide the representation into exponent and mantissa, can achieve better accuracy due to their ability to represent a wider range of values. In the figure below, the INT-4bit example uses only integers, while the others utilize new data formats. It is evident that the Mean Squared Error (MSE) significantly decreases with these new formats.
         
-        ![Untitled](QuaRot%20Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLM%20d62affb326d24ef4881ed78b5b8e429d/Untitled%204.png)
+</center><img src="./ant"></center>
         
     - QuaRot considers INT4 format for both weight quantization and activation quantization, likely because modern GPUs support efficient operations with INT4 and INT8 formats. If we could use other formats, it might be possible to maintain accuracy even with formats as small as 3-bit, leading to greater memory savings. However, maintaining computational simplicity is challenging because GPUs are not optimized for operations with custom data types, unlike INT4. Therefore, achieving optimal computation with custom data types would require the development of custom hardware.
 - Quantization + Pruning
-    - One of the authors, Dan Alistarh, has papers on GPTQ and OBS. GPTQ focuses on reconstructing matrices after quantization, while OBS deals with reconstructing models after pruning. Both papers share a common foundation in using the Hessian matrix and employ various optimization techniques such as Wood-Fisher. Combining these two approaches, the OBC study explores methods to preserve the accuracy of networks that undergo both pruning and quantization.
+    - One of the authors, Dan Alistarh, has papers on [GPTQ](https://arxiv.org/abs/2210.17323) and [OBS](https://proceedings.neurips.cc/paper/1992/file/303ed4c69846ab36c2904d3ba8573050-Paper.pdf). GPTQ focuses on reconstructing matrices after quantization, while OBS deals with reconstructing models after pruning. Both papers share a common foundation in using the Hessian matrix and employ various optimization techniques such as Wood-Fisher. Combining these two approaches, the [OBC](https://arxiv.org/abs/2208.11580) study explores methods to preserve the accuracy of networks that undergo both pruning and quantization.
     - Another paper involving the author demonstrates that SliceGPT similarly achieves effective pruning by employing the concept of computational invariance when multiplying orthogonal matrices. By analyzing the properties of orthogonal matrices in both QuaRot and SliceGPT, I believe it is possible to achieve quantization and pruning simultaneously.
 - How to reduce the overhead of online Hadamard transformation
     - The forward path in QuaRot mostly follows the activation-quantized LLMs like (), yet requires the additional task of online Hadamard transformation on attention activation. Similar to non-matmul tasks, the online Hadamard transformation can be performed by existing computational resources by converting the task into a matrix-multiplication form or tossing a task to a dedicated hardware accelerator. Unlike existing non-linear operations in conventional LLMs, the Hadamard transformation
