@@ -1,5 +1,4 @@
 ---
-title: "Choose and focus tokens on layers of transformer-based language models"
 type: docs
 bookToc: True
 weight: 1
