@@ -36,6 +36,9 @@ weight: 1
 <p align="center">
     <img src='./Figure4.png' width="600">
 </p>
+<p align="center">
+    Fig4. Character language modelling, showing validation bits per character over a wide range of models
+</p>
 
 ## Results
 
@@ -54,7 +57,9 @@ weight: 1
 <p align="center">
     <img src='./Table2.png' width="600">
 </p>
-
+<p align="center">
+    Table2. Downstream performance of regular and unit-scaled BERT models
+</p>
 
 ## Related Work
 
