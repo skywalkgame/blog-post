@@ -34,6 +34,11 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
     (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data)
 </p>
 
+
+### Memory network
+However, knowledge edit is not so simple as it sounds. 
+
+
 ### Autoencoder
 
 TODO : This content can be erased
@@ -46,7 +51,7 @@ TODO : This content can be erased
 </p>
 
 
-### Memory network
+
 
 
 ### Neocortex-Hippocampus interactions
