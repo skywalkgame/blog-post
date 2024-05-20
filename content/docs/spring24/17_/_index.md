@@ -1,8 +1,3 @@
----
-type: docs
-bookToc: True
-weight: 1
----
 
 # QuaRot : Outlier-Free 4-Bit Inference in Rotated LLMs
 
@@ -79,21 +74,21 @@ Step 1 involves applying the new schemes proposed by QuaRot to significantly red
 
 Note that the multiplication of two orthogonal matrices generates identical matrix, so inserting Q and Q^T between linear layers doesn’t change any output. 
 
-$$
+display: block {{< katex display=true >}}
 I = Q Q^T, XQQ^TW =  XW
-$$
+{{< /katex >}}
 
 Considering LayerNorm or RMSNorm at the start of the transformer multiplying some orthogonal matrices does not change output. Also, we can fuse the scaling operation of RMSNorm’s : diag(a) into an adjacent weight matrix. 
 
-$$
+display: block {{< katex display=true >}}
 RMSNorm(X) = x_i \leftarrow \frac{x_i}{||x_i||} = ( \frac{x_i * Q}{||x_i||} ) Q^T = RMSNorm (XQ^T)Q
-$$
+{{< /katex >}}
 
 So for all weights after the RMSNorm layer, the weight becomes : 
 
-$$
+display: block {{< katex display=true >}}
 W \leftarrow Q^T diag(a) W, Q = Hdiag(s)
-$$
+{{< /katex >}}
 
 ### Step 1-b. Rotate FFN
 
@@ -107,41 +102,41 @@ Inserting online Hadamard operation can ease the activation value’s quantizati
 
 This step applies Hadamard transformations to the value and output projection matrices in the attention block throughout both offline weight modification and online activation transformation. Since value and output projection weight are multiplied in each head, two matrices can be transformed using the Hadamard matrix without changing the result of attention.
 
-$$
+display: block {{< katex display=true >}}
 W_v^{(h)} \leftarrow W_v^{(h)}H_{d_h}\\W_{out}^{(h)} \leftarrow H_{d_h} W_{out}^{(h)}  
-$$
+{{< /katex >}}
 
 This transformation can be represented with Kronecker multiplication in the point of full attention computation view.
 
-$$
+display: block {{< katex display=true >}}
 W_v \leftarrow W_v(I\otimes H_{d_h})\\W_{out}\leftarrow (I\otimes H_{d_h}) W_{out}  
-$$
+{{< /katex >}}
 
 The following simple lemma defines the remaining Hadamard operation after modification.
 
-$$
+display: block {{< katex display=true >}}
 H_{a\times b}= (I\otimes H_{b}) (H_{a}\otimes I )
-$$
+{{< /katex >}}
 
 This defines the remaining Hadamard operation as the later term of the upper lemma, which results in a modification of the online forward path.
 
-$$
+display: block {{< katex display=true >}}
 Z \leftarrow Z(H_{n_h} \otimes I)
-$$
+{{< /katex >}}
 
 ### Step 1-d. Key Rotation
 
 This step applies Hadamard transformation to the key vectors in the attention module. Utilizing the RoPE method (Su et al., 2021), the positional encoding is directly attended to query and key vectors. This reshapes the attention score computation equation into a modification-convenient form. 
 
-$$
+display: block {{< katex display=true >}}
 \text{Score}=\text{Softmax}(\alpha \text{Pos}(Q_h) \text{Pos}(K_h^T)\odot M)
-$$
+{{< /katex >}}
 
 The Hadamard transformation is applied to both position encoded query and key vectors similar to step 1-c.
 
-$$
+display: block {{< katex display=true >}}
 \text{Pos}(Q) = \text{Pos}(XW_q)   \leftarrow \text{Pos}(XW_q)(I\otimes H_{d_h})\\\text{Pos}(K) = \text{Pos}(XW_k)   \leftarrow \text{Pos}(XW_k)(I\otimes H_{d_h})  
-$$
+{{< /katex >}}
 
 Note that this transformation can be applied without changing final attention scores since both queries and keys are rotated, therefore no remaining Hadamard transformation exists.
 
@@ -190,6 +185,9 @@ The key point of QuaRot is that the process of performing the Hadamard transform
 - **Toward Quantization + Pruning**
     - One of the authors, Dan Alistarh, has papers on [GPTQ](https://arxiv.org/abs/2210.17323) and [OBS](https://proceedings.neurips.cc/paper/1992/file/303ed4c69846ab36c2904d3ba8573050-Paper.pdf). GPTQ focuses on reconstructing matrices after quantization, while OBS deals with reconstructing models after pruning. Both papers share a common foundation in using the Hessian matrix and employ various optimization techniques such as Wood-Fisher. Combining these two approaches, the [OBC](https://arxiv.org/abs/2208.11580) study explores methods to preserve the accuracy of networks that undergo both pruning and quantization.
     - Another paper involving the author demonstrates that SliceGPT similarly achieves effective pruning by employing the concept of computational invariance when multiplying orthogonal matrices. By analyzing the properties of orthogonal matrices in both QuaRot and SliceGPT, I believe it is possible to achieve quantization and pruning simultaneously.
+ 
+- **Nonlinear layer Quantization**
+  - This paper discusses performing quantization in an end-to-end manner. However, it lacks detailed explanations regarding operations in layers known to require higher bitwidth, such as the input to the softmax function, gelu, and residual operations in layer normalization. Therefore, future research could potentially extend this approach to include all these operations using only low bitwidth integer calculations.
 
 - **How to reduce the overhead of online Hadamard transformation**
     - The forward path in QuaRot mostly follows the activation-quantized LLM tasks like GPTQ, yet requires the additional task of online Hadamard transformation on attention activation. The online Hadamard transformation can be performed by utilizing existing computational resources by converting the task into a matrix-multiplication form, or tossing the task to a dedicated hardware accelerator. Either way have an optimization point of acceleration, where data scheduling of the Hadamard transformation matrix into GEMM task accelerator, or utilizing various previous works about hardware accelerator Hadamard transformation with dedicated dataflow.
