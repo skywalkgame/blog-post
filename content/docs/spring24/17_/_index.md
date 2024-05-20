@@ -65,7 +65,7 @@ This transformation pairs elements to perform simultaneous computations, allowin
 
 QuaRot demonstrates that using this technique reduces the number of outliers. By applying the random Hadamard transformation, the distribution of activations is more uniform, which decreases the number of extreme values or outliers, thereby minimizing information loss during quantization.
 
-![title](./figure2.PNG){: width="50%" height="50%"}
+![title](./figure2.PNG) 
 
 ---
 
