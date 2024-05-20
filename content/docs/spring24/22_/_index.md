@@ -102,7 +102,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Single Fact Editing
 <p align="center">
-    <img src='Single_fact_editing_result.PNG' width="400">
+    <img src='Single_fact_editing_result.PNG' width="600">
 </p>
 <p align="center">
     (Fig9. )
@@ -118,7 +118,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Selective Forgetting
 <p align="center">
-    <img src='memoryerase_result.PNG' width="600">
+    <img src='memoryerase_result.PNG' width="500">
 </p>
 <p align="center">
     (Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data)
