@@ -171,7 +171,7 @@ As highlighted in the contributions of the paper, this model demonstrates that i
 ![title](./result1.PNG)
 
 Regarding the Llama-1-7ㅠ model's 4-bit quantization situation, which exhibits the largest difference from the FP16 model, we compared it with other recent papers not mentioned in the original study. It is evident that QuaRot, which has lower computational cost, outperforms the generally best-performing QAT and OmniQuant, which involves some additional training on top of SmoothQuant, in 4-bit quantization. Despite this low cost, QuaRot has the smallest inference accuracy difference from the FP16 model, making it a highly effective quantization technique. Moreover, while the original SmoothQuant may have lower computational cost at the same bandwidth due to its simplicity, as shown in the table below, its inference accuracy in 4-bit quantization is so poor that it necessitates the use of 8-bit, making comparisons with QuaRot unnecessary.
-![title](./result3.PNG)
+![title](./result3.png)
 
 The key point of QuaRot is that the process of performing the Hadamard transform for quantization to INT4 should not introduce a large overhead compared to the computational benefits gained from converting to INT4. From the perspective of the runtime of the FFN block, it has been confirmed that the overhead remains minimal regardless of layer size, model size, or batch size. Additionally, the memory saving factor ranges from x3.48 to x3.71, which is very close to the ideal value (4 = FP16 / INT4), demonstrating significant efficiency. This paper is particularly noteworthy for addressing the issue of memory overhead in long sequence scenarios by quantizing the KV cache as well.
 ![title](./result2.PNG)
