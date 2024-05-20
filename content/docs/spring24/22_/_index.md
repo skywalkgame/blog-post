@@ -94,7 +94,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 ## 5. Results
 ### Wall Clock time
 <p align="center">
-    <img src='wall_clock_time _result.PNG' width="600">
+    <img src='wall_clock_time _result.PNG' width="800">
 </p>
 <p align="center">
     (Fig8. Wall Clock Time result)
@@ -102,7 +102,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Single Fact Editing
 <p align="center">
-    <img src='Single_fact_editing_result.PNG' width="600">
+    <img src='Single_fact_editing_result.PNG' width="400">
 </p>
 <p align="center">
     (Fig9. )
@@ -110,7 +110,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Sequential Fact Editing
 <p align="center">
-    <img src='sequential_fact_editing_result.PNG' width="600">
+    <img src='sequential_fact_editing_result.PNG' width="400">
 </p>
 <p align="center">
     (Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data)
@@ -126,7 +126,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ### Recall Performance
 <p align="center">
-    <img src='recall_performance_result.PNG' width="600">
+    <img src='recall_performance_result.PNG' width="800">
 </p>
 <p align="center">
     (Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data)
