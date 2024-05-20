@@ -47,6 +47,13 @@ For example, let's assume that you're providing new information to a pre-trained
 
 In this paper, authors followed the method from [6]. For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
 
+<p align="center">
+    <img src='QA.PNG' width="600">
+</p>
+<p align="center">
+    (Fig4. Example of QA)
+</p>
+
 
 ### Autoencoder
 
@@ -56,7 +63,7 @@ TODO : This content can be erased
     <img src='auto encoder.png' width="600">
 </p>
 <p align="center">
-    (Fig4. Autoencoder)
+    (Fig5. Autoencoder)
 </p>
 
 
