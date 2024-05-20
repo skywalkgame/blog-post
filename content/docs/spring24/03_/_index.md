@@ -48,7 +48,7 @@ as *ops*.
 2. Now resolve any scale constraints by taking each constrained group {{< katex >}} {\alpha, \beta_1, \ldots, \beta_l } {{< katex >}} and selecting the geometric mean {{< katex >}} \left(\alpha, \beta_1, \ldots, \beta_l \right)^\frac{1}{l+1} {{< katex >}}
 
 + Selecting scaling factors
-    + Assuming unit-scaled inputs to y = f(xi, . . . , xk), derive the output scale σY and set the forward scaling factor α = 1/σY . Repeat this process for x′ i = fgrad(. . . )i, ∀i ∈ [1..k], to obtain the gradient scale σx′ i and set the backward scaling factor βi = 1/σx′ i . 
+    + Assuming unit-scaled inputs to {{< katex >}} y = f(x_i,\ldots,x_k) {{< katex >}}, derive the output scale {{< katex >}} \sigma_Y {{< katex >}} and set the forward scaling factor {{< katex >}} \alpha = 1/\sigma_Y {{< katex >}} . Repeat this process for {{< katex >}} x_i'=f_{grad}(\ldots)_i, \forall i \in[1 . . k] {{< katex >}}, to obtain the gradient scale {{< katex >}} \sigma_{x_i'} {{< katex >}} i and set the backward scaling factor {{< katex >}} \beta_i = 1/\sigma_{x_i'} {{< katex >}} . 
 
 ### Weighted addition
 
@@ -77,7 +77,7 @@ as *ops*.
     + Results
 
 <p align="center">
-    <img src='./Table2.png' width="600">
+    <img src='./Table2.PNG' width="600">
 </p>
 <p align="center">
     Table2. Downstream performance of regular and unit-scaled BERT models
