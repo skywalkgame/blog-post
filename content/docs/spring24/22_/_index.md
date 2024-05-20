@@ -43,9 +43,9 @@ However, knowledge edit is not so simple as it sounds. Pre-training LLMs require
 
 To tackle the problem, "memory network" was proposed. The main point of memory network is "to combine the successful learning strategies developed in the machine learning literature for inference with a memory component that can be read and written to." [5]
 
-For example, let's assume that you're providing new information to a pre-trained LLM. What you expect to the model is to answer the following questions based on the facts you mentioned. In this case, the model can do the job by writing the knowledge from you into a memory and reading the relevant one from the memory to answer the question. In other words, LLM can save the facts from users and utilize the saved knowledge to answer the question.
+For example, let's assume that you're providing new information to a pre-trained LLM. What you expect to the model is to answer the following questions based on the facts you mentioned. In this case, the model can do the job by writing the knowledge from you into a memory and reading the relevant one from the memory to answer the question. This problem is called as "Question Answering (QA)."
 
-In this paper, authors followed the method from [6]. For details, please refer to '3. Model architecture' and '4. Memory Operations.'
+In this paper, authors followed the method from [6]. For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
 
 
 ### Autoencoder
