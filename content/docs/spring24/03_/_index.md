@@ -44,15 +44,22 @@ as *ops*.
 ### A scaling strategy for unit variance
 
 + Unit scaled computational graphs
-1. Initially set aside any scale constraints, and calculate the scaling factors that give each op expected unit variance outputs (this process is covered below).
-2. Now resolve any scale constraints by taking each constrained group {{< katex >}} {\alpha, \beta_1, \ldots, \beta_l } {{< katex >}} and selecting the geometric mean {{< katex >}} \left(\alpha, \beta_1, \ldots, \beta_l \right)^\frac{1}{l+1} {{< katex >}}
+    + Initially set aside any scale constraints, and calculate the scaling factors that give each op expected unit variance outputs (this process is covered below).
+    + Now resolve any scale constraints by taking each constrained group {{< katex >}} {\alpha, \beta_1, \ldots, \beta_l } {{< katex >}} and selecting the geometric mean {{< katex >}} \left(\alpha, \beta_1, \ldots, \beta_l \right)^\frac{1}{l+1} {{< katex >}}
 
 + Selecting scaling factors
     + Assuming unit-scaled inputs to {{< katex >}} y = f(x_i,\ldots,x_k) {{< katex >}}, derive the output scale {{< katex >}} \sigma_Y {{< katex >}} and set the forward scaling factor {{< katex >}} \alpha = 1/\sigma_Y {{< katex >}} . Repeat this process for {{< katex >}} x_i'=f_{grad}(\ldots)_i, \forall i \in[1 . . k] {{< katex >}}, to obtain the gradient scale {{< katex >}} \sigma_{x_i'} {{< katex >}} i and set the backward scaling factor {{< katex >}} \beta_i = 1/\sigma_{x_i'} {{< katex >}} . 
 
 ### Weighted addition
 
+When tensors of different scales, such as those in residual layers, losses, and positional encodings, are added, simply adding them can adversely affect performance. To address this, we propose using weighted_add. In this approach, we can maintain unit scale while performing operations using a scaled identity function.
+
 ### Recipe
+We now outline a high-level recipe for a unit-scaled model:
+1. Initialise non-bias parameters with unit variance.
+2. Calculate scaling factors for all scaled ops.
+3. Identify non-cut-edges, and constrain the ops consumingthem to have {{< katex >}} \alpha = \beta {{< katex >}} by taking the geometric mean.
+4. Replace adds with weighted adds.
 
 ### Example
 <p align="center">
