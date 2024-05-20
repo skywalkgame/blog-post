@@ -46,17 +46,14 @@ QuaRot uses **Random Hadamard transformation** because the result PPL is lower, 
 | QuaRot (Hadamard) | 6.10 | 5.40 | 3.79 |
 
 Random Hadamard transformation matrix H is described below : 
-
-$$
-H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+display: block {{< katex display=true >}} H_{2} = \frac{1}{\sqrt{2}} \begin{bmatrix}
 1 & 1 \\
 1 & -1 
-\end{bmatrix}, \quad H_{2^n} = H_2 \otimes H_{2^{n-1}}
-$$
+\end{bmatrix}, \quad H_{2^n} = H_2 \otimes H_{2^{n-1}} {{< /katex >}}
 
-$$
+display: block {{< katex display=true >}}
 H' = H \cdot \mathrm{diag}(s), \quad s \sim \mathrm{Uniform}(\{-1, +1\})
-$$
+{{< /katex >}}
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
 
