@@ -28,8 +28,10 @@ as *ops*.
 </p>
 
 + Scaled computational graph
-
+    + A scaled computational graph is one where every op {{< katex >}}f{{< katex >}} in the forward graph is replaced by a scaled equivalent {{< katex >}}f^{*}{{< katex >}}, with the backward graph then generated to produce {{< katex >}}f^{*}_{grad}{{< katex >}} grad for each {{< katex >}}f_{grad}{{< katex >}}, using any choice of scaling factors.
+      
 + Constraint-scaled computational graphs
+    + A constraint-scaled computational graph is a scaled computational graph where we restrict the scaling factors of ops that consume non-cut-edge variables in the following way: for any edge {{< katex >}}e \notin \mathcal{C}{{< katex >}}, we require the op consuming the variable {{< katex >}}x_e{{< katex >}} to have scaling factors {{< katex >}}\alpha = \beta_e f{{< katex >}}. 
 
 **Proposition 5.1**
 
@@ -42,8 +44,11 @@ as *ops*.
 ### A scaling strategy for unit variance
 
 + Unit scaled computational graphs
+1. Initially set aside any scale constraints, and calculate the scaling factors that give each op expected unit variance outputs (this process is covered below).
+2. Now resolve any scale constraints by taking each constrained group {{< katex >}} {\alpha, \beta_1, \ldots, \beta_l } {{< katex >}} and selecting the geometric mean {{< katex >}} \left(\alpha, \beta_1, \ldots, \beta_l \right)^\frac{1}{l+1} {{< katex >}}
 
 + Selecting scaling factors
+    + Assuming unit-scaled inputs to y = f(xi, . . . , xk), derive the output scale σY and set the forward scaling factor α = 1/σY . Repeat this process for x′ i = fgrad(. . . )i, ∀i ∈ [1..k], to obtain the gradient scale σx′ i and set the backward scaling factor βi = 1/σx′ i . 
 
 ### Weighted addition
 
