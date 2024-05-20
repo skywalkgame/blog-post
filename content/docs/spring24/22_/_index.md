@@ -9,7 +9,7 @@ weight: 1
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
 ## 1. Background
-Large Language Model (LLM) is one of the most famous topics in these days, due to their outstanding performance on various Natural Language Processing (NLP) tasks. However, LLM has faced a lot of challenges at the same time. In this report, we especially focus on the "knowledge edit" problem.
+Large Language Model (LLM) is one of the most popular topics in these days, due to their outstanding performance on various Natural Language Processing (NLP) tasks. However, LLM has faced a lot of challenges at the same time. In this report, we especially focus on the "knowledge edit" problem.
 
 ### Knowledge edit in LLM research
 Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
