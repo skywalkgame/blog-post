@@ -12,11 +12,7 @@ weight: 1
 Large Language Model (LLM) is one of the most famous topics in these days, due to their outstanding performance on various Natural Language Processing (NLP) tasks. However, LLM has faced a lot of challenges at the same time. In this report, we especially focus on the "knowledge edit" problem.
 
 ### Knowledge edit in LLM research
-Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." 
-
-It is important to constantly update the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment. However, updating the knowledge is not so simple.
-
-In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploymemnt, the knowledge of the LLM needs to be constantly updated. To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
+Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
 <p align="center">
     <img src='knowledge update.png' width="600">
 </p>
