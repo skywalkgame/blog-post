@@ -13,7 +13,7 @@ This is the Github page for the class, Efficient ML Systems (EECE695D-01).  Stud
      * You edit the markdown file. If you want to attach the image (e.g. pipeline), <br> you easily add file using ```Upload files``` button:
           {{< figure src="./example.png" alt="." width="1000" height="2000" >}}
 
-     💡 You can reference TA's example post 👉 [LINK](https://effml-postech.github.io/docs/spring24/0_taco_example/)
+     💡 You can reference TA's example post 👉 [LINK](https://effml-postech.github.io/docs/spring24/00_taco_example/)
      * Posted how to use the KaTex
 
 ## Contact
