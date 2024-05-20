@@ -1,4 +1,8 @@
 ---
+title: "Mixture of depths Explained"
+author:
+ - "A"
+ - "B"
 type: docs
 bookToc: True
 weight: 1
