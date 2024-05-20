@@ -45,8 +45,6 @@ To tackle the problem, "memory network" was proposed. The main point of memory n
 
 For example, let's assume that you're providing new information to a pre-trained LLM. What you expect to the model is to answer the following questions based on the facts you mentioned. In this case, the model can do the job by writing the knowledge from you into a memory and reading the relevant one from the memory to answer the question. This problem is called as "Question Answering (QA)."
 
-In this paper, authors followed the basic structures from [6] to combine pre-trained LLMs and memory component for knowledge edit. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
-
 
 <p align="center">
     <img src='QA.PNG' width="600">
@@ -66,6 +64,7 @@ This paper imitates the role of brain. Humans can rapidly update their knowledge
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
 
+
 ## 2. Contributions
 1. Larimar introduces a class of memory-conditioned language models inspired by complementary learning mechanisms in the brain. This architecture facilitates real-time test-time adaptation without requiring time-intensive gradient-based learning or internal fact tracing, offering a faster method for updating LLMs.
 Utility Demonstration in Knowledge Editing and Context Generalization:
@@ -78,7 +77,9 @@ Recursive Search-Based Solution for Long Context Generalization: A simple recurs
 
 
 ## 3. Model architecture
-Larimar consists of three main components: encoder, decoder, and adaptive memory. They are combined to pre-trained LLM to provide efficient and accurate updating of knowledge.
+Inspired by human brain (neocortex-hippocampus interactions), authors suggest "a class of LLMs augmented with an external episodic memory controller." To be specific, they utilize an episodic memory to mimic hippocampal fast-learning system, and use LLM as a neocortical slow learning system.
+
+Fig6 below shows the overall structure of Larimar. It consists of three main components: encoder, decoder, and adaptive memory. 
 
 1) Encoder: Transforms the input into a latent vector
 2) Decoder: Generates an answer to the question conditioned on the memory
@@ -96,6 +97,8 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 
 ## 4. Memory Operations
+
+In this paper, authors followed the basic structures from [6] to combine pre-trained LLMs and memory component for knowledge edit. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." 
 
 
 ## 5. Results
