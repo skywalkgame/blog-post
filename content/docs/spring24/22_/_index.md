@@ -40,6 +40,13 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
 
 ### Memory network
 However, knowledge edit is not so simple as it sounds. 
+
+One major drawback of LLMs is their substantial computational cost for pre-training due to their unprecedented amounts of parameters. The disadvantage is exacerbated when new knowledge frequently needs to be introduced into the pre-trained model. [1]
+
+
+The central idea is to combine the successful learning strategies developed in the machine learning literature for inference with a memory component that can be read and written to.
+
+
 To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. 
 
 ### Autoencoder
@@ -141,6 +148,7 @@ The experiment was conducted on a single A100 GPU. Comparing the wall clock time
 
 ## 7. References
 
+
 https://arxiv.org/abs/2310.16218
  -> Knowledge Editing for Large Language Models: A Survey
 
@@ -149,6 +157,10 @@ https://arxiv.org/abs/2207.04901
 
 https://arxiv.org/abs/2402.05813
  -> Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models
+
+https://arxiv.org/abs/1410.3916
+ -> Memory Networks
+
 
 https://arxiv.org/abs/2403.11901
 
