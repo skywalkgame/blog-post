@@ -181,8 +181,10 @@ The key point of QuaRot is that the process of performing the Hadamard transform
     - ![title](./ant.PNG) 
         
     - QuaRot considers INT4 format for both weight quantization and activation quantization, likely because modern GPUs support efficient operations with INT4 and INT8 formats. If we could use other formats, it might be possible to maintain accuracy even with formats as small as 3-bit, leading to greater memory savings. However, maintaining computational simplicity is challenging because GPUs are not optimized for operations with custom data types, unlike INT4. Therefore, achieving optimal computation with custom data types would require the development of custom hardware.
--** Quantization + Pruning **
+ 
+- **Toward Quantization + Pruning**
     - One of the authors, Dan Alistarh, has papers on [GPTQ](https://arxiv.org/abs/2210.17323) and [OBS](https://proceedings.neurips.cc/paper/1992/file/303ed4c69846ab36c2904d3ba8573050-Paper.pdf). GPTQ focuses on reconstructing matrices after quantization, while OBS deals with reconstructing models after pruning. Both papers share a common foundation in using the Hessian matrix and employ various optimization techniques such as Wood-Fisher. Combining these two approaches, the [OBC](https://arxiv.org/abs/2208.11580) study explores methods to preserve the accuracy of networks that undergo both pruning and quantization.
     - Another paper involving the author demonstrates that SliceGPT similarly achieves effective pruning by employing the concept of computational invariance when multiplying orthogonal matrices. By analyzing the properties of orthogonal matrices in both QuaRot and SliceGPT, I believe it is possible to achieve quantization and pruning simultaneously.
-- ** How to reduce the overhead of online Hadamard transformation **
+
+- **How to reduce the overhead of online Hadamard transformation**
     - The forward path in QuaRot mostly follows the activation-quantized LLM tasks like GPTQ, yet requires the additional task of online Hadamard transformation on attention activation. The online Hadamard transformation can be performed by utilizing existing computational resources by converting the task into a matrix-multiplication form, or tossing the task to a dedicated hardware accelerator. Either way have an optimization point of acceleration, where data scheduling of the Hadamard transformation matrix into GEMM task accelerator, or utilizing various previous works about hardware accelerator Hadamard transformation with dedicated dataflow.
