@@ -98,7 +98,7 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
     <img src='wall_clock_time _result.PNG' width="800">
 </p>
 <p align="center">
-    (Fig8. Wall Clock Time result)
+    (Fig8. Comparison between different editing methods and the wall clock time for a single edit)
 </p>
 
 ### Single Fact Editing
