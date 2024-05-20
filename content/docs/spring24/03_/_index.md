@@ -88,9 +88,16 @@ We show code for the above in Figure 3, which also gives a scaled layer for the 
 
 + Character language modelling
 
-    + Experimental Setup
+    + Experimental Setup: Train causal language models on WikiText-103 raw character language modeling, using cross-entropy loss during training and evaluating on bits per character (BPC). Below the product of these settings, we compare the performance of regular (baseline) and unit scaling in both FP32 and FP16.
+        + *Sequence layer type*: Attention, RNN and Convolution
+        + *Norm placement*: PreNorm, PostNorm and NoNorm
+        + *Residual scaling*: default, fixed and running-mean
 
     + Results
+        + First, these demonstrate the need for scaling when using FP16. This is due to gradient underflow, since loss scaling with a factor of 2048 resolves the issue.
+        + Second, they demonstrate that unit scaling, despite changing the training behaviour of the model beyond just numerics, matches or even slightly improves upon baseline performance in almost all cases.
+        + Finally, they show that no tuning is necessary when switching unit scaling to FP16.
+        + suggest that running-mean or fixed are reasonable choices when using unit scaling
  
 <p align="center">
     <img src='./Figure4.png' width="400">
