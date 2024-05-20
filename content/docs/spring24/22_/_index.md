@@ -113,12 +113,14 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 The experiment was conducted on a single A100 GPU. Comparing the wall clock time for each editing method across 10 single edits, as shown in Fig8, Larimar was found to be approximately 4-10 times faster than the existing ROME and GRACE methods. Additionally, Larimar demonstrates the ability to address sequential edits, batch edits, and forgetting/deletion, which were not previously addressed in existing work.
 
 ### Single Fact Editing
+This paper utilizes the CounterFact dataset for comparing Single Fact editing. The CounterFact dataset is designed to test the language model's ability to handle counterfactual edits. It evaluates whether the model accurately learns new facts. It contains a total of 21,919 data points, and the evaluation is conducted using the first 2000 samples. In contrast to training the LLM on edits or causally tracing the original fact within the LLM and updating the relevant parameters, Larimar leverages one-shot memory update for editing. In this approach, the memory posterior is updated as the edit(s) of interest is written, and then the updated memory is queried. The read-out from the memory conditions the decoder to output the edit.
 <p align="center">
     <img src='Single_fact_editing_result.PNG' width="500">
 </p>
 <p align="center">
-    (Fig9. )
+    (Fig9.Single fact edit performanceon CounterFact dataset comparing with baseline. Top two best systems are highlighted.)
 </p>
+The results are shown in Fig 9. Edit Success measures the percentage of cases where the edited result has a higher probability than the original result, while Paraphrase evaluates whether the model achieves the same performance using paraphrase prompts. Neighborhood assesses the model's ability to retain knowledge about the original object. Larimar demonstrates comparable performance in editing new facts and handling prompts.
 
 ### Sequential Fact Editing
 <p align="center">
@@ -138,11 +140,12 @@ The experiment was conducted on a single A100 GPU. Comparing the wall clock time
 
 ### Recall Performance
 <p align="center">
-    <img src='recall_performance_result.PNG' width="800">
+    <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
     (Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data)
 </p>
+
 
 ## 6. Conclusion
 
