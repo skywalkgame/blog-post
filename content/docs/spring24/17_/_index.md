@@ -108,7 +108,7 @@ Inserting online Hadamard operation can ease the activation value’s quantizati
 This step applies Hadamard transformations to the value and output projection matrices in the attention block throughout both offline weight modification and online activation transformation. Since value and output projection weight are multiplied in each head, two matrices can be transformed using the Hadamard matrix without changing the result of attention.
 
 display: block {{< katex display=true >}}
-W_v^{(h)} \leftarrow W_v^{(h)}H_{d_h}\\W_{out}^{(h)} \leftarrow H_{d_h} W_{out}^{(h)}  
+W_v^{(h)} \leftarrow W_v^{(h)}H_{d_h} \\ W_{out}^{(h)} \leftarrow H_{d_h} W_{out}^{(h)}  
 {{< /katex >}}
 
 This transformation can be represented with Kronecker multiplication in the point of full attention computation view.
