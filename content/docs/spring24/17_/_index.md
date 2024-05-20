@@ -65,7 +65,7 @@ $$
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
 
-![title](./hadamard_2.png width="200" height="200"){: .center}
+![title](./hadamard_2.png)(width="200" height="200"){: .center}
 ---
 
 QuaRot demonstrates that using this technique reduces the number of outliers. By applying the random Hadamard transformation, the distribution of activations is more uniform, which decreases the number of extreme values or outliers, thereby minimizing information loss during quantization.
@@ -102,7 +102,7 @@ $$
 
 Inserting online Hadamard operation can ease the activation value’s quantization difficulty within each block.  This operation is implicitly reserved by fusing a Hadamard matrix into the next matrix of the network. 
 
-</center><img src="./figure3.png"></center>
+![title](./figure3.PNG){: .center}
 
 ---
 
@@ -148,7 +148,7 @@ $$
 
 Note that this transformation can be applied without changing final attention scores since both queries and keys are rotated, therefore no remaining Hadamard transformation exists.
 
-</center><img src="./figure4.png"></center>
+![title](./figure4.PNG){: .center}
 
 ---
 
@@ -158,7 +158,7 @@ Step 2 involves applying various state-of-the-art techniques to quantize weights
 
 You can quantize the adjusted weights using GPTQ, or you can use a very simple round-to-nearest (RTN) technique. The paper have shown simpler method(RTN) have shown a slight sacrifice in accuracy.
 
-</center><img src="./weight_qunat.png"></center>
+![title](./weight_qunat.PNG){: .center}
 
 ### Step 2-b. Online Quantization
 
@@ -181,7 +181,7 @@ The key point of QuaRot is that the process of performing the Hadamard transform
 - **Why we limited to symmetric INT4 qunatization?**
     - Numerous papers discuss the limitations of using symmetric quantization in INT4 format for quantization.  For example, [ANT](https://ieeexplore.ieee.org/abstract/document/9923832) demonstrate that, even with the same bitwidth, numeric formats like flint and PoT(power of Two), which divide the representation into exponent and mantissa, can achieve better accuracy due to their ability to represent a wider range of values. In the figure below, the INT-4bit example uses only integers, while the others utilize new data formats. It is evident that the Mean Squared Error (MSE) significantly decreases with these new formats.
         
-</center><img src="./ant.png"></center>
+![title](./ant.PNG){: .center}
         
     - QuaRot considers INT4 format for both weight quantization and activation quantization, likely because modern GPUs support efficient operations with INT4 and INT8 formats. If we could use other formats, it might be possible to maintain accuracy even with formats as small as 3-bit, leading to greater memory savings. However, maintaining computational simplicity is challenging because GPUs are not optimized for operations with custom data types, unlike INT4. Therefore, achieving optimal computation with custom data types would require the development of custom hardware.
 - Quantization + Pruning
