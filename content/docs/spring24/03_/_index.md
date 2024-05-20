@@ -64,7 +64,7 @@ We now outline a high-level recipe for a unit-scaled model:
 ### Example
 
 <p align="center">
-    <img src='./Figure3.png' width="600">
+    <img src='./Figure3.PNG' width="600">
 </p>
 <p align="center">
     Fig4. PyTorch examples
