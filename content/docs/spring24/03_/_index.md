@@ -64,7 +64,7 @@ We now outline a high-level recipe for a unit-scaled model:
 ### Example
 
 <p align="center">
-    <img src='./Figure3.PNG' width="600">
+    <img src='./Figure3.PNG' width="900">
 </p>
 <p align="center">
     Fig4. PyTorch examples
@@ -79,7 +79,7 @@ We now outline a high-level recipe for a unit-scaled model:
     + Results
  
 <p align="center">
-    <img src='./Figure4.png' width="600">
+    <img src='./Figure4.png' width="400">
 </p>
 <p align="center">
     Fig4. Character language modelling, showing validation bits per character over a wide range of models
@@ -92,7 +92,7 @@ We now outline a high-level recipe for a unit-scaled model:
     + Results
 
 <p align="center">
-    <img src='./Table2.PNG' width="600">
+    <img src='./Table2.PNG' width="800">
 </p>
 <p align="center">
     Table2. Downstream performance of regular and unit-scaled BERT models
