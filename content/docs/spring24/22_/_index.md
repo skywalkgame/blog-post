@@ -13,7 +13,7 @@ Large Language Model (LLM) is one of the most popular topics in these days, due 
 
 ### Knowledge edit in LLM research
 Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." The point is that, we have to update the knowledge on the pre-trained model accurately and quickly. Figures below illustrate why do we need knowledge update.
- 1) New knowledge should be updated
+ 1) To update new knowledge
  2) To mitigate context length generalization problem
  3) To erase sensitive data
 <p align="center">
