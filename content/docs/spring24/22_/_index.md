@@ -93,10 +93,45 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 
 ## 5. Results
 ### Wall Clock time
+<p align="center">
+    <img src='wall_clock_time_result.png' width="600">
+</p>
+<p align="center">
+    (Fig8. Wall Clock Time result)
+</p>
+
 ### Single Fact Editing
+<p align="center">
+    <img src='Single_fact_editing_result.png' width="600">
+</p>
+<p align="center">
+    (Fig9. )
+</p>
+
 ### Sequential Fact Editing
+<p align="center">
+    <img src='sequential_fact_editing_result.png' width="600">
+</p>
+<p align="center">
+    (Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
 ### Selective Forgetting
+<p align="center">
+    <img src='memoryerase_result.png' width="600">
+</p>
+<p align="center">
+    (Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
 ### Recall Performance
+<p align="center">
+    <img src='recall_performance_result.png' width="600">
+</p>
+<p align="center">
+    (Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
 ## 6. Conclusion
 
 ## 7. References
