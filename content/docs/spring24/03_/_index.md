@@ -65,6 +65,7 @@ We now outline a high-level recipe for a unit-scaled model:
 
 Using the unit scaling recipe, we first build a scaled op, and then a full scaled layer. Consider a scaled projection op with learnable weights:
 
+<<<<<<< HEAD
 <p align="center">
     {{< katex >}} \operatorname{matmul}^*(X, W) & =\alpha \cdot X W {{< /katex >}}
         
@@ -72,6 +73,14 @@ Using the unit scaling recipe, we first build a scaled op, and then a full scale
     
     {{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_2 & =\beta_2 \cdot X^{\top} G {{< /katex >}}
 </p>
+=======
+{{< katex >}} \operatorname{matmul}^*(X, W) & =\alpha \cdot X W {{< /katex >}}
+        
+{{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_1 & =\beta_1 \cdot G W^{\top}  {{< /katex >}}
+    
+{{< katex >}} \operatorname{matmul}_{\text {grad }}^*(X, W, G)_2 & =\beta_2 \cdot X^{\top} G {{< /katex >}}
+
+>>>>>>> 09d0440407f9953465e8c825cbdec2d13f3731c9
 for input {{< katex >}} X \in \mathbb{R}^{b \times m}  {{< /katex >}}, weight  {{< katex >}} W \in \mathbb{R}^{m \times n} {{< /katex >}}, output {{< katex >}} \mathbb{R}^{b \times n} {{< /katex >}} and incoming gradients {{< katex >}} G \in \mathbb{R}^{b \times n} {{< /katex >}}
 
 We show code for the above in Figure 3, which also gives a scaled layer for the Transformer FFN 
@@ -88,9 +97,16 @@ We show code for the above in Figure 3, which also gives a scaled layer for the 
 
 + Character language modelling
 
-    + Experimental Setup
+    + Experimental Setup: Train causal language models on WikiText-103 raw character language modeling, using cross-entropy loss during training and evaluating on bits per character (BPC). Below the product of these settings, we compare the performance of regular (baseline) and unit scaling in both FP32 and FP16.
+        + *Sequence layer type*: Attention, RNN and Convolution
+        + *Norm placement*: PreNorm, PostNorm and NoNorm
+        + *Residual scaling*: default, fixed and running-mean
 
     + Results
+        + First, these demonstrate the need for scaling when using FP16. This is due to gradient underflow, since loss scaling with a factor of 2048 resolves the issue.
+        + Second, they demonstrate that unit scaling, despite changing the training behaviour of the model beyond just numerics, matches or even slightly improves upon baseline performance in almost all cases.
+        + Finally, they show that no tuning is necessary when switching unit scaling to FP16.
+        + suggest that running-mean or fixed are reasonable choices when using unit scaling
  
 <p align="center">
     <img src='./Figure4.png' width="400">

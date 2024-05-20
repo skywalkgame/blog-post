@@ -8,12 +8,11 @@ weight: 1
 
 *Authors: Payel Das (IBM AI Research), Subhajit Chaudhury (IBM AI Research) et.al*
 
-## Background
-Pre-trained Large Language Models (LLMs) have demonstrated outstanding performance on various Natural Language Processing (NLP) tasks.
-However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the "knowledge update" problem.
+## 1. Background
+Large Language Model (LLM) is one of the most famous topics in these days, due to their outstanding performance on various Natural Language Processing (NLP) tasks. However, LLM has faced a lot of challenges at the same time. In this report, we especially focus on the "knowledge edit" problem.
 
-### Knowledge update in LLM research
-In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploymemnt, the knowledge of the LLM needs to be constantly updated. To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
+### Knowledge edit in LLM research
+Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
 <p align="center">
     <img src='knowledge update.png' width="600">
 </p>
@@ -60,7 +59,7 @@ This paper imitates the role of brain. Humans can rapidly update their knowledge
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
 
-## Contributions
+## 2. Contributions
 1. Larimar introduces a class of memory-conditioned language models inspired by complementary learning mechanisms in the brain. This architecture facilitates real-time test-time adaptation without requiring time-intensive gradient-based learning or internal fact tracing, offering a faster method for updating LLMs.
 Utility Demonstration in Knowledge Editing and Context Generalization:
 
@@ -71,7 +70,7 @@ Selective Fact Forgetting and Information Leakage Prevention:
 Recursive Search-Based Solution for Long Context Generalization: A simple recursive search-based approach is provided to enable Larimar's memory to generalize to longer input contexts.
 
 
-## Model architecture
+## 3. Model architecture
 Larimar consists of three main components: encoder, decoder, and adaptive memory.
 1) Encoder: Transforms the input into a latent vector
 2) Decoder: Generates an answer to the question conditioned on the memory
@@ -85,18 +84,53 @@ Larimar consists of three main components: encoder, decoder, and adaptive memory
 </p>
 
 
-## Memory Operations
+## 4. Memory Operations
 
 
-## Results
+## 5. Results
 ### Wall Clock time
-### Single Fact Editing
-### Sequential Fact Editing
-### Selective Forgetting
-### Recall Performance
-## Conclusion
+<p align="center">
+    <img src='wall_clock_time _result.PNG' width="800">
+</p>
+<p align="center">
+    (Fig8. Wall Clock Time result)
+</p>
 
-## References
+### Single Fact Editing
+<p align="center">
+    <img src='Single_fact_editing_result.PNG' width="600">
+</p>
+<p align="center">
+    (Fig9. )
+</p>
+
+### Sequential Fact Editing
+<p align="center">
+    <img src='sequential_fact_editing_result.PNG' width="400">
+</p>
+<p align="center">
+    (Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
+### Selective Forgetting
+<p align="center">
+    <img src='memoryerase_result.PNG' width="500">
+</p>
+<p align="center">
+    (Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
+### Recall Performance
+<p align="center">
+    <img src='recall_performance_result.PNG' width="800">
+</p>
+<p align="center">
+    (Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data)
+</p>
+
+## 6. Conclusion
+
+## 7. References
 
 https://arxiv.org/abs/2310.16218
  -> Knowledge Editing for Large Language Models: A Survey
