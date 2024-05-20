@@ -47,11 +47,12 @@ For example, let's assume that you're providing new information to a pre-trained
 
 In this paper, authors followed the method from [6]. For more details, please refer to '3. Model architecture' and '4. Memory Operations.'
 
+
 <p align="center">
     <img src='QA.PNG' width="600">
 </p>
 <p align="center">
-    (Fig4. Example of QA)
+    (Fig4. Example of QA [5])
 </p>
 
 
