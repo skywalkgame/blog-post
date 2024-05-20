@@ -12,7 +12,7 @@ weight: 1
 Large Language Model (LLM) is one of the most popular topics in these days, due to their outstanding performance on various Natural Language Processing (NLP) tasks. However, LLM has faced a lot of challenges at the same time. In this report, we especially focus on the "knowledge edit" problem.
 
 ### Knowledge edit in LLM research
-Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." The point is that, we have to update the knowledge on the pre-trained model accurately and quickly. Figures below illustrate why do we need knowledge update.
+Knowledge edit problem can be summarized as "constantly updating the knowledge of pre-trained LLMs to keep models fact-relevant, safe, and ethical after deployment." [1] The point is that, we have to update the knowledge on the pre-trained model accurately and quickly. Figures below illustrate why do we need knowledge update.
  1) To update new knowledge
  2) To mitigate context length generalization problem
  3) To erase sensitive data
@@ -20,21 +20,21 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
     <img src='knowledge update.png' width="600">
 </p>
 <p align="center">
-    (Fig1. Knowledge update: New knowledge should be injected constantly)
+    (Fig1. Knowledge update: New knowledge should be injected constantly [2])
 </p>
 
 <p align="center">
     <img src='context length generalization.png' width="600">
 </p>
 <p align="center">
-    (Fig2. Context length generalization: The ability to quickly update the LLM can help with "input context length generalization problem")
+    (Fig2. Context length generalization: The ability to quickly update the LLM can help with "input context length generalization problem" [3])
 </p>
 
 <p align="center">
     <img src='selective fact forgetting.png' width="600">
 </p>
 <p align="center">
-    (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data)
+    (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data [4])
 </p>
 
 
@@ -151,13 +151,17 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
 
 ## 7. References
 
+[1] Larimar
 
+[2]
 https://arxiv.org/abs/2310.16218
  -> Knowledge Editing for Large Language Models: A Survey
 
+[3]
 https://arxiv.org/abs/2207.04901
  -> Exploring Length Generalization in Large Language Models
 
+[4]
 https://arxiv.org/abs/2402.05813
  -> Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models
 
