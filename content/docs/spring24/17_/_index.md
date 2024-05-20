@@ -60,7 +60,7 @@ $$
 
 This transformation pairs elements to perform simultaneous computations, allowing the matrix-vector multiplication between matrix 𝐻 and vector 𝑥 to be executed using only 𝑂(𝑑log⁡𝑑) addition operations without any multiplications, as illustrated below:
 
-![Untitled](QuaRot%20Outlier-Free%204-Bit%20Inference%20in%20Rotated%20LLM%20d62affb326d24ef4881ed78b5b8e429d/Untitled.png)
+![Untitled](./hadamard.png)
 
 ---
 
