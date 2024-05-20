@@ -21,11 +21,15 @@ as *ops*.
 
 + Scaled ops
     +  Given an op {{< katex >}}f\left(x_1, \ldots, x_k\right){{< /katex >}}, we define the *scaled op* {{< katex >}} f^*\left(x_1, \ldots, x_k, \alpha, \beta_1, \ldots, \beta_k\right) {{< /katex >}} with *scaling factors* {{< katex >}} \alpha, \beta_1, \ldots, \beta_k \in \mathbb{R}^{+} {{< /katex >}}, such that
-
+      
+<p align="center">
 {{< katex >}}f^* & \triangleq \alpha \cdot f\left(x_1, \ldots, x_k\right){{< /katex >}}
-
+</p>  
+    
+<p align="center">  
 {{< katex >}} f_{\text {grad }}^*\left(x_1, \ldots x_k, g\right)_i & \triangleq \beta_i \cdot f_{\text {grad }}\left(x_1, \ldots x_k, g\right)_i, \forall i \in[1 . . k] {{< /katex >}}
-
+</p>  
+    
 + Scaled computational graph
     + A scaled computational graph is one where every op {{< katex >}}f{{< /katex >}} in the forward graph is replaced by a scaled equivalent {{< katex >}}f^{*}{{< /katex >}}, with the backward graph then generated to produce {{< katex >}}f^{*}_{grad}{{< /katex >}} grad for each {{< katex >}}f_{grad}{{< /katex >}}, using any choice of scaling factors.
       
