@@ -12,7 +12,7 @@ weight: 1
 Pre-trained Large Language Models (LLMs) have demonstrated outstanding performance on various Natural Language Processing (NLP) tasks.
 However, LLMs have faced a lot of challenges at the same time. Especially, in this post, we focus on the "knowledge update" problem.
 
-### Knowledge update in LLM research
+### Knowledge edit in LLM research
 In order to keep pre-trained LLMs fact-relevant, safe, and ethical after deploymemnt, the knowledge of the LLM needs to be constantly updated. To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. Figures below illustrate why do we need knowledge update.
 <p align="center">
     <img src='knowledge update.png' width="600">
