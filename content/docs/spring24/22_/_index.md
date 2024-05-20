@@ -39,12 +39,11 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
 
 
 ### Memory network
-However, knowledge edit is not so simple as it sounds. 
+However, knowledge edit is not so simple as it sounds. Pre-training LLMs requires substantial computational cost due to thier unprecedented amounts of parameters. Considering that we have to introduce new knowledge into the pre-trained model frequently, re-training is not a feasible solution [2]. 
 
-One major drawback of LLMs is their substantial computational cost for pre-training due to their unprecedented amounts of parameters. The disadvantage is exacerbated when new knowledge frequently needs to be introduced into the pre-trained model. [1]
+To tackle the problem, "memory network" was proposed. The main point of memory network is "to combine the successful learning strategies developed in the machine learning literature for inference with a memory component that can be read and written to." [5]
 
 
-The central idea is to combine the successful learning strategies developed in the machine learning literature for inference with a memory component that can be read and written to.
 
 
 To be specific, model editing is mandatory to remove the undesired, incorrect, or obsolete facts from the LLM's "memory", and optionally replace it with desired outcome. 
@@ -151,21 +150,19 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
 
 ## 7. References
 
-[1] Larimar
+[1] https://arxiv.org/abs/2403.11901
+ -> Larimar: Large Language Models with Episodic Memory Control
 
-[2]
-https://arxiv.org/abs/2310.16218
+[2] https://arxiv.org/abs/2310.16218
  -> Knowledge Editing for Large Language Models: A Survey
 
-[3]
-https://arxiv.org/abs/2207.04901
+[3] https://arxiv.org/abs/2207.04901
  -> Exploring Length Generalization in Large Language Models
 
-[4]
-https://arxiv.org/abs/2402.05813
+[4] https://arxiv.org/abs/2402.05813
  -> Selective Forgetting: Advancing Machine Unlearning Techniques and Evaluation in Language Models
 
-https://arxiv.org/abs/1410.3916
+[5] https://arxiv.org/abs/1410.3916
  -> Memory Networks
 
 
