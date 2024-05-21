@@ -51,8 +51,8 @@ Experiment setting
 
 
 For both MEMIT & EMMET editing, metrics are seen to consistently fall with larger batches, with **NS** being the most pronounced to fall. **ES** is most resilient metric to edits. **PS**, only metric to do so, seen to increase dramatically between batch sizes of 16 and 64.
-
 The similar trend between two editing techniques reflect the similarity in their optimization objectives.
+
 
 **Sequential Batch Editing :** 
 
