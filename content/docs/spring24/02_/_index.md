@@ -152,7 +152,7 @@ SUNDAE demonstrates strong performance across various metrics, including PSNR, S
     <img src='fig5.png' width="600">
 </p>
 <p align="center">
-    Fig3. Qualitative results of SUNDAE.
+    Fig4. Qualitative results of SUNDAE.
 </p>  
 
 The qualitative results demonstrate that SUNDAE achieves comparable novel view synthesis quality with significantly lower memory consumption (1% or 10%).
@@ -166,7 +166,7 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
     <img src='fig7.png' width="600">
 </p>
 <p align="center">
-    Fig4. Ablations experiment on the ratio 𝛾 of the bandlimited filter of graph based pruning.
+    Fig5. Ablations experiment on the ratio 𝛾 of the bandlimited filter of graph based pruning.
 </p>  
 
 - **Band-limited ratio of Graph-based pruning:**
@@ -183,7 +183,7 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
     <img src='fig6.png' width="600">
 </p>
 <p align="center">
-    Fig 5. Visualization with and without neural compensation.
+    Fig 6. Visualization with and without neural compensation.
 </p>  
 
 - **The compensation performance of the network:**
