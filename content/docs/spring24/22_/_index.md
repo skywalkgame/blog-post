@@ -73,7 +73,7 @@ This paper imitates the role of brain. Humans can rapidly update their knowledge
     <img src=brain.png width="400"> 
 </p>
 <p align="center">
-    Fig5. Neocortex and the Hippocampus
+    Fig6. Neocortex and the Hippocampus
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
 
@@ -103,7 +103,7 @@ Fig6 below shows the overall structure of Larimar. It consists of three main com
     <img src='architecture.png' width="800">
 </p>
 <p align="center">
-    Fig6. Larimar architecture
+    Fig7. Larimar architecture
 </p>
 
 
@@ -122,7 +122,7 @@ In this paper, authors followed the basic structures from [8] to combine pre-tra
     <img src='basic memory operations.png' width="800">
 </p>
 <p align="center">
-    Fig. Basic memory operations [8]
+    Fig8. Basic memory operations [8]
 </p>
 
 
@@ -132,7 +132,7 @@ In this paper, authors followed the basic structures from [8] to combine pre-tra
     <img src='wall_clock_time _result.PNG' width="800">
 </p>
 <p align="center">
-    Fig7. Comparison between different editing methods and the wall clock time for a single edit
+    Fig9. Comparison between different editing methods and the wall clock time for a single edit
 </p>
 The experiment was conducted on a single A100 GPU. Comparing the wall clock time for each editing method across 10 single edits, as shown in Fig8, Larimar was found to be approximately 4-10 times faster than the existing ROME and GRACE methods. Additionally, Larimar demonstrates the ability to address sequential edits, batch edits, and forgetting/deletion, which were not previously addressed in existing work.
 
@@ -142,7 +142,7 @@ This paper utilizes the CounterFact dataset for comparing Single Fact editing. T
     <img src='Single_fact_editing_result.PNG' width="500">
 </p>
 <p align="center">
-    Fig8.Single fact edit performanceon CounterFact dataset comparing with baseline. Top two best systems are highlighted.
+    Fig10.Single fact edit performanceon CounterFact dataset comparing with baseline. Top two best systems are highlighted.
 </p>
 The results are shown in Fig 9. Edit Success measures the percentage of cases where the edited result has a higher probability than the original result, while Paraphrase evaluates whether the model achieves the same performance using paraphrase prompts. Neighborhood assesses the model's ability to retain knowledge about the original object. Larimar demonstrates comparable performance in editing new facts and handling prompts.
 
@@ -152,7 +152,7 @@ To check sequential fact editing, Test retention rate(TRR) and edit retention ra
     <img src='sequential_fact_editing_result.PNG' width="450">
 </p>
 <p align="center">
-    Fig9. Sequential editing on ZsRE dataset
+    Fig11. Sequential editing on ZsRE dataset
 </p>
 According to the figure 9, Larimar’s comparable ERR performance to GRACE, while preserving its original test set performance.Larimar-1.3B achieves editing speeds approximately 10 or more times faster than GRACE on GPT-2 XL.
 
@@ -162,7 +162,7 @@ This results shows that specific fact can be selectively erased from N facts tha
     <img src='selective_forgetting.PNG' width="300">
 </p>
 <p align="center">
-    Fig10. Batch editing accuracy on counterfact dataset. Green: MEMIT, Orange: ROME, Magenta: MEND, Black: Larimar.
+    Fig12. Batch editing accuracy on counterfact dataset. Green: MEMIT, Orange: ROME, Magenta: MEND, Black: Larimar.
 </p>
 Fig 10 shows many edits can be written at once to memory and accurately retrieve from it. Rewrite accuracy is near 100% for up to 512 edits (the memory size K) and then drops to 82% for 1024 edits. This result shows Larimar's ability to compress more than K facts into its size-K memory. This performance level is higher when compared to baselines like MEND and ROME, but subpar compared to MEMIT, which can accurately handle a very large batch of edits at a cost of reduced editing speed and is also not meant to handle sequential editing.
 </p>
@@ -172,7 +172,7 @@ To test the ability of Larimar for selectively forgetting specified facts during
     <img src='memoryerase_result.PNG' width="500">
 </p>
 <p align="center">
-    Fig11. Fraction of facts with accurate recall, for the Counterfact and ZsRE datasets, after writing N factrs to memory and removing one.
+    Fig13. Fraction of facts with accurate recall, for the Counterfact and ZsRE datasets, after writing N factrs to memory and removing one.
 </p>
 As a result, Larimar achived higher performance in forgotten and retained information is all testbench than Basemodel. This shows that Larimar works better on selective forgetting.
 
@@ -186,7 +186,7 @@ For example, in a search engine scenario, the recall rate indicates how many of 
     <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
-    Fig12. Novel fact addition recall rate on FastFacts.
+    Fig14. Novel fact addition recall rate on FastFacts.
 </p>
 Fig 12 shows Larimar’s recall performance does not degrade much with increasing input context length, even
 compared to some of most competitive baseline LLMs trained with longer training context. We also compare with Supersizing Transformer, which is a memory-augmented model, however it did not show competitive recall performance because it was not trained to perform memory-conditioned generation. Due to memory
