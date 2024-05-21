@@ -4,7 +4,7 @@
 
 Meng et al.(2022b) assess the effectiveness of hidden states in LLMS for recalling facts using causal tracing → subject’s last token within the feed-forward networks at intermediate layer plays a significant role.
 
-**Motivation** : However, previous work showed that layers deemed important during causal tracing did not always translate to model editing performance. (causal tracing 중에서 중요하다고 생각된 layer들이 model editing performance에서도 좋은 것은 아니었음.)
+**Motivation** : However, previous work showed that layers deemed important during causal tracing did not always translate to model editing performance.
 
 → Therefore, find the optimal layer for model editing layer empirically.
 
