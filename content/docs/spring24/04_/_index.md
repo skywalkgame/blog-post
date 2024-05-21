@@ -6,7 +6,7 @@ weight: 1
 
 # Better & Faster Large Language Models via Multi-token Prediction
 - Authors: Gloeckle et al. 
-- Institution : FAIR at Meta, CERMICS Ecole des Ponts ParisTech and LISN Universite Paris-Saclay
+- Institution : FAIR at Meta, CERMICS Ecole des Ponts ParisTech and LISN Universite Paris-Saclay *
 * Posted by Jinoh Cho and Seonghyeon Park *
   
 # Preliminaries
