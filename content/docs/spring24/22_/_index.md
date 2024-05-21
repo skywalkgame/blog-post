@@ -110,7 +110,7 @@ Let's see how it works with details.
 
 First of all, the memory **M** in Fig7 has to be trained so as to approximate the distribution of **X** (**X** is an exchangeable-order invariant episode: $**X** = \lbrace x_{1}, ..., x_{N} \rbrace$, a subset of the input data consisting of **N** samples. To do so, the model maximize the conditional log-likelihood of ln *p* (**X**|**M**). 
 
-Larimar trains the memory **M** in Fig7 so as to maximize the conditional log-likelihood of ln *p*(**X**|**M**), where **X** is an exchangeable (order invariant) episode:  **X** = {$ x_{1}, ..., x_{N} $} , a subset of the input data consisting of N samples.
+
 
 Our goal is to understand how to determine the writing weight and reading weight. 
 
