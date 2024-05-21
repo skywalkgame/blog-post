@@ -59,7 +59,9 @@ This work proposes optimal way to scale model editing that strikes a balance bet
 
 **Sequential-batched editing** sequentially edit many batch of facts at a time. And the experiment was conducted going from batch size of 1 up to 4096. (1, 64, 256, 1024, 4096)
 
-![Untitled](Blog%20Post/Untitled%205.png)
+<p align="center">
+    <img src="Blog%20Post/Untitled%205.png" alt="." > 
+</p>
 
 Experimental results according to figures above showed that larger batch sizes are actually worse for model performance than sequential edits with smaller batches. 
 
