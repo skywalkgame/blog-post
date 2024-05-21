@@ -5,7 +5,10 @@ weight: 1
 ---
 
 # Exploring µ-Parameterization in Large-Scale Neural Networks
-
+Paper : A Large-Scale Exploration of µ-Transfer
+Author : Lucas Dax Lingle
+produced by Jeonghyun Choi, Minhye Choo
+<br/>
 
 ## Introduction
 
