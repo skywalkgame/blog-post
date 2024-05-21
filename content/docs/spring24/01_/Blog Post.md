@@ -14,10 +14,10 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 3. The layer that achieves the highest score is selected as the most suitable for targeted interventions.
 
 <p align="center">
-  <img src="Blog%20Post/Untitled.png" alt="." width=\columnwidth > 
+  <img src="Blog%20Post/Untitled.png" alt="." width=\textwidth > 
 </p>
 <p align="center">
-  <img src="Blog%20Post/Untitled%201.png" alt="." width="500" height="300" > 
+  <img src="Blog%20Post/Untitled%201.png" alt="." width=\textwidth > 
 </p>
 
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6.
