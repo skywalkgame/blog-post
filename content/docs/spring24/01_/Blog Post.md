@@ -23,7 +23,6 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6.
 
 Here, MEMIT and ROME have very similar performance for model editing across layer of a model.
-
 → Why? : Both algorithms optimize for the **same objective** with difference in the memorization constraints. This shows that memorization constraints plays minor effect on editing performance.
 
 ### **Optimal** way of Scaling Up model editing?
@@ -35,7 +34,6 @@ After finding the optimal layer, scaling of model editing on the same model can 
 A large number(batch size) of knowledge edits are performed on the model with the same update. This work stick to editing a single layer of the model.
 
 Experiment setting
-
 - Targeting layer1 in Llama-3 with  batch size 16, 64, 256, 1024, and 4096 for Batched editing.
 
 <p align="center">
