@@ -108,7 +108,7 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
   <img src="BlogPost/Untitled.png" alt="." width=\textwidth > 
 </p>
 <p align="center">
-  <img src="BlogPost/Untitled1.png" alt="." width=\textwidth > 
+  <img src="BlogPost/Untitled 1.png" alt="." width=\textwidth > 
 </p>
 
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6. Here, MEMIT and ROME have very similar performance for model editing across layer of a model.
