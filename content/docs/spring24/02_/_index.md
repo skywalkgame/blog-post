@@ -8,18 +8,29 @@ weight: 1
 *Authors: Yang, Runyi, et al
 
 ## Summary
-<p align="center">
-    <img src='fig1.png' width="600">
-</p>
-<p align="center">
-    Fig1. Comparison of 3D gaussian splatting and proposed SUNDAE
-</p>
-
+ 3D representation, which is the basis for many VR/AR and robotics applications, has long been an area of interest in computer vision and graphics. With the advent of neural radiation fields (NeRFs) [Link](https://dl.acm.org/doi/abs/10.1145/3503250), several methods have emerged to improve the quality and efficiency of NeRFs.
+ 
 ### Conventional 3D Gaussian Splatting (3DGS) 
+<p align="center">
+    <img src='3dgs.png' width="600">
+</p>
+<p align="center">
+    Fig. 1. Comparison of 3D Gaussian Splatting to previous NeRF technologies.
+</p>  
+ One of the recent hot topics in the NeRF field, 3D Gaussian Splatting (3DGS), demonstrates high quality and particularly fast, near real-time rendering speeds (about 100FPS).
+
 - Pros: Superior **rendering speed** and **quality**  
 - Cons: **High memory consumption**  
   
 ### Proposed SUNDAE  
+
+<p align="center">
+    <img src='fig1.png' width="600">
+</p>
+<p align="center">
+    Fig. 2. Comparison of 3D gaussian splatting and proposed SUNDAE
+</p>
+
 - It constructs a **memory-efficient Gaussian field** using spectral pruning and neural compensation.  
 - It considers the relationship between primitives, reducing memory usage while maintaining rendering quality.  
 - It significantly **reduces memory consumption** while **preserving high rendering quality**.  
@@ -30,7 +41,7 @@ weight: 1
     <img src='fig2.png' width="600">
 </p>
 <p align="center">
-    Fig2. Conceptual illustration of vanilla 3DGS, SUNDAE spectral pruning technique, and neural compensation.
+    Fig. 3. Conceptual illustration of vanilla 3DGS, SUNDAE spectral pruning technique, and neural compensation.
 </p>  
 
 ### 3D Gaussian Splatting (3DGS) [Link](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file)
@@ -60,7 +71,7 @@ The overall framework is in Fig.
     <img src='fig3.png' width="600">
 </p>
 <p align="center">
-    Fig3. The overall framework of SUNDAE with pipeline and graph-based pruning.
+    Fig. 4. The overall framework of SUNDAE with pipeline and graph-based pruning.
 </p>
 
 Let’s see how each step works.
@@ -151,7 +162,7 @@ SUNDAE demonstrates strong performance across various metrics, including PSNR, S
     <img src='fig5.png' width="600">
 </p>
 <p align="center">
-    Fig4. Qualitative results of SUNDAE.
+    Fig5. Qualitative results of SUNDAE.
 </p>  
 
 The qualitative results demonstrate that SUNDAE achieves comparable novel view synthesis quality with significantly lower memory consumption (1% or 10%).
@@ -165,7 +176,7 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
     <img src='fig7.png' width="600">
 </p>
 <p align="center">
-    Fig5. Ablations experiment on the ratio 𝛾 of the bandlimited filter of graph based pruning.
+    Fig6. Ablations experiment on the ratio 𝛾 of the bandlimited filter of graph based pruning.
 </p>  
 
 - **Band-limited ratio of Graph-based pruning:**
@@ -182,7 +193,7 @@ The qualitative results demonstrate that SUNDAE achieves comparable novel view s
     <img src='fig6.png' width="600">
 </p>
 <p align="center">
-    Fig 6. Visualization with and without neural compensation.
+    Fig. 7. Visualization with and without neural compensation.
 </p>  
 
 - **The compensation performance of the network:**
