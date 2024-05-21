@@ -182,7 +182,7 @@ To summarize the contributions of the paper and consider the future works, this 
 - <a href="https://arxiv.org/abs/2203.03466">Tensor Programs V: Tuning large neural networks via zero-shot hyperparameter transfer</a> <br/>
 The performance of µ-Transfer, which reduces computation by tuning a small model and then transferring the obtained hyperparameters to a large model instead of tuning the large parameter model directly, was demonstrated experimentally. <br/>
 <div align="center">
-![relate1](https://github.com/simct/test/assets/127532891/09c64922-425d-4bbc-850a-36ca097e5fb7)<br/>
+<img src="https://github.com/simct/test/assets/127532891/09c64922-425d-4bbc-850a-36ca097e5fb7" alt="relate1"/>
 *Figure : (1) MLP with SP (2) MLP with µP (3) transformer with SP (4) transformer with µP*
 </div>
 The paper experimentally confirmed that when Standard Parameterization was applied to MLP and Transformer models, the hyperparameter stability was low. However, using µ Parameterization enabled stable transfer by using width-128 network and width-8192 network. <br/>
