@@ -138,7 +138,7 @@ According to the figure 9, Larimar’s comparable ERR performance to GRACE, whil
 ### Selective Forgetting
 This results shows that specific fact can be selectively erased from N facts that are have been written in Larimar's memory. 
 <p align="center">
-    <img src='selective_forgetting.PNG' width="400">
+    <img src='selective_forgetting.PNG' width="300">
 </p>
 <p align="center">
     Fig10. Batch editing accuracy on counterfact dataset. Green: MEMIT, Orange: ROME, Magenta: MEND, Black: Larimar.
