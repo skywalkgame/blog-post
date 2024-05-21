@@ -15,9 +15,9 @@ weight: 1
 
 Standard language modeling involves learning from a large text corpus \( x_1, \ldots, x_T \) by implementing a next-token prediction task. The goal is to minimize the cross-entropy loss, defined as:
 
-\[ 
+$$ 
 L_1 = - \sum_{t} \log P_{\theta}(x_{t+1} \mid x_{t:1}), 
-\]
+$$
 
 where \( P_{\theta} \) represents our large language model under training. The objective is to maximize the probability of the next token \( x_{t+1} \), given the history of previous tokens \( x_{t:1} = x_t, \ldots, x_1 \).
 
