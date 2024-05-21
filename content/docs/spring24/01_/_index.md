@@ -144,7 +144,7 @@ Experiment setting
 
 **Evaluation Results of Batch Editing**
 
-<p align="left">
+<p align="center">
     <img src="BlogPost/Untitled3.png" alt="." >
     <img src="BlogPost/Untitled4.png" alt="." > 
 </p>
