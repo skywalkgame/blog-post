@@ -1,87 +1,64 @@
 ---
+title: "Accelerating Transformers via Conditional Computation: As Aspect of Mixture of Depths"
 author:
- - "A"
- - "B"
+- Inkwan Hwang
+- Minjae Park
 type: docs
 bookToc: True
 weight: 1
 ---
+*Posted by: *
 
-# **Mixture-of-Depths: Dynamically allocating compute in transformer-based language models**
-*Authors: Dativd Raposo(Google DeepMind) and Adam Santoro(Google DeepMind) et.al*
+## Introduction
+“Choice and concentration” is an effective strategies for achieving success in problems. Sometimes, it is not necessary to consume same amount of effort and time into all problems. Expending energy on trivial issues may fail to concentrate on what truly matters. Similarly, in language models, there is a technique that does not focus equally on all tokens but allocates less budget to non-essential tokens. This technique is called conditional computation.
 
-“Choice and concentration” is an effective strategies for completing tasks with overall success. It is not necessary to consume same amount of effort and time into all problems. If we expend our energy on trivial issues, we may fail to concentrate on what truly matters. Similary, a technique was introduced that allows languge models to allocate less budget to non-essential tokens instead of focusing equally on all tokens.
+In this post, We will explain conditional computation strategies for Transformers, focusing on a technology announced this year called **Mixture-of-Texture.**
 
-The tremendous technique developed by Google DeepMind Researchers is called Miture-of-Depths, or MoD for short. In this blog post, we take a look at building blocks of MoD and how they works.
 
- This paper insists that all problems do not require same amount of time to solve in real world and also in language models like Transformer.  
-But, Transformer models spread FLOPs **'uniformly'** across input sequences, which is inefficient!  
-Therefore there are many efforts like "early exiting" to reduce total FLOPs & **'dynamically'** allocate compute budgets.  
-However, these methods do not work well due to hardware constraints.  
-So, the methods should be sophistically addressed like harmonious with current hardware stack & known tensor sizes that are selected to maximize hardware utilization.  
+paper:  [<U>Mixture-of-Depths: Dynamically allocating compute in transformer-based language models</U>](https://arxiv.org/abs/2404.02258)
 
-<p align="center">
-    <img src=./Mixture-of-Depths.png> 
-</p>
 
-<p align="center">
-    (Fig 1. Description of overall MoD & comparison between Vanilla Transformer & Early Exit method)
-</p>
+Let's dive in!
+
+## Understanding the challenge: Uniform computation in Transformers
+
+## Conditional Computation for transformers
+- Early exiting
   
-Therefore, the things that authors of this paper contributed in this paper are listed as follows:  
+  Early Exit method is a method when the model decides to end computation on a given token, allowing it skips the remaining layers. Difference between MoD is, MoD can choose whether skip middle layer or not, but Early Exit method can't.
+- CoLT5
 
-1. Suggestion of method(Mixture-of-Depths, MoD) which limits the total FLOPs by choosing only k tokens which process into Attention + mlp layer.
-2. Comparing this method with vanilla Transformer(isoFLOP) &  Mixture-of-Experts(MoE) & Combined version of MoE + MoD = MoDE
-3. With this method, MoD achieves better performance than vanilla Transformer in isoFLOPs & faster inference speed.
+- Mixture of Experts (MoE)
 
-## **Background**
-
-#### Early Exit method
-
-<p align="center">
-    <img src=./earlyexit.png> 
-</p>
-<p align="center">
-    (Fig 2. Early Exit method)
-</p>
-
-Early Exit method is a method when the model decides to end computation on a given token, then model skips the remaining layers.  
-Difference between MoD is, MoD can choose whether skip middle layer or not, but Early Exit method can't.
-
-#### What is MoE?
+  MoE is an model which consists of parallel expert models which is fitted to certain domains. Like MoD, token-level routing decisions are made across the network depth. Difference between MoD is, MoD chooses path to transformer or to residual connection, MoE chooses path to transformer(Expert) or to transformer(Expert) or both.
+  
+## Overview to Mixture-of-Depths (MoD)
 
 <p align="center">
-    <img src=./moe.png> 
-</p>
-<p align="center">
-    (Fig 3. Diagram of MoE)
+    <img src=../images/Mixture-of-Depths.png> 
 </p>
 
-MoE is an model which consists of parallel expert models which is fitted to certain domains.  
-Like MoD, token-level routing decisions are made across the network depth.  
+MoE is an model which consists of parallel expert models which is fitted to certain domains.
+Like MoD, token-level routing decisions are made across the network depth.
 Difference between MoD is, MoD chooses path to transformer or to residual connection, MoE chooses path to transformer(Expert) or to transformer(Expert) or both.
 
-## **Implementing Mixture-of-Depth Transformers**
+## Capacity based routing schemes
+- Token-choice routing
+- Expert-choice routing
+- Expert-choice MoD
 
-High-level strategy of Mixture-of-Depths is as follows:
+## Implementation detail
 
-#### **Defining a compute budget**
+논문 요약
 
-- First, to make smaller compute budget per forward pass than vanila transformer, we limit the number of tokens in a sequence for computations like self-attention and MLP. This concept, called **capacity**, defines the total tokens processed and determines the FLOPs required.
-- For example, in vanila transformers, capacity($T$) covers all tokens, but in MoE transformers, it's dividing among multiple experts.
-- Lowering computation capacity can reduce the compute budget per forward pass without performance loss if the model learns to prioritize important tokens.
-  
-#### **Routing around transformer blocks**
+## Open source MoD
 
-#### **Routing schemes**
+https://github.com/astramind-ai/Mixture-of-depths
 
-#### **Routing implementation**
+## Conclusion and discussion
 
-#### **Sampling**
+논문 요약 + 내 생각
 
-## **Results & Discussion**
+## Some resources
 
-## **References**
-
-Fig 2. https://www.sciencedirect.com/science/article/pii/S0893608022002532  
-Fig 3. https://deepgram.com/learn/mixture-of-experts-ml-model-guide  
+참고문헌 정리
