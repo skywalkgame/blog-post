@@ -127,7 +127,7 @@ Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metr
 
 → Why? : Both algorithms optimize for the **same objective** with difference in the memorization constraints. This shows that memorization constraints plays minor effect on editing performance.
 
-### **Optimal** way of Scaling Up model editing?
+### **Optimal way of Scaling Up model editing?**
 
 After finding the optimal layer, scaling of model editing on the same model can happen in two ways : **batch editing** & **sequential editing**.
 
