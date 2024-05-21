@@ -1,5 +1,3 @@
-# Blog Post 작성
-
 ## 3 Experiments
 
 ### 3.1 Finding Optimal Layer for Model Editing
