@@ -33,7 +33,7 @@ weight: 1
     Fig2. Conceptual illustration of vanilla 3DGS, SUNDAE spectral pruning technique, and neural compensation.
 </p>  
 
-### 3DGS
+### 3D Gaussian Splatting (3DGS) [Link](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file)
 Recently, 3DGS has been proposed as a **novel 3D scene representation**, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
 3DGS demonstrates notable **advantages in rendering speed, rendering quality, and training time**. But it **requires a large storage**.
 
