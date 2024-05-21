@@ -46,7 +46,6 @@ Experiment setting
 
 <p align="left">
     <img src="Blog%20Post/Untitled%203.png" alt="." >
-<p align="right">
     <img src="Blog%20Post/Untitled%204.png" alt="." > 
 </p>
 
