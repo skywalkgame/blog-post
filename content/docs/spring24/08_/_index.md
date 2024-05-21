@@ -11,7 +11,7 @@ weight: 1
 ### What is LoRA?
 LoRA is a methodology for effective fine-tuning large-scale pretrained models. Models such as OPT, LLaMA, and CLIP demonstrate remarkable performance when fine-tuned for various downstream tasks. However, full fine-tuning of these massive models requires substantial computational resources. LoRA enables parameter-efficient fine-tuning by keeping the pretrained model's weights frozen and adding trainable low-rank decomposition matrices.
 
-{{< figure src="./LoRA.png" alt="." height="600" >}}
+{{< figure src="./LoRA.png" alt="." width="600" height="600" >}}
 
 In the above figure, only the matrices A and B are trained, with dimensions (d x r) and (r x d) respectively. By setting r << d, the number of parameters to be trained can be reduced. These trained matrices are then added to the existing pretrained weights, allowing tuning without affecting the inference speed of the original model.
 
