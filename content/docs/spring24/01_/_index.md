@@ -177,9 +177,7 @@ This work examines several model editing techniques in the context of the newly 
 - Smaller, frequent sequential batch size edits have a superior performance.
 - Batch size of 1024 for MEMIT and EMMET is optimal batchsize with sequential-batched editing.
 
- The authors argue that the current trend of pushing towards bigger edit batch sizes for scaling model editing may have limitations. Instead, they propose that future research should focus on methods that combine both batched and sequential editing to optimize performance while minimizing model degradation.
-
-Future work will include experiments on multi-layer intervention for edits, as well as experiments against other popular models and algorithms, including methods that are hyper-network based
+ The authors argue that the current trend of pushing towards bigger edit batch sizes for scaling model editing may have limitations. Instead, they propose that future research should focus on methods that combine both batched and sequential editing to optimize performance while minimizing model degradation. Also, future work was proposed for experiments on multi-layer intervention for edits, as well as experiments against other popular models and algorithms, including methods that are hyper-network based.
 
 **Provide your own perspectives and discussions, and propose a future research direction**.
 
