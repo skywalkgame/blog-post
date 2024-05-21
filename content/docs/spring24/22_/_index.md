@@ -56,14 +56,14 @@ For example, let's assume that you're providing new information to a pre-trained
 ### Variational auto encoder (VAE)
 To implement the idea from memory network, concepts from variational auto encoder can be used. VAE is a kind of generative model to generate an output similar to real data. In other words, it aims to approximate the true distribution of input data with three components - encoder, decoder, and latent space.
 
-In this post, we assume that readers have knowledge about VAE. For details, please refer to [] and [].
+In this post, we assume that readers have knowledge about VAE. For details, please refer to [6] and [7].
 
 
 <p align="center">
     <img src='VAE.png' width="600">
 </p>
 <p align="center">
-    Fig5. VAE Structure [5]
+    Fig5. VAE Structure [7]
 </p>
 
 
@@ -116,13 +116,13 @@ sparse distributed memory is used for stroing and retrieving large amounts of in
 
 ## 4. Memory Operations
 
-In this paper, authors followed the basic structures from [6] to combine pre-trained LLMs and memory component for knowledge edit. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." 
+In this paper, authors followed the basic structures from [8] to combine pre-trained LLMs and memory component for knowledge edit. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." 
 
 <p align="center">
     <img src='basic memory operations.png' width="800">
 </p>
 <p align="center">
-    Fig. Basic memory operations [6]
+    Fig. Basic memory operations [8]
 </p>
 
 
@@ -210,16 +210,17 @@ processing in the latent space, Larimar is also efficient is terms of number of 
 
 [5] https://arxiv.org/abs/1410.3916
  -> Memory Networks
- 
-[6] https://openreview.net/forum?id=Harn4_EZBw
+
+[6] https://arxiv.org/abs/1312.6114
+ -> Auto-Encoding Variational Bayes
+
+[7] https://process-mining.tistory.com/161
+ -> VAE, blog post
+
+[8] https://openreview.net/forum?id=Harn4_EZBw
  -> Generative Pseudo-Inverse Memory
 
 
-https://arxiv.org/abs/1312.6114
- -> Auto-Encoding Variational Bayes
-
-https://process-mining.tistory.com/161
- -> VAE
  
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
