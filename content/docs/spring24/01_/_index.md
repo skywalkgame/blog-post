@@ -104,7 +104,7 @@ Akshat Gupta, Dev Sajnani, and Gopala Anumanchipalli. 2024. [A unified framework
 
 ## Experiments & Results
 
-### Whats the Optimal Layer for Model Editing?
+### What's the Optimal Layer for Model Editing?
 
 Investigating the effectiveness of hidden states in LLMS for recalling facts using causal tracing showed thjat subject’s last token within the feed-forward networks at intermediate layer plays a significant role. [(Meng et al., 2022b)](https://arxiv.org/pdf/2210.07229)
 
