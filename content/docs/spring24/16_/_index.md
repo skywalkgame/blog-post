@@ -1,13 +1,10 @@
 ---
-title: "Accelerating Transformers via Conditional Computation: As Aspect of Mixture of Depths"
-author:
-- Inkwan Hwang
-- Minjae Park
 type: docs
 bookToc: True
 weight: 1
 ---
-*Posted by: *
+# **Accelerating Transformers via Conditional Computation: As Aspect of Mixture of Depths**
+*Posted by: Inkwan Hwang, Minjae Park*
 
 ## Introduction
 “Choice and concentration” is an effective strategies for achieving success in problems. Sometimes, it is not necessary to consume same amount of effort and time into all problems. Expending energy on trivial issues may fail to concentrate on what truly matters. Similarly, in language models, there is a technique that does not focus equally on all tokens but allocates less budget to non-essential tokens. This technique is called conditional computation.
