@@ -19,7 +19,7 @@ $$
 L_1 = - \sum_{t} \log P_{\theta}(x_{t+1} \mid x_{t:1}), 
 $$
 
-where $ P_{\theta} $ represents our large language model under training. The objective is to maximize the probability of the next token $x_{t+1}$, given the history of previous tokens $x_{t:1} = x_t, \ldots, x_1$.
+where $P_{\theta}$ represents our large language model under training. The objective is to maximize the probability of the next token $x_{t+1}$, given the history of previous tokens $x_{t:1} = x_1, \ldots, x_t$.
 
 # Core Idea
 
