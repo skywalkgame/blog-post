@@ -13,7 +13,7 @@ weight: 1
 
 ### Language Modeling and Next-Token Prediction Task
 
-Standard language modeling involves learning from a large text corpus $ x_1, \ldots, x_T $ by implementing a next-token prediction task. The goal is to minimize the cross-entropy loss, defined as:
+Standard language modeling involves learning from a large text corpus $x_1, \ldots, x_T$ by implementing a next-token prediction task. The goal is to minimize the cross-entropy loss, defined as:
 
 $$ 
 L_1 = - \sum_{t} \log P_{\theta}(x_{t+1} \mid x_{t:1}), 
