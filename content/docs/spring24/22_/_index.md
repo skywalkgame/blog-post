@@ -138,10 +138,10 @@ According to the figure 9, Larimar’s comparable ERR performance to GRACE, whil
 ### Selective Forgetting
 This results shows that specific fact can be selectively erased from N facts that are have been written in Larimar's memory. 
 <p align="center">
-    <img src='selective_forgetting.PNG' width="500">
+    <img src='selective_forgetting.PNG' width="400">
 </p>
 <p align="center">
-    Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig10. Batch editing accuracy on counterfact dataset. Green: MEMIT, Orange: ROME, Magenta: MEND, Black: Larimar-6B.
 </p>
 Fig 10 shows many edits can be written at once to memory and accurately retrieve from it. Rewrite accuracy is near 100% for up to 512 edits (the memory size K) and then drops to 82% for 1024 edits. This result shows Larimar's ability to compress more than K facts into its size-K memory. This performance level is higher when compared to baselines like MEND and ROME, but subpar compared to MEMIT, which can accurately handle a very large batch of edits at a cost of reduced editing speed and is also not meant to handle sequential editing.
 
@@ -149,7 +149,7 @@ Fig 10 shows many edits can be written at once to memory and accurately retrieve
     <img src='memoryerase_result.PNG' width="500">
 </p>
 <p align="center">
-    Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
 
 ### Recall Performance
@@ -157,7 +157,7 @@ Fig 10 shows many edits can be written at once to memory and accurately retrieve
     <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
-    Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
 
 
