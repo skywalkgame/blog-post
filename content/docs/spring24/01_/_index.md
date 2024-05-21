@@ -107,15 +107,19 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 <p align="center">
   <img src="BlogPost/Untitled.png" alt="." width=\textwidth > 
 </p>
+
 <p align="center">
   Fig 3. Post-edit performance of various metrics for Llama3-8b model using MEMIT and ROME on various layers. Eqch layer is edited with 1000 facts, one at a time and non-sequentially.
 </p>
+
 <p align="center">
   <img src="BlogPost/Untitled 1.png" alt="." width=\textwidth > 
 </p>
+
 <p align="center">
   Fig 4. Post-edit performance of various metrics on Llama2-7b for MEMIT on various layers.
 </p>
+
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6. Here, MEMIT and ROME have very similar performance for model editing across layer of a model.
 
 → Why? : Both algorithms optimize for the **same objective** with difference in the memorization constraints. This shows that memorization constraints plays minor effect on editing performance.
