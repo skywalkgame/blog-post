@@ -115,6 +115,7 @@ First, overall flow shows that model architecture is based on that of VAE.
 
 sparse distributed memory is used for stroing and retrieving large amounts of information without focusing on the accuracy but on similarity of information. - wiki
 
+$$A \equiv B(modC)$$
 
 
 
