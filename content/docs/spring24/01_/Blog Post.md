@@ -38,8 +38,9 @@ Experiment setting
 
 - Targeting layer1 in Llama-3 with  batch size 16, 64, 256, 1024, and 4096 for Batched editing.
 
+<p align="center">
 ![Untitled](Blog%20Post/Untitled%202.png)
-
+</p>
 **Evaluation Results of Batch Editing**
 
 ![Untitled](Blog%20Post/Untitled%203.png)
