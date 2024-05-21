@@ -63,11 +63,7 @@ This work proposes optimal way to scale model editing that strikes a balance bet
     <img src="Blog%20Post/Untitled%205.png" alt="." > 
 </p>
 
-Experimental results according to figures above showed that larger batch sizes are actually worse for model performance than sequential edits with smaller batches. 
-
-In contrast, larger batch sizes seem to be better for metrics in NS : while batch edits are less successful in general, it is better in preserving locality of edits.
-
-This results were concluded to optimal batch size of 1024 for both MEMIT and EMMET. Increasing batch-size beyond that lead to larger model degradation and better editing results can be achieved by sequential-batched editing with smaller batch sizes. 
+Experimental results according to figures above showed that larger batch sizes are actually worse for model performance than sequential edits with smaller batches. In contrast, larger batch sizes seem to be better for metrics in NS : while batch edits are less successful in general, it is better in preserving locality of edits. This results were concluded to optimal batch size of 1024 for both MEMIT and EMMET. Increasing batch-size beyond that lead to larger model degradation and better editing results can be achieved by sequential-batched editing with smaller batch sizes. 
 
 ### Conclusion
 
