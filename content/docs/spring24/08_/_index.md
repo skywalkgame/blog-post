@@ -16,8 +16,6 @@ LoRA is a methodology for effective fine-tuning large-scale pretrained models. M
     <img src=./LoRA.png> 
 </p>
 
-{{< figure src="" alt="." width="600" height="600" >}}
-
 In the above figure, only the matrices A and B are trained, with dimensions (d x r) and (r x d) respectively. By setting r << d, the number of parameters to be trained can be reduced. These trained matrices are then added to the existing pretrained weights, allowing tuning without affecting the inference speed of the original model.
 
 ### LoRAs Composistion
