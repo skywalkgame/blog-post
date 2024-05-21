@@ -13,9 +13,10 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 2. Calculate various model metrics(ES, PS, NS, S) to evaluate their impact.
 3. The layer that achieves the highest score is selected as the most suitable for targeted interventions.
 
-![Untitled](Blog%20Post/Untitled.png)
+<p align="center">
+  <img src="Blog Post/Untitled.PNG" alt="." width="500" height="300" > 
+</p>
 
-![Untitled](Blog%20Post/Untitled%201.png)
 
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6.
 
