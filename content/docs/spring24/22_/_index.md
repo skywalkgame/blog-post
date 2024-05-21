@@ -108,7 +108,7 @@ Fig7 below shows the overall architecture of Larimar. Basic idea is to implement
 
 Let's see how it works with details.
 
-First of all, Larimar trains the memory **M** in Fig7 so as to maximize the conditional log-likelihood of $ln*p*(**X**|**M**)$, where X is an exchangeable (order invariant) episode: $ **X** = {x_{1}, ..., x_{N}} $, a subset of the input data consisting of N samples.
+First of all, Larimar trains the memory **M** in Fig7 so as to maximize the conditional log-likelihood of ln*p*(**X**|**M**), where X is an exchangeable (order invariant) episode:  **X** = {x_{1}, ..., x_{N}} , a subset of the input data consisting of N samples.
 
 Our goal is to understand how to determine the writing weight and reading weight. 
 
