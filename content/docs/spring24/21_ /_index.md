@@ -12,7 +12,12 @@ weight: 1
 ## Introduction
 In the rapidly evolving field of artificial intelligence and machine learning, keeping large language models (LLMs) up-to-date with the latest information is crucial. This blog post shows two model editing techniques (ROME and MEMIT) and introduces EMMET, a new framework that aims to integrate these methods under a single objective.
 
-
+<p align="center">
+    <img src='figure1.png' width="600">
+</p>
+<p align="center">
+    Fig. 1. a.
+</p>  
 
 ## ROME and MEMIT: Overview
 As new facts constantly emerge, it's essential to update models with the latest knowledge. Model editing allows us to modify facts stored inside a model or update incorrect information. This paper focuses on two popular parameter-modifying model editing methods: ROME (Rank-One Model Editing) and MEMIT (Mass Editing Memory in Transformer). Both methods can infuse knowledge within models without needing additional hypernetworks and can be applied to any transformer-based large language model (LLM).
@@ -68,7 +73,7 @@ While EMMET streamlines the model editing process, it does not address deeper st
 
 
 ## Conclusion
-EMMET successfully unifies ROME and MEMIT under the preservation-memorization framework, offering a robust solution for model editing. By balancing efficiency and accuracy, EMMET represents a significant advancement in updating large language models. However, recognizing the limitations and ethical implications is essential to ensure responsible use of these powerful tools. Future research should focus on improving edit distribution algorithms and understanding their impact on model performance.
+- EMMET successfully unifies ROME and MEMIT under the preservation-memorization framework, offering a robust solution for model editing. By balancing efficiency and accuracy, EMMET represents a significant advancement in updating large language models. However, recognizing the limitations and ethical implications is essential to ensure responsible use of these powerful tools. Future research should focus on improving edit distribution algorithms and understanding their impact on model performance.
 
 
 
