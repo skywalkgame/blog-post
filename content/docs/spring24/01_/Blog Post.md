@@ -41,11 +41,17 @@ Experiment setting
 <p align="center">
     <img src="Blog%20Post/Untitled%202.png" alt="." > 
 </p>
+
 **Evaluation Results of Batch Editing**
 
-![Untitled](Blog%20Post/Untitled%203.png)
+<p align="center">
+    <img src="Blog%20Post/Untitled%203.png" alt="." > 
+</p>
 
-![Untitled](Blog%20Post/Untitled%204.png)
+<p align="center">
+    <img src="Blog%20Post/Untitled%204.png" alt="." > 
+</p>
+
 
 For both MEMIT & EMMET editing, metrics are seen to consistently fall with larger batches, with **NS** being the most pronounced to fall. **ES** is most resilient metric to edits. **PS**, only metric to do so, seen to increase dramatically between batch sizes of 16 and 64.
 
