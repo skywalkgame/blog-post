@@ -1,4 +1,3 @@
-# Blog Post 작성
 
 ## Experiments & Results
 
