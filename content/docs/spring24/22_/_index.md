@@ -156,13 +156,20 @@ To test the ability of Larimar for selectively forgetting specified facts during
 As a result, Larimar achived higher performance in forgotten and retained information is all testbench than Basemodel. This shows that Larimar works better on selective forgetting.
 
 ### Recall Performance
+Larimar performs fact recall with long context using data that is not present in the base decoders pretraining corpus. Facts are curated from CNN Fast Facts. Recursive search in the latent memory space and using readouts to construct new higher-level memory is performed to process the long context with Larimar’s memory trained on a relative small episode length. It should be noted that memory hierarchy is also found in hippocampus and thought to be implicated in learning.
+</p>
+The recall rate, in the context of information retrieval, is a measure of how well a system retrieves all relevant items of a specific class. It represents the proportion of relevant items that the system correctly identifies out of all the relevant items available.
+For example, in a search engine scenario, the recall rate indicates how many of the relevant documents related to a user's query are successfully retrieved by the system. A high recall rate implies that the system effectively captures most, if not all, of the relevant information.
+
 <p align="center">
     <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
     Fig12. Novel fact addition recall rate on FastFacts.
 </p>
-
+Fig 12 shows Larimar’s recall performance does not degrade much with increasing input context length, even
+compared to some of most competitive baseline LLMs trained with longer training context. We also compare with Supersizing Transformer, which is a memory-augmented model, however it did not show competitive recall performance because it was not trained to perform memory-conditioned generation. Due to memory
+processing in the latent space, Larimar is also efficient is terms of number of KV cache token computation compared to baseline methods. 
 
 ## 6. Conclusion
 
