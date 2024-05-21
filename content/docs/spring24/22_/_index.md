@@ -146,6 +146,7 @@ This results shows that specific fact can be selectively erased from N facts tha
 Fig 10 shows many edits can be written at once to memory and accurately retrieve from it. Rewrite accuracy is near 100% for up to 512 edits (the memory size K) and then drops to 82% for 1024 edits. This result shows Larimar's ability to compress more than K facts into its size-K memory. This performance level is higher when compared to baselines like MEND and ROME, but subpar compared to MEMIT, which can accurately handle a very large batch of edits at a cost of reduced editing speed and is also not meant to handle sequential editing.
 </p>
 To test the ability of Larimar for selectively forgetting specified facts during inference, write N facts to memory and then forget one fact, and also write to memoty in its place the same fact with the answer replaced with the string "unknown." Then, compare recall for the forgotten fact before and after the forgetting operation.  Paper also report the recall on the remaining N −1 facts in memory to demonstrate that forgetting does not compromise other memories. The samples used are from the ZsRE validation set and from the Counterfact test set.
+
 <p align="center">
     <img src='memoryerase_result.PNG' width="500">
 </p>
