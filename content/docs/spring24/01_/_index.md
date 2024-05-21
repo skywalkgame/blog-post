@@ -76,14 +76,10 @@ In EMMET, it shows model editing is possible with batched facts. It is possible 
 </p>
     
 ### How model editing performance is estimated?
-Model performance is estimated with 4 main scores, and these scores are bsed on how model editing works with expressions of correct facts in {{< /katex >}}(s,r,o^{c}){{< /katex >}} and false facts in {{< katex }}(s,r,o^{*}){{< /katex >}}.
+Model performance is estimated with 4 main scores, and these scores are bsed on how model editing works with expressions of correct facts in {{< katex >}}s,r,o^{c}{{< /katex >}} and false facts in {{< katex >}}(s,r,o^{*}){{< /katex >}}.
 #### __Efficacy Score (ES)__ 
-<<<<<<< HEAD
-It measures if the new fact, we want to edit, is successfully edited to model. It is measured by percentage where P(new fact) > P(old fact) for query prompt.{{< katex >}} \mathbb{E}_i \left[ \mathbb{P}_G \left[ o_i \mid p(s_i, r_i) \right] \right] > \mathbb{P}_G \left[ o_i^c \mid p(s_i, r_i) \right] {{< /katex >}} 
 
-=======
 __ES__ measures if the new fact, which we want to edit, is __successfully edited__ to model. It is measured by percentage where {{< katex >}}\mathbb{P}[o^*] > \mathbb{P}[o^{c}]{{< /katex >}}, which means the portion of correct edition result from predictions.
->>>>>>> 925e8ac3693830fed58f0cf4806e2082daeb4c6c
 
 #### __Paraphrase Score (PS)__
 __PS__ measures model's ability to __generalize__ following an edit. It is measured by where P(new fact) > P(old fact) under paraphrases of the query prompt.
@@ -92,8 +88,18 @@ __PS__ measures model's ability to __generalize__ following an edit. It is measu
 __NS__ represents the __specificity__ of model editing. To measure __NS__, we collect a set of nearby subjects {{< katex >}}s_n{{< /katex >}} for which {{< katex >}}(s_n,r,o^{c}){{< /katex >}} holds true. Then we test {{< katex >}}\mathbb{P}[o^*] > \mathbb{P}[o^{c}]{{< /katex >}}, reporting the success fraction asn __NS__.
 
 #### __Composite Score (S)__
-<<<<<<< HEAD
-It combines aspect of edit success, generalization, and locality. It is calculated as the harmonic mean of Edit Success (ES), Paraphrase Score (PS), and Neighborhood Score (NS). It provies overall efficacy of model edits.
+__S__ represents the overall performance. It combines aspect of edit success, generalization, and specificity. It is calculated as the harmonic mean of Edit Success (ES), Paraphrase Score (PS), and Neighborhood Score (NS). It provies overall efficacy of model edits.
+
+## References
+Yunzhi Yao, Peng Wang, Bozhong Tian, Siyuan Cheng, Zhoubo Li, Shumin Deng, Huajun Chen, Ningyu Zhang. 2023. [Editing large language models: Problems, methods, and opportunities](https://arxiv.org/pdf/2305.13172). arXiv preprint arXiv:2305.13172.
+
+Anton Sinitsin, Vsevolod Plokhotnyuk, Dmitriy Pyrkin, Sergei Popov, Artem Babenko. 2020. [Editable neural networks](https://arxiv.org/pdf/2004.00345). arXiv preprint arXiv:2004.00345.
+
+Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov. 2022a. [Locating and editing factual associations in gpt](https://arxiv.org/pdf/2202.05262). Advances in Neural Information Processing Systems, 35:17359–17372.
+
+Kevin Meng, Arnab Sen Sharma, Alex Andonian, Yonatan Belinkov, and David Bau. 2022b. [Massediting memory in a transformer](https://arxiv.org/pdf/2210.07229). arXiv preprint arXiv:2210.07229.
+
+Akshat Gupta, Dev Sajnani, and Gopala Anumanchipalli. 2024. [A unified framework for model editin](https://arxiv.org/pdf/2401.07453). arXiv preprint arXiv:2403.14236.
 
 
 ## Experiments & Results
@@ -182,17 +188,4 @@ NS의 경우 layer가 뒤로 갔을 때 다시 성능이 좋아진 원인, PS에
 single layer에서 나아가 multi-layer에서 몇 개의 layer edit이 효과적인지 조사.
 
 batch size가 증가함에 따라 전체적인 metric이 내려가는 상관관계를 emprically말고 이론적으로 밝히면 더욱 효과적으로 model editing 연구에 도움이 될 수 있을 것 같다.
-=======
-__S__ represents the overall performance. It combines aspect of edit success, generalization, and specificity. It is calculated as the harmonic mean of Edit Success (ES), Paraphrase Score (PS), and Neighborhood Score (NS). It provies overall efficacy of model edits.
 
-## References
-Yunzhi Yao, Peng Wang, Bozhong Tian, Siyuan Cheng, Zhoubo Li, Shumin Deng, Huajun Chen, Ningyu Zhang. 2023. [Editing large language models: Problems, methods, and opportunities](https://arxiv.org/pdf/2305.13172). arXiv preprint arXiv:2305.13172.
-
-Anton Sinitsin, Vsevolod Plokhotnyuk, Dmitriy Pyrkin, Sergei Popov, Artem Babenko. 2020. [Editable neural networks](https://arxiv.org/pdf/2004.00345). arXiv preprint arXiv:2004.00345.
-
-Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov. 2022a. [Locating and editing factual associations in gpt](https://arxiv.org/pdf/2202.05262). Advances in Neural Information Processing Systems, 35:17359–17372.
-
-Kevin Meng, Arnab Sen Sharma, Alex Andonian, Yonatan Belinkov, and David Bau. 2022b. [Massediting memory in a transformer](https://arxiv.org/pdf/2210.07229). arXiv preprint arXiv:2210.07229.
-
-Akshat Gupta, Dev Sajnani, and Gopala Anumanchipalli. 2024. [A unified framework for model editin](https://arxiv.org/pdf/2401.07453). arXiv preprint arXiv:2403.14236.
->>>>>>> 925e8ac3693830fed58f0cf4806e2082daeb4c6c
