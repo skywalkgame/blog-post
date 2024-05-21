@@ -54,6 +54,10 @@ For example, let's assume that you're providing new information to a pre-trained
 </p>
 
 ### Variational auto encoder (VAE)
+To implement the idea from memory network, concepts from variational auto encoder can be used. VAE is a kind of generative model to generate an output similar to real data. In other words, it aims to approximate the true distribution of input data with three components - encoder, decoder, and latent space.
+
+In this post, we assume that readers have knowledge about VAE. For details, please refer to [] and [].
+
 
 <p align="center">
     <img src='VAE.png' width="600">
@@ -210,6 +214,9 @@ processing in the latent space, Larimar is also efficient is terms of number of 
 [6] https://openreview.net/forum?id=Harn4_EZBw
  -> Generative Pseudo-Inverse Memory
 
+
+https://arxiv.org/abs/1312.6114
+ -> Auto-Encoding Variational Bayes
 
 https://process-mining.tistory.com/161
  -> VAE
