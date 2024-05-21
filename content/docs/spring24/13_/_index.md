@@ -4,14 +4,6 @@ bookToc: True
 weight: 1
 ---
 
-#
----
-title: "Exploring µ-Parameterization in Large-Scale Neural Networks"
-author: "Lucas Dax Lingle"
-date: 2024-05-17
-layout: post
----
-
 # Exploring µ-Parameterization in Large-Scale Neural Networks
 
 ## Introduction
