@@ -8,7 +8,6 @@ weight: 1
 In the rapidly evolving field of artificial intelligence and machine learning, keeping large language models (LLMs) up-to-date with the latest information is crucial. This blog post will delve into two innovative model editing techniques—ROME and MEMIT—and introduce EMMET, a new framework that aims to integrate these methods under a single objective.
 
 
-{{< figure src="./overall_architecture.png" alt="." width="600" height="600" >}}
 
 ## Background
 
