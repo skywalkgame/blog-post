@@ -35,7 +35,7 @@ Let's dive in!
 ## Overview to Mixture-of-Depths (MoD)
 
 <p align="center">
-    <img src=../images/Mixture-of-Depths.png> 
+    <img src=../Mixture-of-Depths.png> 
 </p>
 
 MoE is an model which consists of parallel expert models which is fitted to certain domains.
