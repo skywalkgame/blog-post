@@ -131,7 +131,7 @@ To check sequential fact editing, Test retention rate(TRR) and edit retention ra
     <img src='sequential_fact_editing_result.PNG' width="450">
 </p>
 <p align="center">
-    Fig9. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig9. Sequential editing on ZsRE dataset
 </p>
 According to the figure 9, Larimar’s comparable ERR performance to GRACE, while preserving its original test set performance.Larimar-1.3B achieves editing speeds approximately 10 or more times faster than GRACE on GPT-2 XL.
 
@@ -151,7 +151,7 @@ To test the ability of Larimar for selectively forgetting specified facts during
     <img src='memoryerase_result.PNG' width="500">
 </p>
 <p align="center">
-    Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig11. Fraction of facts with accurate recall, for the Counterfact and ZsRE datasets, after writing N factrs to memory and removing one.
 </p>
 As a result, Larimar achived higher performance in forgotten and retained information is all testbench than Basemodel. This shows that Larimar works better on selective forgetting.
 
@@ -160,7 +160,7 @@ As a result, Larimar achived higher performance in forgotten and retained inform
     <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
-    Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data
+    Fig12. Novel fact addition recall rate on FastFacts.
 </p>
 
 
