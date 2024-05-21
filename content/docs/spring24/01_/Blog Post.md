@@ -15,6 +15,8 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 
 <p align="center">
   <img src="Blog%20Post/Untitled.png" alt="." width=\textwidth > 
+</p>
+<p align="center">
   <img src="Blog%20Post/Untitled%201.png" alt="." width=\textwidth > 
 </p>
 
