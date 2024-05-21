@@ -5,15 +5,29 @@ weight: 1
 ---
 
 ## Introduction
-In the rapidly evolving field of artificial intelligence and machine learning, keeping large language models (LLMs) up-to-date with the latest information is crucial. This blog post will delve into two innovative model editing techniques—ROME and MEMIT—and introduce EMMET, a new framework that aims to integrate these methods under a single objective.
+In the rapidly evolving field of artificial intelligence and machine learning, keeping large language models (LLMs) up-to-date with the latest information is crucial. This blog post shows two model editing techniques (ROME and MEMIT) and introduces EMMET, a new framework that aims to integrate these methods under a single objective.
 
 
 
-## Background
+## ROME and MEMIT: Overview
 As new facts constantly emerge, it's essential to update models with the latest knowledge. Model editing allows us to modify facts stored inside a model or update incorrect information. This paper focuses on two popular parameter-modifying model editing methods: ROME (Rank-One Model Editing) and MEMIT (Mass Editing Memory in Transformer). Both methods can infuse knowledge within models without needing additional hypernetworks and can be applied to any transformer-based large language model (LLM).
 
+### ROME (Rank-One Model Editing)
+ROME modifies a single fact at a time by performing edits with an equality constraint. It ensures that the new fact precisely replaces the old fact while preserving other parts of the model's knowledge.
 
-Model Editing Evaluation Metrics
+### MEMIT (Mass Editing Memory in Transformer)
+MEMIT, on the other hand, uses a least-square constraint, allowing for more flexible, batched edits. This method distributes edits across multiple layers, which enhances its ability to handle large batch sizes effectively.
+
+The Preservation-Memorization Objective
+Both ROME and MEMIT optimize the same goal: the preservation-memorization objective. This objective balances two aspects:
+
+Preservation: Ensuring that the model retains its existing knowledge.
+Memorization: Accurately integrating new information into the model.
+In simpler terms, imagine the model's knowledge as a bookshelf. When adding a new book, you want to place it correctly without disturbing the existing books. ROME adds one book at a time with precision, while MEMIT places several books simultaneously, ensuring they all fit well.
+
+
+
+## Model Editing Evaluation Metrics
 The success of model editing is measured using standard metrics. Here are the key evaluation metrics:
 
 Efficacy Score (ES): Indicates if an edit has been successfully made to a model. It is measured as the percentage of edits where the probability of the new fact is greater than the probability of the old fact for a given query prompt.
@@ -27,21 +41,30 @@ Generation Entropy (GE): Represents the fluency of a model post-edit. It is calc
 Score (S): A composite metric defined to represent a combination of edit success, generalization, and locality. It is the harmonic mean of ES, PS, and NS.
 
 
+## EMMET: Unifying ROME and MEMIT
+### Introducing EMMET
+EMMET (Equality-constrained Mass Model Editing in Transformer) unifies ROME and MEMIT under the preservation-memorization objective. EMMET uses an equality constraint for batched edits, providing a balanced approach that leverages the strengths of both ROME and MEMIT.
+
+### EMMET's Closed-Form Solution
+
+### Experiments and Results
+Single Edits and Batch Edits
+Experiments comparing ROME and MEMIT, with and without edit distribution, showed that both methods perform equally well for single edits. However, MEMIT's ability to distribute edits across layers gives it an edge for large batch sizes.
+
+Performance Comparison
+When editing single layers, both EMMET and MEMIT exhibit similar performance across different models and metrics. Applying MEMIT's edit-distribution algorithm to EMMET shows that EMMET can slightly outperform MEMIT in some cases, particularly for large batch sizes.
 
 
 
 
-## ROME and MEMIT: Overview
-ROME (Rank-One Model Editing)
-ROME modifies a single fact at a time by performing edits with an equality constraint. It ensures that the new fact precisely replaces the old fact while preserving other parts of the model's knowledge.
 
-MEMIT (Mass Editing Memory in Transformer)
-MEMIT, on the other hand, uses a least-square constraint, allowing for more flexible, batched edits. This method distributes edits across multiple layers, which enhances its ability to handle large batch sizes effectively.
+## Limitations and Future Directions
+While EMMET streamlines the model editing process, it does not address deeper structural issues within models. The effectiveness of EMMET varies depending on model complexity and the nature of the edited knowledge. Furthermore, although EMMET imposes a theoretically stronger memorization constraint, it does not always outperform MEMIT, suggesting that we might be reaching the limits of model editing capabilities with current techniques.
 
-The Preservation-Memorization Objective
-Both ROME and MEMIT optimize the same goal: the preservation-memorization objective. This objective balances two aspects:
 
-Preservation: Ensuring that the model retains its existing knowledge.
-Memorization: Accurately integrating new information into the model.
-In simpler terms, imagine the model's knowledge as a bookshelf. When adding a new book, you want to place it correctly without disturbing the existing books. ROME adds one book at a time with precision, while MEMIT places several books simultaneously, ensuring they all fit well.
+## Conclusion
+EMMET successfully unifies ROME and MEMIT under the preservation-memorization framework, offering a robust solution for model editing. By balancing efficiency and accuracy, EMMET represents a significant advancement in updating large language models. However, recognizing the limitations and ethical implications is essential to ensure responsible use of these powerful tools. Future research should focus on improving edit distribution algorithms and understanding their impact on model performance.
+
+
+
 
