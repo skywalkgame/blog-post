@@ -126,15 +126,12 @@ A large number(batch size) of knowledge edits are performed on the model with th
 Experimental settings
 - Targeting layer1 in Llama-3 with  batch size 16, 64, 256, 1024, and 4096 for Batched editing.
 
-<p align="center">
-    <img src="BlogPost/Untitled 2.png" alt="." > 
-</p>
+
 
 **Evaluation Results of Batch Editing**
-
 <p align="center">
-    <img src="BlogPost/Untitled 3.png" alt="." >
-    <img src="BlogPost/Untitled 4.png" alt="." > 
+    <img src="BlogPost/Untitled 2.png" alt="." >
+    <img src="BlogPost/Untitled 3.png" alt="." > 
 </p>
 
 
@@ -151,6 +148,7 @@ This work proposes optimal way to scale model editing that strikes a balance bet
 **Sequential-batched editing** sequentially edit many batch of facts at a time. And the experiment was conducted going from batch size of 1 up to 4096. (1, 64, 256, 1024, 4096)
 
 <p align="center">
+    <img src="BlogPost/Untitled 4.png" alt="." > 
     <img src="BlogPost/Untitled 5.png" alt="." > 
 </p>
 
