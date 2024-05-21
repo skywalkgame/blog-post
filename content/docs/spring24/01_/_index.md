@@ -181,7 +181,7 @@ This work examines several model editing techniques in the context of the newly 
 
 Future work will include experiments on multi-layer intervention for edits, as well as experiments against other popular models and algorithms, including methods that are hyper-network based
 
-**Provide your own perspectives and discussions, and propose a **future research direction.**
+**Provide your own perspectives and discussions, and propose a future research direction**.
 
 - The paper empirically analyzes the performance of model editing based on batch size. It would be more beneficial for model editing research if the theoretical reasons behind the overall metrics decreasing as batch size increases are elucidated, rather than just empirically.
 - While the work presents a hybrid format combining sequential editing and batch editing, it lacks in-depth analysis of the strengths and weaknesses of both approaches. Additionally, it is important to ensure that the individual characteristics of techniques such as ROME, MEMIT, and EMMET are appropriately integrated into editing optimization.
