@@ -6,8 +6,8 @@ weight: 1
 
 # Better & Faster Large Language Models via Multi-token Prediction
 - Authors: Gloeckle et al. 
-- Institution : FAIR at Meta, CERMICS Ecole des Ponts ParisTech and LISN Universite Paris-Saclay \\
-* Posted by Jinoh Cho and Seonghyeon Park *
+- Institution : FAIR at Meta, CERMICS Ecole des Ponts ParisTech and LISN Universite Paris-Saclay
+*Posted by Jinoh Cho and Seonghyeon Park*
   
 # Preliminaries
 
@@ -34,4 +34,4 @@ $$
 This formulation allows the model to learn to predict multiple future tokens simultaneously, enhancing its predictive capabilities and efficiency.
 
 ### Memory-Efficient Implementation
-
+Naive 
