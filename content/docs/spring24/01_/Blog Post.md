@@ -15,7 +15,7 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 
 ![Untitled](Blog%20Post/Untitled.png)
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%201.png)
+![Untitled](Blog%20Post/Untitled%201.png)
 
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6.
 
@@ -35,13 +35,13 @@ Experiment setting
 
 - Targeting layer1 in Llama-3 with  batch size 16, 64, 256, 1024, and 4096 for Batched editing.
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%202.png)
+![Untitled](Blog%20Post/Untitled%202.png)
 
 **Evaluation Results of Batch Editing**
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%203.png)
+![Untitled](Blog%20Post/Untitled%203.png)
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%204.png)
+![Untitled](Blog%20Post/Untitled%204.png)
 
 For both MEMIT & EMMET editing, metrics are seen to consistently fall with larger batches, with **NS** being the most pronounced to fall. **ES** is most resilient metric to edits. **PS**, only metric to do so, seen to increase dramatically between batch sizes of 16 and 64.
 
@@ -55,7 +55,7 @@ This work proposes optimal way to scale model editing that strikes a balance bet
 
 **Sequential-batched editing** sequentially edit many batch of facts at a time. And the experiment was conducted going from batch size of 1 up to 4096. (1, 64, 256, 1024, 4096)
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%205.png)
+![Untitled](Blog%20Post/Untitled%205.png)
 
 Experimental results according to figures above showed that larger batch sizes are actually worse for model performance than sequential edits with smaller batches. 
 
