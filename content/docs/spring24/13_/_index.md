@@ -33,7 +33,7 @@ The core idea is to scale the initialization and learning rates based on the wid
 
 1. **Initialization Variance**: Parameters are initialized with a variance that scales inversely with the width of the layer. For example, if the width of a layer is ***M***, then the initialization variance for weight matrices  ***W<sub>AQ</sub>, W<sub>AK</sub>, W<sub>AV</sub>*** is $\frac{1}{M}$.
 
-2. **Learning Rate**: The learning rate for each parameter is scaled based on the width of the network. For instance, the learning rate for the same weight matrices ***W<sub>AQ</sub>, W<sub>AK</sub>, W<sub>AV</sub>*** is ***$\frac{αP}{M}$***, where ***$α$*** is the base learning rate and ***P*** is a fixed proxy model width.
+2. **Learning Rate**: The learning rate for each parameter is scaled based on the width of the network. For instance, the learning rate for the same weight matrices ***W<sub>AQ</sub>, W<sub>AK</sub>, W<sub>AV</sub>*** is $\frac{αP}{M}$, where ***α*** is the base learning rate and ***P*** is a fixed proxy model width.
 
 These scaling rules ensure that the behavior of small and large models remains consistent, facilitating the transfer of optimal hyperparameters across different model sizes.
 
