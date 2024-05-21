@@ -20,21 +20,21 @@ Knowledge edit problem can be summarized as "constantly updating the knowledge o
     <img src='knowledge update.png' width="600">
 </p>
 <p align="center">
-    (Fig1. Knowledge update: New knowledge should be injected constantly [2])
+    Fig1. Knowledge update: New knowledge should be injected constantly [2]
 </p>
 
 <p align="center">
     <img src='context length generalization.png' width="600">
 </p>
 <p align="center">
-    (Fig2. Context length generalization: The ability to quickly update the LLM can help with "input context length generalization problem" [3])
+    Fig2. Context length generalization: The ability to quickly update the LLM can help with "input context length generalization problem" [3]
 </p>
 
 <p align="center">
     <img src='selective fact forgetting.png' width="600">
 </p>
 <p align="center">
-    (Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data [4])
+    Fig3. Selective fact forgetting: LLMs should forget personal & sensitive data [4]
 </p>
 
 
@@ -50,7 +50,7 @@ For example, let's assume that you're providing new information to a pre-trained
     <img src='QA.PNG' width="600">
 </p>
 <p align="center">
-    (Fig4. Example of QA [5])
+    Fig4. Example of QA [5]
 </p>
 
 
@@ -60,7 +60,7 @@ This paper imitates the role of brain. Humans can rapidly update their knowledge
     <img src=brain.png width="400"> 
 </p>
 <p align="center">
-    (Fig5. Neocortex and the Hippocampus)
+    Fig5. Neocortex and the Hippocampus
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
 
@@ -89,7 +89,7 @@ Fig6 below shows the overall structure of Larimar. It consists of three main com
     <img src='architecture.png' width="800">
 </p>
 <p align="center">
-    (Fig6. Larimar architecture)
+    Fig6. Larimar architecture
 </p>
 
 
@@ -111,7 +111,7 @@ In this paper, authors followed the basic structures from [6] to combine pre-tra
     <img src='wall_clock_time _result.PNG' width="800">
 </p>
 <p align="center">
-    (Fig8. Comparison between different editing methods and the wall clock time for a single edit)
+    Fig7. Comparison between different editing methods and the wall clock time for a single edit
 </p>
 The experiment was conducted on a single A100 GPU. Comparing the wall clock time for each editing method across 10 single edits, as shown in Fig8, Larimar was found to be approximately 4-10 times faster than the existing ROME and GRACE methods. Additionally, Larimar demonstrates the ability to address sequential edits, batch edits, and forgetting/deletion, which were not previously addressed in existing work.
 
@@ -121,7 +121,7 @@ This paper utilizes the CounterFact dataset for comparing Single Fact editing. T
     <img src='Single_fact_editing_result.PNG' width="500">
 </p>
 <p align="center">
-    (Fig9.Single fact edit performanceon CounterFact dataset comparing with baseline. Top two best systems are highlighted.)
+    Fig8.Single fact edit performanceon CounterFact dataset comparing with baseline. Top two best systems are highlighted.
 </p>
 The results are shown in Fig 9. Edit Success measures the percentage of cases where the edited result has a higher probability than the original result, while Paraphrase evaluates whether the model achieves the same performance using paraphrase prompts. Neighborhood assesses the model's ability to retain knowledge about the original object. Larimar demonstrates comparable performance in editing new facts and handling prompts.
 
@@ -130,7 +130,7 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
     <img src='sequential_fact_editing_result.PNG' width="450">
 </p>
 <p align="center">
-    (Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data)
+    Fig9. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
 
 ### Selective Forgetting
@@ -138,7 +138,7 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
     <img src='memoryerase_result.PNG' width="500">
 </p>
 <p align="center">
-    (Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data)
+    Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
 
 ### Recall Performance
@@ -146,7 +146,7 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
     <img src='recall_performance_result.PNG' width="750">
 </p>
 <p align="center">
-    (Fig12. Selective fact forgetting: LLMs should forget personal & sensitive data)
+    Fig11. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
 
 
@@ -171,8 +171,6 @@ The results are shown in Fig 9. Edit Success measures the percentage of cases wh
  
 [6] https://openreview.net/forum?id=Harn4_EZBw
  -> Generative Pseudo-Inverse Memory
-
-https://arxiv.org/abs/2403.11901
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
 
