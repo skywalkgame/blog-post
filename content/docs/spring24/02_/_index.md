@@ -16,13 +16,13 @@ weight: 1
 </p>
 
 ### Conventional 3D Gaussian Splatting (3DGS) 
-- Pros: Superior rendering speed and quality  
-- Cons: High memory consumption  
+- Pros: Superior **rendering speed** and **quality**  
+- Cons: **High memory consumption**  
   
 ### Proposed SUNDAE  
-- It constructs a memory-efficient Gaussian field using spectral pruning and neural compensation.  
+- It constructs a **memory-efficient Gaussian field** using spectral pruning and neural compensation.  
 - It considers the relationship between primitives, reducing memory usage while maintaining rendering quality.  
-- It significantly reduces memory consumption while preserving high rendering quality.  
+- It significantly **reduces memory consumption** while **preserving high rendering quality**.  
 - Code: https://runyiyang.github.io/projects/SUNDAE/.  
 
 ## Introduction
@@ -34,19 +34,18 @@ weight: 1
 </p>  
 
 ### 3DGS
-Recently, 3DGS has been proposed as a novel 3D scene representation, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
-3DGS demonstrates notable advantages in rendering speed, rendering quality, and training time. But it requires a large storage.
+Recently, 3DGS has been proposed as a **novel 3D scene representation**, utilizing a set of 3D positions, opacity, anisotropic covariance, and spherical harmonic (SH) coefficients to represent a 3D scene (left panel of Fig. 2).
+3DGS demonstrates notable **advantages in rendering speed, rendering quality, and training time**. But it **requires a large storage**.
 
 ### Spectral graph pruning
-Gaussian fields utilize a collection of Gaussian primitives as the representation of the scene. As these primitives are irregularly distributed in 3D space, we propose a graph-based data structure, rather than regular structures like grids, to capture the relationship between these primitives (middle panel of Fig. 2).
-
+Gaussian fields utilize a collection of Gaussian primitives as the representation of the scene. As these primitives are irregularly distributed in 3D space, they propose a **graph-based data structure**, rather than regular structures like grids, to capture the relationship between these primitives (middle panel of Fig. 2).
 
 ### Neural compensation
-To address an inevitable decrease in rendering quality, they employ a neural compensation head to compensate for this quality loss (right panel of Fig. 2).
+To address an inevitable decrease in rendering quality, they employ a **neural compensation head to compensate for this quality loss** (right panel of Fig. 2).
 
 ### Contributions
-- A newly proposed primitive pruning framework for Gaussian fields based upon the spectrum of primitive graphs;
-- A novel feature splatting and mixing module to compensate for the performance drop caused by the pruning;
+- A newly proposed primitive pruning framework for Gaussian fields based upon the spectrum of primitive graphs.
+- A novel feature splatting and mixing module to compensate for the performance drop caused by the pruning.
 - State-of-the-art results, in terms of both quality and speed, on various benchmarks with low memory footprint.
 
 ## Methods
