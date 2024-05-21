@@ -7,7 +7,7 @@ weight: 1
 *Posted by: Inkwan Hwang, Minjae Park*
 
 <p align="center">
-    <img src=./Pondering_Transformer.png> 
+    <img src=./Pondering_Transformer.jpg> 
 </p>
 
 ## Introduction
