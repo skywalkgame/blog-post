@@ -127,14 +127,14 @@ Experimental settings
 - Targeting layer1 in Llama-3 with  batch size 16, 64, 256, 1024, and 4096 for Batched editing.
 
 <p align="center">
-    <img src="BlogPost/Untitled2.png" alt="." > 
+    <img src="BlogPost/Untitled 2.png" alt="." > 
 </p>
 
 **Evaluation Results of Batch Editing**
 
 <p align="center">
-    <img src="BlogPost/Untitled3.png" alt="." >
-    <img src="BlogPost/Untitled4.png" alt="." > 
+    <img src="BlogPost/Untitled 3.png" alt="." >
+    <img src="BlogPost/Untitled 4.png" alt="." > 
 </p>
 
 
@@ -151,7 +151,7 @@ This work proposes optimal way to scale model editing that strikes a balance bet
 **Sequential-batched editing** sequentially edit many batch of facts at a time. And the experiment was conducted going from batch size of 1 up to 4096. (1, 64, 256, 1024, 4096)
 
 <p align="center">
-    <img src="BlogPost/Untitled5.png" alt="." > 
+    <img src="BlogPost/Untitled 5.png" alt="." > 
 </p>
 
 Experimental results according to figures above showed that **larger batch sizes are actually worse for model performance than sequential edits with smaller batches**. In contrast, larger batch sizes seem to be better for metrics in NS : while batch edits are less successful in general, it is better in preserving locality of edits. This results were concluded to optimal batch size of 1024 for both MEMIT and EMMET. Increasing batch-size beyond that lead to larger model degradation and better editing results can be achieved by sequential-batched editing with smaller batch sizes. 
