@@ -181,11 +181,14 @@ This work examines several model editing techniques in the context of the newly 
 
 Future work will include experiments on multi-layer intervention for edits, as well as experiments against other popular models and algorithms, including methods that are hyper-network based
 
-- Provide your own perspectives and discussions, and propose a **future research direction.**
+**Provide your own perspectives and discussions, and propose a **future research direction.**
 
-NS의 경우 layer가 뒤로 갔을 때 다시 성능이 좋아진 원인, PS에서 batch size를 증가 시켰을 때 좋아지는 이유를 분석하면 multi layer edit에서 optimal point를 찾는데 도움이 될 수도 있을 것 같음.
+- The paper empirically analyzes the performance of model editing based on batch size. It would be more beneficial for model editing research if the theoretical reasons behind the overall metrics decreasing as batch size increases are elucidated, rather than just empirically.
+- While the work presents a hybrid format combining sequential editing and batch editing, it lacks in-depth analysis of the strengths and weaknesses of both approaches. Additionally, it is important to ensure that the individual characteristics of techniques such as ROME, MEMIT, and EMMET are appropriately integrated into editing optimization.
 
-single layer에서 나아가 multi-layer에서 몇 개의 layer edit이 효과적인지 조사.
+- Analyzing the reasons behind the improvement in performance when layers are edited later in the network (NS) and the improvement when batch size is increased (PS) could help in identifying the optimal point for multi-layer editing
 
-batch size가 증가함에 따라 전체적인 metric이 내려가는 상관관계를 emprically말고 이론적으로 밝히면 더욱 효과적으로 model editing 연구에 도움이 될 수 있을 것 같다.
+- It seems necessary to investigate how many layers should be edited in multi-layer editing to achieve effective results beyond single-layer editing.
+
+
 
