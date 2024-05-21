@@ -12,9 +12,9 @@ Meng et al.(2022b) assess the effectiveness of hidden states in LLMS for recalli
 2. Calculate various model metrics to evaluate their impact(ES, PS, NS, S)
 3. The layer that achieves the highest score is selected as the most suitable for targeted interventions.
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled.png)
+![Untitled](Untitled.png)
 
-![Untitled](Blog%20Post%20%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%2004c42d1fe7304b03af409de21c8b8e1a/Untitled%201.png)
+![Untitled](Untitled%201.png)
 
 → 결론 : Llama-3에서는 layer 1이 모든 metric에서 outperform. + previous version, Llama-2에서도 동일하게 나타남 as seen in Figure 6.
 
