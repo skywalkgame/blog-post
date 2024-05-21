@@ -16,7 +16,9 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 <p align="center">
   <img src="Blog%20Post/Untitled.png" alt="." width="500" height="300" > 
 </p>
-
+<p align="center">
+  <img src="Blog%20Post/Untitled2.png" alt="." width="500" height="300" > 
+</p>
 
 Evaluation results showed that layer 1 for Llama-3 outperformed on numerous metrics. Furthermore this trend was also shown in previous version, Llama-2, as seen in Figure 6.
 
