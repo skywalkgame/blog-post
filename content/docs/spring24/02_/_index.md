@@ -50,7 +50,84 @@ To address an inevitable decrease in rendering quality, they employ a neural com
 - State-of-the-art results, in terms of both quality and speed, on various benchmarks with low memory footprint.
 
 ## Methods
+We have 4 steps for the method
+1.   3D Gaussian Splatting Warm Up
+2.   Spectral Graph Pruning
+3.   Neural Compensation
+4.   Continuous Pruning as a Strategy
 
+The overall framework is in Fig.
+<p align="center">
+    <img src='fig3.png' width="600">
+</p>
+<p align="center">
+    Fig3. The overall framework of SUNDAE with pipeline and graph-based pruning.
+</p>
+
+Let’s see how each step works.
+
+
+### 1. 3D Gaussian Splatting Warm up
+SUNDAE **initialize Gaussian centers** of the vanilla 3D Gaussian Splating as the first step for generating a dense representation using Gaussian primitives. Then, an **effective densification strategy** is used to increase the primitives.
+#### - Gaussian Primitive Initialization
+The point cloud $P_c$ is the first input for representing the 3D scene using Gaussian primitives $P$. Then they turn 3D coordinates $x \in P_c$ into Gaussian primitives $p \in P$ by the following equation:
+<p align="center">
+$p(x)=exp(-1/2(x)^T\Sigma^-1(x))$
+</p>
+
+where the $\Sigma$ is defined as 3D covariance matrix. They also use an ellipsoid configuration. The decomposition of $\Sigma$ is achieved with scaling matrix $S$ and a rotation matrix $R$, as expressed in the equation:
+<p align="center">
+$\Sigma=RSS^TR^T$
+</p>
+
+
+#### - Gaussian Primitive Densification
+They optimize all parameters of Gaussian primitives and integrate a densification strategy to improve representation power during the training process.
+
+
+### 2. Spectral Graph Pruning
+After warm-up, a dense representation incurs significant storage consumption. To efficiently prune redundant primitives, they used the **graph signal processing theory** and construct a graph based on Gaussian primitives.
+
+
+#### - Graph Signal Processing Preliminaries
+**Graph shift**: Graph shift represents the connections between nodes in a weighted graph, typically represented by a weighted adjacency matrix. It quantitatively describes the relationships between nodes using the weights of edges.
+
+**Graph signal**: Graph signal is a mapping assigning values to each node in a graph, utilized to model interactions between nodes.
+
+**Graph Fourier Transform**: Graph Fourier Transform is the process of expanding a graph signal using the eigenbasis of the graph shift, enabling analysis of the structure and interactions within the graph.
+
+
+#### - Graph Construction
+Given a set of Gaussian Primitives %P% , they construct a **nearest neighbor graph** with the adjacent matrix $W$ of the graph:
+<p align="center">
+$$
+W_{ij} = \begin{cases} 
+\exp\left( -\frac{\|x_i - x_j\|^2}{2 \sigma^2} \right), & \text{if } \|x_i - x_j\|^2 < \tau \\ 
+0, & \text{otherwise} 
+\end{cases}
+$$
+</p>
+
+where $x_i$ and $x_j$ are central points in $P$, $\tau$ is a hyperparameter, and $\sigma$ is the variance of the distance matrix.
+
+
+#### - Graph Filtering and Sampling
+SUNDAE propose a **band-limited graph filter** that combined with a high-frequency filter and low-frequency filter. By doing this, they can catch **both the detailed information and general information**. Design of filters are Haar-like.
+
+They also prune the abundant primitives according to the response magnitude of the high-pass filter.
+
+
+### 3. Neural Compensation
+There is a decrease in rendering quality for large pruning ratio. To address this, they employ a **neural compresation network** to model the relationship between primitives in the 2D domain.
+
+They render the 3D Gaussian primitives into neural images in a **differentiable** manner, using the differentiable 3D Gaussian renderer from 3DGS with feature rendering instead of RGB rendering. The center of each Gaussian primitive is projected using a standard point rendering method, and the covariance in the neural image space is calculated.
+
+The neural image is then computed using the **feature vectors** of Gaussian primitives. A lightweight neural network (U-Net with skip connections) is used to compensate for the quality drop after spectral pruning.
+
+The overall optimization process is based on the difference between the rendered images and the ground truth images from the dataset. The compensation network and the 3D Gaussian primitives are optimized simultaneously during training, using a loss function that combines L1 loss and D-SSIM loss.
+
+### 4. Continuous Pruning as a Strategy
+In addition to the training-then-pruning strategy, a **continuous pruning strategy** is explored. Continuous pruning periodically removes a **specific number or percentage of primitives** during the training process. This aims to lower **peak memory** usage and allow training on GPUs with lower memory. However, it can result in less predictable final memory usage, as the reduction may vary across different scenes. Therefore, continuous pruning is considered an alternative strategy when needed.
 
 
 ## Results
