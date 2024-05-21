@@ -107,7 +107,7 @@ Fig7 below shows the overall architecture of Larimar. Basic idea is to combine t
 </p>
 
 
-First, overall flow shows that model architecture is based on that of VAE. Encoder makes a latent space taking input. 
+First, overall flow shows that model architecture is based on that of VAE. 
 
 sparse distributed memory is used for stroing and retrieving large amounts of information without focusing on the accuracy but on similarity of information. - wiki
 
