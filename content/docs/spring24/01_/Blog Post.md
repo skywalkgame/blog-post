@@ -14,7 +14,7 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 3. The layer that achieves the highest score is selected as the most suitable for targeted interventions.
 
 <p align="center">
-  <img src="Blog%20Post/Untitled.png" alt="." width=\textwidth > 
+  <img src="Blog%20Post/Untitled.png" alt="." width=\columnwidth > 
 </p>
 <p align="center">
   <img src="Blog%20Post/Untitled%201.png" alt="." width="500" height="300" > 
