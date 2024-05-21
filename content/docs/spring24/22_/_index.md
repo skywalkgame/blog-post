@@ -53,6 +53,15 @@ For example, let's assume that you're providing new information to a pre-trained
     Fig4. Example of QA [5]
 </p>
 
+### Variational auto encoder (VAE)
+
+<p align="center">
+    <img src='VAE.png' width="600">
+</p>
+<p align="center">
+    Fig5. VAE Structure [5]
+</p>
+
 
 ### Neocortex-Hippocampus interactions
 This paper imitates the role of brain. Humans can rapidly update their knowledge after encountering the first relevant instance. In the brain, this process is facilitated through interactions between the neocortex and the hippocampus. The hippocampus is the site for storing long-term memories, while the neocortex integrates long-term and short-term memories to relay the results to the body. 
@@ -63,6 +72,7 @@ This paper imitates the role of brain. Humans can rapidly update their knowledge
     Fig5. Neocortex and the Hippocampus
 </p>
 The Complementary Learning Systems (CLS) theory proposes a model that combines these complementary learning systems of the hippocampus and neocortex. The interaction between the neocortex and hippocampus in the brain is known to promote adaptive behavior through memorization and generalization. Furthermore, it is suggested that memory consolidation from the hippocampus to the neocortex is facilitated by the activation synchronized with multiple exact or false replays of the encoded experience in the hippocampus. This implies that the hippocampus functions as a generative associative network.
+
 
 
 ## 2. Contributions
@@ -199,6 +209,11 @@ processing in the latent space, Larimar is also efficient is terms of number of 
  
 [6] https://openreview.net/forum?id=Harn4_EZBw
  -> Generative Pseudo-Inverse Memory
+
+
+https://process-mining.tistory.com/161
+ -> VAE
+ 
 
 [brain figure](https://www.rallyware.com/blog/the_neuroscience_behind_successful_talent_development)
 
