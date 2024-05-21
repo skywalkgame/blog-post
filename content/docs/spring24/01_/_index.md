@@ -6,7 +6,7 @@ weight: 1
 # **Is Bigger Edit Batch Size Always Better? - An Empirical Study on Model Editing with Llama-3**
 *Authors: Junsang Yoon, Akshat Gupta, Gopala Anumanchipalli*
 
-*By Jin Hyun, Gyuhyun Jung*
+*Posted by Jin Hyun, Gyuhyun Jung*
 
 ## Background
 ### What is __model editing__?
