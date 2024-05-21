@@ -106,8 +106,9 @@ Fig7 below shows the overall architecture of Larimar. Basic idea is to implement
     Fig7. Larimar architecture
 </p>
 
+Our goal is to understand how to determine the writing weight and reading weight.
 
-First of all, let's consider the write operation (green arrows in Fig7). 
+First of all, let's consider the write operation (green arrows in Fig7). Data episode of length N is transformed into a latent vector through an encoder. Then, the posterior memory M given the data Z and the writing weight W0 is calculated [8]. 
 
 
 First, overall flow shows that model architecture is based on that of VAE. 
