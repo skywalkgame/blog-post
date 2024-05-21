@@ -54,7 +54,7 @@ For example, let's assume that you're providing new information to a pre-trained
 </p>
 
 ### Variational auto encoder (VAE)
-To implement the idea from memory network, concepts from variational auto encoder can be used. VAE is a kind of generative model to generate an output similar to real data. In other words, it aims to approximate the true distribution of input data with three components - encoder, decoder, and latent space.
+To implement the idea of memory network, concepts from variational auto encoder are usually used. VAE is a kind of generative model to generate an output similar to real data. To be specific, it aims to approximate the true distribution of input data with three components - encoder, decoder, and latent space.
 
 In this post, we assume that readers have knowledge about VAE. For details, please refer to [6] and [7].
 
