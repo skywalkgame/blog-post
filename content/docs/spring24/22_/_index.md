@@ -106,7 +106,14 @@ Fig7 below shows the overall architecture of Larimar. Basic idea is to implement
     Fig7. Larimar architecture
 </p>
 
-Our goal is to understand how to determine the writing weight and reading weight.
+Let's see how it works with details. 
+
+First of all, Larimar trains the memory M in Fig7 so as to maximize the conditional log-likelihood of $$lnp(X|M)$$, where X is an exchangeable (order invariant) episode: $$X \equiv {x_{1}, ..., x_{N}}$$, a subset of the input data consisting of N samples.
+
+
+Our goal is to understand how to determine the writing weight and reading weight. 
+
+
 
 First of all, let's consider the write operation (green arrows in Fig7). Data episode of length N is transformed into a latent vector through an encoder. Then, the posterior memory M given the data Z and the writing weight W0 is calculated [8]. 
 
