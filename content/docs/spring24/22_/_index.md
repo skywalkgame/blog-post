@@ -126,12 +126,14 @@ This paper utilizes the CounterFact dataset for comparing Single Fact editing. T
 The results are shown in Fig 9. Edit Success measures the percentage of cases where the edited result has a higher probability than the original result, while Paraphrase evaluates whether the model achieves the same performance using paraphrase prompts. Neighborhood assesses the model's ability to retain knowledge about the original object. Larimar demonstrates comparable performance in editing new facts and handling prompts.
 
 ### Sequential Fact Editing
+To check sequential fact editing, Test retention rate(TRR) and edit retention rate(ERR) are used. TRR check how well an edited model retains its performence on tis original testing data. Larminar decoder's perplexity was tested on 1000 random test samples from wikitext using a separate language model.  In comparison, baseline models compute TRR from mean F1 scores from 1000 random samples of NQ data. ERR check how well an edited model retains previous edits. This paper, ERR was evaluated by F1 score after 1000 sequential edits when querying the memory with the encoded query Zquery for each written fact. 
 <p align="center">
     <img src='sequential_fact_editing_result.PNG' width="450">
 </p>
 <p align="center">
     Fig9. Selective fact forgetting: LLMs should forget personal & sensitive data
 </p>
+According to the figure 9, Larimar’s comparable ERR performance to GRACE, while preserving its original test set performance.Larimar-1.3B achieves editing speeds approximately 10 or more times faster than GRACE on GPT-2 XL.
 
 ### Selective Forgetting
 <p align="center">
