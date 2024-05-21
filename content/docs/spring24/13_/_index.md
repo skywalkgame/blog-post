@@ -216,7 +216,7 @@ To fully realize the benefits of µP, the following future research directions a
 2. **Tool Development**: Create user-friendly tools and libraries that automate the µP scaling process, making it more accessible to practitioners.
 3. **Hybrid Approaches**: Explore combining µP with other optimization methods like LAMB to further enhance training efficiency and performance.
 
-y addressing these future research directions, the full potential of µ-Parameterization can be unlocked, paving the way for more efficient and effective neural network training methodologies. 
+By addressing these future research directions, the full potential of µ-Parameterization can be unlocked, paving the way for more efficient and effective neural network training methodologies. 
 
 
 
