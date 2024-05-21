@@ -105,7 +105,7 @@ sparse distributed memory is used for stroing and retrieving large amounts of in
 In this paper, authors followed the basic structures from [6] to combine pre-trained LLMs and memory component for knowledge edit. On top of that, they suggest "a class of episodic and adaptable memory-conditioned LLM architecture." 
 
 <p align="center">
-    <img src='basic memory operations.PNG' width="800">
+    <img src='basic memory operations.png' width="800">
 </p>
 <p align="center">
     Fig. Basic memory operations [6]
