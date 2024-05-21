@@ -13,10 +13,10 @@ Investigating the effectiveness of hidden states in LLMS for recalling facts usi
 2. Calculate various model metrics(ES, PS, NS, S) to evaluate their impact.
 3. The layer that achieves the highest score is selected as the most suitable for targeted interventions.
 
-<p align="center">
+<p align="left">
   <img src="Blog%20Post/Untitled.png" alt="." width=\textwidth > 
 </p>
-<p align="center">
+<p align="right">
   <img src="Blog%20Post/Untitled%201.png" alt="." width=\textwidth > 
 </p>
 
