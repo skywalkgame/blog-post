@@ -136,6 +136,15 @@ To check sequential fact editing, Test retention rate(TRR) and edit retention ra
 According to the figure 9, Larimar’s comparable ERR performance to GRACE, while preserving its original test set performance.Larimar-1.3B achieves editing speeds approximately 10 or more times faster than GRACE on GPT-2 XL.
 
 ### Selective Forgetting
+This results shows that specific fact can be selectively erased from N facts that are have been written in Larimar's memory. 
+<p align="center">
+    <img src='selective_forgetting.PNG' width="500">
+</p>
+<p align="center">
+    Fig10. Selective fact forgetting: LLMs should forget personal & sensitive data
+</p>
+Fig 10 shows many edits can be written at once to memory and accurately retrieve from it. Rewrite accuracy is near 100% for up to 512 edits (the memory size K) and then drops to 82% for 1024 edits. This result shows Larimar's ability to compress more than K facts into its size-K memory. This performance level is higher when compared to baselines like MEND and ROME, but subpar compared to MEMIT, which can accurately handle a very large batch of edits at a cost of reduced editing speed and is also not meant to handle sequential editing.
+
 <p align="center">
     <img src='memoryerase_result.PNG' width="500">
 </p>
